@@ -162,7 +162,7 @@ export const PROJECTS: Project[] = [
     title: "Continuous Personal Health — Philips Healthcare",
     summary: "CI/CD automation platform to accelerate release velocity for a healthcare application.",
     problem: "Manual, drift-prone releases across Test/QA/UAT/Prod slowed engineering and increased risk.",
-    solution: "Designed Jenkins pipelines with Maven/Docker/Ansible across 50+ EC2 instances, eliminating drift. Docker Hub registry, Tomcat deploys, and comprehensive runbooks.",
+    solution: "Designed Jenkins pipelines with Maven/Docker/Ansible across 100+ EC2 instances, eliminating drift. Docker Hub registry, Tomcat deploys, and comprehensive runbooks.",
     impact: [
       "99% build success rate",
       "75% fewer env issues",
