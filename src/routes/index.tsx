@@ -250,7 +250,7 @@ function About() {
         <div className="mt-10 space-y-6">
           <Reveal>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I'm an <span className="text-highlight">AWS DevOps Engineer</span>, <span className="text-highlight">DevSecOps Engineer</span>, and <span className="text-highlight">Platform Engineer</span> with <span className="text-highlight">6+ years</span> of experience designing secure, scalable, and automated cloud-native infrastructure. My work spans <span className="text-highlight">AWS Cloud</span>, <span className="text-highlight">Kubernetes</span>, <span className="text-highlight">Platform Engineering</span>, <span className="text-highlight">GitOps</span>, <span className="text-highlight">CI/CD automation</span>, <span className="text-highlight">Infrastructure as Code</span>, and <span className="text-highlight">DevSecOps</span>, helping organizations accelerate software delivery, improve platform reliability, and operate production environments with confidence.
+              I'm an <span className="text-highlight">DevOps Engineer</span>, <span className="text-highlight">DevSecOps Engineer</span>, and <span className="text-highlight">Platform Engineer</span> with <span className="text-highlight">5+ years</span> of experience designing secure, scalable, and automated cloud-native infrastructure. My work spans <span className="text-highlight">AWS Cloud</span>, <span className="text-highlight">Kubernetes</span>, <span className="text-highlight">Platform Engineering</span>, <span className="text-highlight">GitOps</span>, <span className="text-highlight">CI/CD automation</span>, <span className="text-highlight">Infrastructure as Code</span>, and <span className="text-highlight">DevSecOps</span>, helping organizations accelerate software delivery, improve platform reliability, and operate production environments with confidence.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -301,7 +301,7 @@ function Experience() {
     <section id="experience" className="section-shell">
       <div className="section-container">
         <Reveal>
-          <SectionHeading eyebrow="Experience" title="6+ years engineering cloud-native platforms, DevSecOps automation, and scalable Kubernetes infrastructure." />
+          <SectionHeading eyebrow="Experience" title="5+ years engineering cloud-native platforms, DevSecOps automation, and scalable Kubernetes infrastructure." />
         </Reveal>
         <div className="mt-12 relative">
           <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-[var(--color-aurora-1)]/50 via-white/10 to-transparent md:left-1/2" />
