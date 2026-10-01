@@ -18,7 +18,7 @@ export const PROFILE = {
   phone: "+91 9100948285",
   linkedin: "https://www.linkedin.com/in/grlokesh96",
   github: "https://github.com/grlokesh96",
-  years: "6+",
+  years: "5+",
 };
 
 export const ROLES = [
@@ -96,7 +96,7 @@ export const EXPERIENCE: Experience[] = [
   {
     role: "DevOps Engineer",
     company: "Larsen & Toubro (L&T), India",
-    period: "Sep 2021 — Jul 2024",
+    period: "AUG 2021 — JUL 2024",
     bullets: [
       "Built and maintained CI/CD pipeline for 40+ microservices using GitHub Actions and Argo CD, improving release velocity.",
       "Integrated SonarQube, Trivy, SAST, dependency, and container scanning into pipelines, strengthening application security.",
@@ -107,8 +107,8 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     role: "Cloud Support Associate",
-    company: "Progile Infotech, India",
-    period: "Apr 2020 — Aug 2021",
+    company: "Larsen & Toubro (L&T), India",
+    period: "SEP 2021 — JUL 2022",
     bullets: [
       "Provided L1/L2 support for AWS and Azure production infrastructure, troubleshooting Compute, Networking, Storage, Connectivity, and performance issues. ",
       "Managed AWS IAM, Azure RBAC, MFA, and access controls, enforcing least-privilege security practices.",
