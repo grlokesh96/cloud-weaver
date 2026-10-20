@@ -8,7 +8,7 @@ import {
 } from "react-icons/hi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {
-  PROFILE, ROLES, HERO_TECH, STATS, SKILLS, EXPERIENCE, PROJECTS,
+  PROFILE, ROLES, HERO_TECH, STATS, EXPERIENCE, PROJECTS,
   PROJECT_FILTERS, CERTIFICATIONS,
 } from "@/lib/portfolio-data";
 
@@ -308,7 +308,7 @@ function Experience() {
           <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-[var(--color-aurora-1)]/50 via-white/10 to-transparent md:left-1/2" />
           <div className="space-y-10">
             {EXPERIENCE.map((e, i) => (
-              <Reveal key={e.company} delay={i * 0.05}>
+              <Reveal key={`${e.company}-${e.period}`} delay={i * 0.05}>
                 <div className={`relative grid gap-6 md:grid-cols-2 ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
                   <div className="pl-10 md:pl-0 md:pr-10 md:text-right">
                     <div className="text-xs font-mono uppercase tracking-widest text-primary">{e.period}</div>
