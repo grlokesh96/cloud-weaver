@@ -8,7 +8,7 @@ import {
 } from "react-icons/hi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {
-  PROFILE, ROLES, HERO_TECH, STATS, SKILLS, EXPERIENCE, PROJECTS,
+  PROFILE, ROLES, HERO_TECH, STATS, EXPERIENCE, PROJECTS,
   PROJECT_FILTERS, CERTIFICATIONS,
 } from "@/lib/portfolio-data";
 
@@ -16,6 +16,7 @@ import { Nav } from "@/components/portfolio/Nav";
 
 import { Pipeline } from "@/components/portfolio/Pipeline";
 import { K8sOpsCenter } from "@/components/portfolio/K8sOpsCenter";
+import { SkillsExplorer } from "@/components/portfolio/SkillsExplorer";
 
 import { Counter, Reveal, MagneticButton } from "@/components/portfolio/ui";
 import {
@@ -307,7 +308,7 @@ function Experience() {
           <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-[var(--color-aurora-1)]/50 via-white/10 to-transparent md:left-1/2" />
           <div className="space-y-10">
             {EXPERIENCE.map((e, i) => (
-              <Reveal key={e.company} delay={i * 0.05}>
+              <Reveal key={`${e.company}-${e.period}`} delay={i * 0.05}>
                 <div className={`relative grid gap-6 md:grid-cols-2 ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
                   <div className="pl-10 md:pl-0 md:pr-10 md:text-right">
                     <div className="text-xs font-mono uppercase tracking-widest text-primary">{e.period}</div>
@@ -345,37 +346,9 @@ function Skills() {
         <Reveal>
           <SectionHeading eyebrow="Skills" title="An opinionated, production-grade engineering toolkit." />
         </Reveal>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {SKILLS.map((g, i) => (
-            <Reveal key={g.title} delay={i * 0.04}>
-              <motion.div
-                whileHover={{ y: -4 }}
-                tabIndex={0}
-                role="article"
-                aria-label={`${g.title} skills category`}
-                className="skill-card group relative h-full overflow-hidden rounded-2xl p-6 cursor-default"
-              >
-                <div className="skill-card-glow absolute -right-8 -top-8 h-40 w-40 rounded-full bg-gradient-to-br from-[var(--color-aurora-1)]/30 via-[var(--color-aurora-2)]/20 to-[var(--color-aurora-3)]/10 blur-3xl opacity-40 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100 group-active:opacity-100" />
-                <div className="skill-card-border absolute inset-0 rounded-2xl bg-gradient-to-br from-[var(--color-aurora-1)]/60 via-[var(--color-aurora-2)]/40 to-[var(--color-aurora-3)]/60 p-[1px] opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 group-active:opacity-100" />
-                <div className="relative z-10 flex h-full flex-col">
-                  <div className="relative flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--color-aurora-1)]/20 to-[var(--color-aurora-2)]/20 ring-1 ring-inset ring-white/10">
-                      <g.icon size={20} className="text-primary" aria-hidden />
-                    </div>
-                    <h3 className="text-lg font-semibold">{g.title}</h3>
-                  </div>
-                  <div className="mt-4 flex flex-wrap gap-1.5">
-                    {g.items.map(it => (
-                      <span key={it} className="rounded-full border border-foreground/10 bg-foreground/5 px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground">
-                        {it}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal>
+          <SkillsExplorer />
+        </Reveal>
       </div>
     </section>
   );
