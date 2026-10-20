@@ -56,7 +56,8 @@ export function SkillsExplorer() {
     if (next < 0) return;
     e.preventDefault();
     selectTab(next);
-    tabRefs.current[next]?.focus();
+    tabRefs.current[next]?.focus({ preventScroll: true });
+    tabRefs.current[next]?.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
   };
 
   const renderChip = (item: string, i: number, showQuery: boolean) => {
@@ -90,9 +91,9 @@ export function SkillsExplorer() {
   };
 
   return (
-    <div className="mt-10 grid gap-4 lg:grid-cols-[300px_1fr]">
+    <div className="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-[300px_1fr]">
       {/* Category rail */}
-      <div className="skill-card rounded-2xl p-2">
+      <div className="skill-card min-w-0 rounded-2xl p-2">
         <div
           role="tablist"
           aria-label="Skill categories"
@@ -112,7 +113,7 @@ export function SkillsExplorer() {
                 aria-selected={selected}
                 aria-controls="skill-panel"
                 tabIndex={i === active ? 0 : -1}
-                onClick={() => selectTab(i)}
+                onClick={e => { selectTab(i); e.currentTarget.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" }); }}
                 onKeyDown={e => onTabKey(e, i)}
                 className={`relative flex shrink-0 items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 ${
                   selected ? "text-foreground" : "text-muted-foreground hover:bg-foreground/5 hover:text-foreground"
@@ -148,7 +149,7 @@ export function SkillsExplorer() {
         role="tabpanel"
         aria-labelledby={q ? undefined : `skill-tab-${active}`}
         aria-label={q ? "Skill search results" : undefined}
-        className="skill-card relative flex min-h-[380px] flex-col overflow-hidden rounded-2xl p-5 sm:p-6"
+        className="skill-card relative flex min-h-[380px] min-w-0 flex-col overflow-hidden rounded-2xl p-5 sm:p-6"
       >
         <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-gradient-to-br from-[var(--color-aurora-1)]/25 via-[var(--color-aurora-2)]/15 to-[var(--color-aurora-3)]/10 blur-3xl" />
 
