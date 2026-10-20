@@ -47,6 +47,14 @@ export function SkillsExplorer() {
     setQuery("");
   };
 
+  // Scroll only the horizontal tab rail (mobile) — never the page.
+  const revealTab = (el: HTMLButtonElement | null) => {
+    const rail = el?.parentElement;
+    if (!el || !rail || rail.scrollWidth <= rail.clientWidth) return;
+    const left = el.offsetLeft - rail.clientWidth / 2 + el.clientWidth / 2;
+    rail.scrollTo({ left, behavior: "smooth" });
+  };
+
   const onTabKey = (e: KeyboardEvent<HTMLButtonElement>, i: number) => {
     let next = -1;
     if (e.key === "ArrowDown" || e.key === "ArrowRight") next = (i + 1) % SKILLS.length;
@@ -57,7 +65,7 @@ export function SkillsExplorer() {
     e.preventDefault();
     selectTab(next);
     tabRefs.current[next]?.focus({ preventScroll: true });
-    tabRefs.current[next]?.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
+    revealTab(tabRefs.current[next]);
   };
 
   const renderChip = (item: string, i: number, showQuery: boolean) => {
@@ -113,7 +121,7 @@ export function SkillsExplorer() {
                 aria-selected={selected}
                 aria-controls="skill-panel"
                 tabIndex={i === active ? 0 : -1}
-                onClick={e => { selectTab(i); e.currentTarget.scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" }); }}
+                onClick={e => { selectTab(i); revealTab(e.currentTarget); }}
                 onKeyDown={e => onTabKey(e, i)}
                 className={`relative flex shrink-0 items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 ${
                   selected ? "text-foreground" : "text-muted-foreground hover:bg-foreground/5 hover:text-foreground"
