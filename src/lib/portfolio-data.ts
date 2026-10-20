@@ -22,6 +22,8 @@ export const PROFILE = {
 };
 
 export const ROLES = [
+  "DevOps Engineer",
+  "DevSecOps Engineer",
   "AWS Cloud Engineer",
   "Kubernetes Engineer",
   "Infrastructure Automation Engineer",
