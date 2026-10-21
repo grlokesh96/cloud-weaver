@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import {
-  HiOutlineDownload, HiOutlineMail, HiOutlineArrowRight, HiSearch,
+  HiOutlineDownload, HiOutlineMail, HiOutlineArrowRight,
   HiOutlineExternalLink, HiOutlineDocumentText, HiOutlineLocationMarker,
   HiOutlinePhone, HiOutlineCheckCircle,
 } from "react-icons/hi";
