@@ -84,7 +84,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
     id: "security",
     title: "DevSecOps & Security",
     tools: [
-      { name: "Trivy", icon: SiTrivy, color: "#1904DA" },
+      { name: "Trivy", icon: SiTrivy, color: "#5B6CFF" },
       { name: "Checkov", icon: SiPaloaltonetworks, color: "#FA582D" },
       { name: "Semgrep", mono: "SG", color: "#2FD381" },
       { name: "Gitleaks", mono: "GL", color: "#E5484D" },

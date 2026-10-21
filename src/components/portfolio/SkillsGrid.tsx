@@ -42,7 +42,7 @@ function CategoryGroup({ cat, index }: { cat: TechCategory; index: number }) {
         {cat.title}
         <span className="text-xs font-normal normal-case tracking-normal text-muted-foreground/70">{cat.tools.length}</span>
       </h3>
-      <ul aria-labelledby={`skills-${cat.id}`} className="grid grid-cols-2 gap-3 min-[420px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
+      <ul aria-labelledby={`skills-${cat.id}`} className="grid grid-cols-2 gap-3 min-[360px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
         {cat.tools.map(t => <TechTile key={t.name} tech={t} />)}
       </ul>
     </motion.div>
