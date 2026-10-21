@@ -392,16 +392,6 @@ function Projects() {
               </button>
             ))}
           </div>
-          <div className="glass flex items-center gap-2 rounded-full px-3 py-1.5">
-            <HiSearch className="text-muted-foreground" />
-            <input
-              value={query}
-              onChange={e => setQuery(e.target.value)}
-              placeholder="Search projects…"
-              aria-label="Search projects"
-              className="w-48 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
-            />
-          </div>
         </div>
 
         <div className="mt-8 grid gap-6 md:grid-cols-2">
