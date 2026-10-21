@@ -8,7 +8,7 @@ import {
 } from "react-icons/hi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {
-  PROFILE, ROLES, HERO_TECH, STATS, SKILLS, EXPERIENCE, PROJECTS,
+  PROFILE, ROLES, HERO_TECH, STATS, EXPERIENCE, PROJECTS,
   PROJECT_FILTERS, CERTIFICATIONS,
 } from "@/lib/portfolio-data";
 
