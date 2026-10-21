@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 import {
-  HiOutlineDownload, HiOutlineMail, HiOutlineArrowRight, HiSearch,
+  HiOutlineDownload, HiOutlineMail, HiOutlineArrowRight,
   HiOutlineExternalLink, HiOutlineDocumentText, HiOutlineLocationMarker,
   HiOutlinePhone, HiOutlineCheckCircle,
 } from "react-icons/hi";
@@ -391,16 +391,6 @@ function Projects() {
                 {f}
               </button>
             ))}
-          </div>
-          <div className="glass flex items-center gap-2 rounded-full px-3 py-1.5">
-            <HiSearch className="text-muted-foreground" />
-            <input
-              value={query}
-              onChange={e => setQuery(e.target.value)}
-              placeholder="Search projects…"
-              aria-label="Search projects"
-              className="w-48 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
-            />
           </div>
         </div>
 
