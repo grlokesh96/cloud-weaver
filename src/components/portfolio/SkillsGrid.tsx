@@ -12,7 +12,9 @@ function TechTile({ tech }: { tech: Tech }) {
       className="group flex h-full min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-xl border border-foreground/10 bg-foreground/[0.03] px-2 py-4 text-center transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-foreground/[0.06] focus-visible:-translate-y-0.5 focus-visible:border-primary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 motion-reduce:transform-none"
     >
       <span className="grid h-9 w-9 place-items-center" aria-hidden>
-        {Icon ? (
+        {tech.img ? (
+          <img src={tech.img} alt="" width={32} height={32} loading="lazy" decoding="async" className="h-8 w-8 object-contain" />
+        ) : Icon ? (
           <Icon className={tech.color ? "h-8 w-8" : "h-8 w-8 text-foreground"} style={tech.color ? { color: tech.color } : undefined} />
         ) : (
           <span

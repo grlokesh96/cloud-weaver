@@ -6,17 +6,29 @@ import {
   SiGnubash, SiYaml, SiPaloaltonetworks,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
-import { VscAzure } from "react-icons/vsc";
 import type { IconType } from "react-icons";
+import awsEc2 from "@/assets/tech/aws-ec2.svg.asset.json";
+import awsEks from "@/assets/tech/aws-eks.svg.asset.json";
+import awsS3 from "@/assets/tech/aws-s3.svg.asset.json";
+import awsIam from "@/assets/tech/aws-iam.svg.asset.json";
+import awsVpc from "@/assets/tech/aws-vpc.svg.asset.json";
+import awsLambda from "@/assets/tech/aws-lambda.svg.asset.json";
+import awsEcr from "@/assets/tech/aws-ecr.svg.asset.json";
+import awsRds from "@/assets/tech/aws-rds.svg.asset.json";
+import awsCloudwatch from "@/assets/tech/aws-cloudwatch.svg.asset.json";
+import azureLogo from "@/assets/tech/azure.svg.asset.json";
+import azureAks from "@/assets/tech/azure-aks.svg.asset.json";
 
 /**
  * Centralized Skills & Technologies config.
+ * - `img` → official brand/service SVG (AWS Architecture Icons, Microsoft Azure icons).
  * - `icon` omitted → monogram fallback tile (`mono` or first two letters).
  * - `color` omitted → uses the theme foreground (for near-black brand marks).
  */
 export interface Tech {
   name: string;
   icon?: IconType;
+  img?: string;
   color?: string;
   mono?: string;
   url?: string;
@@ -26,7 +38,6 @@ export interface Tech {
 export interface TechCategory { id: string; title: string; tools: Tech[] }
 
 const AWS = "#FF9900";
-const AZURE = "#0089D6";
 const K8S = "#326CE5";
 
 export const SKILL_CATEGORIES: TechCategory[] = [
@@ -35,17 +46,17 @@ export const SKILL_CATEGORIES: TechCategory[] = [
     title: "Cloud & Infrastructure",
     tools: [
       { name: "AWS", icon: FaAws, color: AWS, url: "https://aws.amazon.com" },
-      { name: "Azure", icon: VscAzure, color: AZURE, label: "Microsoft Azure" },
-      { name: "EC2", icon: FaAws, color: AWS, label: "Amazon EC2" },
-      { name: "EKS", icon: FaAws, color: AWS, label: "Amazon EKS" },
-      { name: "S3", icon: FaAws, color: AWS, label: "Amazon S3" },
-      { name: "IAM", icon: FaAws, color: AWS, label: "AWS IAM" },
-      { name: "VPC", icon: FaAws, color: AWS, label: "Amazon VPC" },
-      { name: "Lambda", icon: FaAws, color: AWS, label: "AWS Lambda" },
-      { name: "ECR", icon: FaAws, color: AWS, label: "Amazon ECR" },
-      { name: "RDS", icon: FaAws, color: AWS, label: "Amazon RDS" },
-      { name: "CloudWatch", icon: FaAws, color: AWS, label: "AWS CloudWatch" },
-      { name: "AKS", icon: VscAzure, color: AZURE, label: "Azure AKS" },
+      { name: "Azure", img: azureLogo.url, label: "Microsoft Azure" },
+      { name: "EC2", img: awsEc2.url, label: "Amazon EC2" },
+      { name: "EKS", img: awsEks.url, label: "Amazon EKS" },
+      { name: "S3", img: awsS3.url, label: "Amazon S3" },
+      { name: "IAM", img: awsIam.url, label: "AWS IAM" },
+      { name: "VPC", img: awsVpc.url, label: "Amazon VPC" },
+      { name: "Lambda", img: awsLambda.url, label: "AWS Lambda" },
+      { name: "ECR", img: awsEcr.url, label: "Amazon ECR" },
+      { name: "RDS", img: awsRds.url, label: "Amazon RDS" },
+      { name: "CloudWatch", img: awsCloudwatch.url, label: "AWS CloudWatch" },
+      { name: "AKS", img: azureAks.url, label: "Azure AKS" },
     ],
   },
   {
