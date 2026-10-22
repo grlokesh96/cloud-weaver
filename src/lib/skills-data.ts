@@ -18,6 +18,7 @@ import awsRds from "@/assets/tech/aws-rds.svg.asset.json";
 import awsCloudwatch from "@/assets/tech/aws-cloudwatch.svg.asset.json";
 import azureLogo from "@/assets/tech/azure.svg.asset.json";
 import azureAks from "@/assets/tech/azure-aks.svg.asset.json";
+import awsSecretsManager from "@/assets/tech/aws-secrets-manager.svg.asset.json";
 
 /**
  * Centralized Skills & Technologies config.
@@ -88,7 +89,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Kubernetes HPA", icon: SiKubernetes, color: K8S },
       { name: "Cluster Autoscaler", icon: SiKubernetes, color: K8S },
       { name: "Docker Hub", icon: SiDocker, color: "#2496ED" },
-      { name: "Amazon ECR", icon: FaAws, color: AWS },
+      { name: "Amazon ECR", img: awsEcr.url },
     ],
   },
   {
@@ -105,7 +106,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Syft", mono: "SY", color: "#4AA8FF" },
       { name: "Cosign", mono: "CS", color: "#F59E0B" },
       { name: "HashiCorp Vault", icon: SiVault, color: "#FFD814" },
-      { name: "AWS Secrets Manager", icon: FaAws, color: AWS },
+      { name: "AWS Secrets Manager", img: awsSecretsManager.url },
       { name: "IAM & RBAC", icon: SiKubernetes, color: K8S },
     ],
   },
@@ -118,7 +119,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Datadog", icon: SiDatadog, color: "#A07BE8" },
       { name: "ELK Stack", icon: SiElasticstack, color: "#00BFB3" },
       { name: "OpenTelemetry", icon: SiOpentelemetry, color: "#F5A800" },
-      { name: "AWS CloudWatch", icon: FaAws, color: AWS },
+      { name: "AWS CloudWatch", img: awsCloudwatch.url },
       { name: "Python", icon: SiPython, color: "#4B8BBE" },
       { name: "Boto3", mono: "B3", color: AWS },
       { name: "Bash", icon: SiGnubash, color: "#4EAA25" },
