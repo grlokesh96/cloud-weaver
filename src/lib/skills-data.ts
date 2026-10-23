@@ -7,18 +7,18 @@ import {
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import type { IconType } from "react-icons";
-import awsEc2 from "@/assets/tech/aws-ec2.svg.asset.json";
-import awsEks from "@/assets/tech/aws-eks.svg.asset.json";
-import awsS3 from "@/assets/tech/aws-s3.svg.asset.json";
-import awsIam from "@/assets/tech/aws-iam.svg.asset.json";
-import awsVpc from "@/assets/tech/aws-vpc.svg.asset.json";
-import awsLambda from "@/assets/tech/aws-lambda.svg.asset.json";
-import awsEcr from "@/assets/tech/aws-ecr.svg.asset.json";
-import awsRds from "@/assets/tech/aws-rds.svg.asset.json";
-import awsCloudwatch from "@/assets/tech/aws-cloudwatch.svg.asset.json";
-import azureLogo from "@/assets/tech/azure.svg.asset.json";
-import azureAks from "@/assets/tech/azure-aks.svg.asset.json";
-import awsSecretsManager from "@/assets/tech/aws-secrets-manager.svg.asset.json";
+const awsEc2 = { url: "/tech/aws-ec2.svg" };
+const awsEks = { url: "/tech/aws-eks.svg" };
+const awsS3 = { url: "/tech/aws-s3.svg" };
+const awsIam = { url: "/tech/aws-iam.svg" };
+const awsVpc = { url: "/tech/aws-vpc.svg" };
+const awsLambda = { url: "/tech/aws-lambda.svg" };
+const awsEcr = { url: "/tech/aws-ecr.svg" };
+const awsRds = { url: "/tech/aws-rds.svg" };
+const awsCloudwatch = { url: "/tech/aws-cloudwatch.svg" };
+const azureLogo = { url: "/tech/azure.svg" };
+const azureAks = { url: "/tech/azure-aks.svg" };
+const awsSecretsManager = { url: "/tech/aws-secrets-manager.svg" };
 
 /**
  * Centralized Skills & Technologies config.
