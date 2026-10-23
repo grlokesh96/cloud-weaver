@@ -688,16 +688,38 @@ function Contact() {
 
           <Reveal delay={0.1}>
             <form
-              onSubmit={e => {
+              onSubmit={async e => {
                 e.preventDefault();
+                const form = e.currentTarget;
                 setState("sending");
-                const fd = new FormData(e.currentTarget);
-                const subject = encodeURIComponent(String(fd.get("subject") || "Hello from your portfolio"));
-                const body = encodeURIComponent(
-                  `${fd.get("message")}\n\n— ${fd.get("name")} (${fd.get("email")})`
-                );
-                window.location.href = `mailto:${PROFILE.email}?subject=${subject}&body=${body}`;
-                setTimeout(() => setState("sent"), 400);
+                const fd = new FormData(form);
+                const name = String(fd.get("name") || "");
+                const email = String(fd.get("email") || "");
+                const subject = String(fd.get("subject") || "");
+                const message = String(fd.get("message") || "");
+                try {
+                  const res = await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      service_id: "service_jopduan",
+                      template_id: "template_7awy8w3",
+                      user_id: "pbbBu6UsUaBXGmmma",
+                      template_params: {
+                        name, email, subject, message,
+                        from_name: name, from_email: email, reply_to: email,
+                        title: subject, time: new Date().toLocaleString(),
+                      },
+                    }),
+                  });
+                  if (!res.ok) throw new Error(await res.text());
+                  form.reset();
+                  setState("sent");
+                  setTimeout(() => setState("idle" as typeof state), 4000);
+                } catch {
+                  setState("idle" as typeof state);
+                  alert("Sorry, your message could not be sent. Please email me directly at " + PROFILE.email);
+                }
               }}
               className="glass ring-glow flex flex-col gap-3 rounded-2xl p-6"
             >
