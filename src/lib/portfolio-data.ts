@@ -88,7 +88,7 @@ export const EXPERIENCE: Experience[] = [
     company: "ASICS Technologies, India",
     period: "Jul 2024 — Present",
     bullets: [
-      "Designed a GitOps platform using GitLab CI/CD, Argo CD, and Amazon EKS for 30+ microservices, reducing release time by 45%.",
+      "Designed a GitOps platform using GitLab CI/CD, Argo CD, and Amazon EKS for 20+ microservices, reducing release time by 45%.",
       "Implemented DevSecOps security gates across SAST, SCA, IaC, container, and DAST scanning, embedding security throughout the software delivery lifecycle.",
       "Optimized EKS workloads with HPA, KEDA, Cluster Autoscaler, and Karpenter, reducing AWS compute costs by 30%.",
       "Hardened Kubernetes with RBAC, IRSA, Vault, Kyverno, and Istio, enforcing least-privilege access and secure service-to-service communication.",
