@@ -743,7 +743,7 @@ function Contact() {
                 disabled={state === "sending"}
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-medium text-background hover:bg-foreground/90 disabled:opacity-60"
               >
-                {state === "sent" ? "Opening your mail app…" : state === "sending" ? "Preparing…" : "Send message"} <HiOutlineArrowRight />
+                {state === "sent" ? "Message sent ✓" : state === "sending" ? "Sending…" : "Send message"} <HiOutlineArrowRight />
               </button>
             </form>
           </Reveal>
