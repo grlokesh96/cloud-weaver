@@ -703,7 +703,7 @@ function Contact() {
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
                       service_id: "service_jopduan",
-                      template_id: "template_7awy8w3",
+                      template_id: "template_jxj6cn9",
                       user_id: "pbbBu6UsUaBXGmmma",
                       template_params: {
                         name, email, subject, message,
