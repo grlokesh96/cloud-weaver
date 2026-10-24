@@ -40,7 +40,7 @@ function downloadResume() {
 
 function ResumePage() {
   return (
-    <main className="aurora-bg min-h-screen px-4 py-6 sm:px-6 sm:py-8">
+    <main className="aurora-bg min-h-screen overflow-x-clip px-4 py-6 sm:px-6 sm:py-8">
       <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-6xl flex-col overflow-hidden rounded-2xl border border-foreground/10 bg-background/95 shadow-2xl backdrop-blur">
         <header className="flex flex-col gap-4 border-b border-foreground/10 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
           <div>

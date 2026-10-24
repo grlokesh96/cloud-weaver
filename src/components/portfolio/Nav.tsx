@@ -89,14 +89,14 @@ export function Nav() {
           <div className={`flex w-full items-center justify-between rounded-full px-4 py-2 transition-all ${scrolled ? "glass-strong" : ""}`}>
             <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight">
               <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-[var(--color-aurora-1)] to-[var(--color-aurora-2)] text-[11px] font-bold text-background">GL</span>
-              <span className="hidden sm:inline">{PROFILE.name}</span>
+              <span className="hidden whitespace-nowrap sm:inline md:hidden lg:inline">{PROFILE.name}</span>
             </a>
-            <nav className="hidden items-center gap-1 md:flex">
+            <nav className="hidden items-center gap-0.5 md:flex lg:gap-1">
               {NAV_LINKS.map(l => (
                 <a
                   key={l.href}
                   href={l.href}
-                  className="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
+                  className="whitespace-nowrap rounded-full px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground lg:px-3"
                 >
                   {l.label}
                 </a>

@@ -308,7 +308,7 @@ function Experience() {
           <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-[var(--color-aurora-1)]/50 via-white/10 to-transparent md:left-1/2" />
           <div className="space-y-10">
             {EXPERIENCE.map((e, i) => (
-              <Reveal key={e.company} delay={i * 0.05}>
+              <Reveal key={`${e.company}-${e.period}`} delay={i * 0.05}>
                 <div className={`relative grid gap-6 md:grid-cols-2 ${i % 2 ? "md:[&>*:first-child]:order-2" : ""}`}>
                   <div className="pl-10 md:pl-0 md:pr-10 md:text-right">
                     <div className="text-xs font-mono uppercase tracking-widest text-primary">{e.period}</div>
@@ -785,10 +785,10 @@ function Footer() {
         <div className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} {PROFILE.name}. Crafted with care.
         </div>
-        <div className="flex items-center gap-3">
-          <a href={PROFILE.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-foreground"><FaGithub size={18} /></a>
-          <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-foreground"><FaLinkedin size={18} /></a>
-          <a href={`mailto:${PROFILE.email}`} aria-label="Email" className="text-muted-foreground hover:text-foreground"><HiOutlineMail size={20} /></a>
+        <div className="flex items-center gap-1">
+          <a href={PROFILE.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="inline-flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground hover:bg-foreground/5 hover:text-foreground"><FaGithub size={18} /></a>
+          <a href={PROFILE.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="inline-flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground hover:bg-foreground/5 hover:text-foreground"><FaLinkedin size={18} /></a>
+          <a href={`mailto:${PROFILE.email}`} aria-label="Email" className="inline-flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground hover:bg-foreground/5 hover:text-foreground"><HiOutlineMail size={20} /></a>
           <a href="#top" className="glass rounded-full px-3 py-1 text-xs hover:bg-foreground/10">Back to top ↑</a>
         </div>
       </div>
