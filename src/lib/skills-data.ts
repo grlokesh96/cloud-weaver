@@ -121,6 +121,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "ELK Stack", icon: SiElasticstack, color: "#00BFB3" },
       { name: "OpenTelemetry", icon: SiOpentelemetry, color: "#F5A800" },
       { name: "AWS CloudWatch", img: awsCloudwatch.url },
+      { name: "Azure Monitor", img: "/tech/azure-monitor.svg" },
       { name: "Python", icon: SiPython, color: "#4B8BBE" },
       { name: "Boto3", mono: "B3", color: AWS },
       { name: "Bash", icon: SiGnubash, color: "#4EAA25" },
