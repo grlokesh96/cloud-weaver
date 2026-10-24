@@ -18,6 +18,7 @@ const awsRds = { url: "/tech/aws-rds.svg" };
 const awsCloudwatch = { url: "/tech/aws-cloudwatch.svg" };
 const azureLogo = { url: "/tech/azure.svg" };
 const azureAks = { url: "/tech/azure-aks.svg" };
+const azureRbac = { url: "/tech/azure-rbac.svg" };
 const awsSecretsManager = { url: "/tech/aws-secrets-manager.svg" };
 
 /**
@@ -56,7 +57,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Lambda", img: awsLambda.url, label: "AWS Lambda" },
       { name: "ECR", img: awsEcr.url, label: "Amazon ECR" },
       { name: "RDS", img: awsRds.url, label: "Amazon RDS" },
-      { name: "CloudWatch", img: awsCloudwatch.url, label: "AWS CloudWatch" },
+      { name: "Azure RBAC", img: azureRbac.url, label: "Azure Role-Based Access Control" },
       { name: "AKS", img: azureAks.url, label: "Azure AKS" },
     ],
   },
