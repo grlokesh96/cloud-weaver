@@ -275,9 +275,9 @@ export function Pipeline() {
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-2" role="toolbar" aria-label="Pipeline simulator controls">
+          <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 sm:flex" role="toolbar" aria-label="Pipeline simulator controls">
             {/* Density toggle */}
-            <div className="glass inline-flex items-center rounded-full p-0.5 text-[11px]" role="group" aria-label="Layout density (shortcut: D)">
+            <div className="glass col-span-2 inline-flex items-center justify-self-start rounded-full p-0.5 text-[11px]" role="group" aria-label="Layout density (shortcut: D)">
               {(["compact", "comfortable"] as Density[]).map(opt => (
                 <button
                   key={opt}
@@ -327,7 +327,7 @@ export function Pipeline() {
               onClick={reset}
               aria-label="Reset pipeline (shortcut: R)"
               aria-keyshortcuts="R"
-              className="glass inline-flex h-11 items-center gap-1.5 rounded-xl px-3 text-xs hover:bg-foreground/10"
+              className="glass inline-flex h-11 shrink-0 items-center gap-1.5 rounded-xl px-3 text-xs hover:bg-foreground/10"
             >
               <HiOutlineRefresh aria-hidden /> Reset
             </button>

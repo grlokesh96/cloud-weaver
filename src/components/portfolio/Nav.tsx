@@ -91,12 +91,12 @@ export function Nav() {
               <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-gradient-to-br from-[var(--color-aurora-1)] to-[var(--color-aurora-2)] text-[11px] font-bold text-background">GL</span>
               <span className="hidden sm:inline">{PROFILE.name}</span>
             </a>
-            <nav className="hidden items-center gap-1 md:flex">
+            <nav className="hidden items-center gap-0.5 md:flex lg:gap-1">
               {NAV_LINKS.map(l => (
                 <a
                   key={l.href}
                   href={l.href}
-                  className="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
+                  className="rounded-full px-2 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground lg:px-3"
                 >
                   {l.label}
                 </a>
