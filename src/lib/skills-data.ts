@@ -47,7 +47,6 @@ export const SKILL_CATEGORIES: TechCategory[] = [
   {
     id: "cloud",
     title: "Cloud & Infrastructure",
-    splitAt: 10,
     tools: [
       { name: "AWS", icon: FaAws, color: AWS, url: "https://aws.amazon.com" },
       { name: "EC2", img: awsEc2.url, label: "Amazon EC2" },
