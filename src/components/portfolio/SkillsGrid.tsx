@@ -9,7 +9,7 @@ function TechTile({ tech }: { tech: Tech }) {
       tabIndex={0}
       title={tech.label && tech.label !== tech.name ? tech.label : undefined}
       aria-label={label}
-      className="group flex h-full min-h-[96px] flex-col items-center justify-center gap-2.5 rounded-xl border border-foreground/10 bg-foreground/[0.03] px-2 py-4 text-center transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-foreground/[0.06] focus-visible:-translate-y-0.5 focus-visible:border-primary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 motion-reduce:transform-none"
+      className="group flex h-full min-h-[96px] flex-col items-center justify-start gap-2.5 rounded-xl border border-foreground/10 bg-foreground/[0.03] px-2 py-4 text-center transition-[transform,border-color,background-color] duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-foreground/[0.06] focus-visible:-translate-y-0.5 focus-visible:border-primary/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 motion-reduce:transform-none"
     >
       <span className="grid h-9 w-9 place-items-center" aria-hidden>
         {tech.img ? (
