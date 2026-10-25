@@ -3,7 +3,7 @@ import {
   SiPrometheus, SiGrafana, SiJenkins, SiPython, SiAnsible, SiNginx, SiIstio,
   SiGitlab, SiGithubactions, SiSonarqubeserver, SiJfrog, SiSonatype, SiTrivy,
   SiSnyk, SiOwasp, SiVault, SiDatadog, SiElasticstack, SiOpentelemetry,
-  SiGnubash, SiYaml, SiPaloaltonetworks,
+  SiGnubash, SiPaloaltonetworks, SiPodman,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import type { IconType } from "react-icons";
@@ -69,7 +69,6 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Jenkins", icon: SiJenkins, color: "#D33833" },
       { name: "GitLab CI/CD", icon: SiGitlab, color: "#FC6D26" },
       { name: "Argo CD", icon: SiArgo, color: "#EF7B4D" },
-      { name: "SonarQube", icon: SiSonarqubeserver, color: "#4E9BCD" },
       { name: "JFrog Artifactory", icon: SiJfrog, color: "#40BE46" },
       { name: "Nexus Repository", icon: SiSonatype, color: "#1B8A5A" },
       { name: "Git", icon: SiGit, color: "#F05033" },
@@ -89,8 +88,9 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "NGINX", icon: SiNginx, color: "#009639" },
       { name: "Kubernetes HPA", icon: SiKubernetes, color: K8S },
       { name: "Cluster Autoscaler", icon: SiKubernetes, color: K8S },
-      { name: "Docker Hub", icon: SiDocker, color: "#2496ED" },
       { name: "Amazon ECR", img: awsEcr.url },
+      { name: "Azure ACR", img: "/tech/azure-acr.svg", label: "Azure Container Registry" },
+      { name: "Podman", icon: SiPodman, color: "#A78BFA" },
     ],
   },
   {
@@ -127,7 +127,6 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Bash", icon: SiGnubash, color: "#4EAA25" },
       { name: "Terraform", icon: SiTerraform, color: "#844FBA" },
       { name: "Ansible", icon: SiAnsible, color: "#EE3333" },
-      { name: "YAML", icon: SiYaml, color: "#CB171E" },
     ],
   },
 ];
