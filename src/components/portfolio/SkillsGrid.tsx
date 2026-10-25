@@ -44,9 +44,13 @@ function CategoryGroup({ cat, index }: { cat: TechCategory; index: number }) {
         {cat.title}
         <span className="text-xs font-normal normal-case tracking-normal text-muted-foreground/70">{cat.tools.length}</span>
       </h3>
-      <ul aria-labelledby={`skills-${cat.id}`} className="grid grid-cols-2 gap-3 min-[360px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
-        {cat.tools.map(t => <TechTile key={t.name} tech={t} />)}
-      </ul>
+      <div className="space-y-3">
+        {(cat.splitAt ? [cat.tools.slice(0, cat.splitAt), cat.tools.slice(cat.splitAt)] : [cat.tools]).map((group, gi) => (
+          <ul key={gi} aria-labelledby={`skills-${cat.id}`} className="grid grid-cols-2 gap-3 min-[360px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8">
+            {group.map(t => <TechTile key={t.name} tech={t} />)}
+          </ul>
+        ))}
+      </div>
     </motion.div>
   );
 }

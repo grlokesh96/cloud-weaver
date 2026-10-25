@@ -37,7 +37,8 @@ export interface Tech {
   label?: string;
 }
 
-export interface TechCategory { id: string; title: string; tools: Tech[] }
+/** `splitAt` → tools before this index render in one block, the rest start on a new row. */
+export interface TechCategory { id: string; title: string; tools: Tech[]; splitAt?: number }
 
 const AWS = "#FF9900";
 const K8S = "#326CE5";
@@ -46,19 +47,24 @@ export const SKILL_CATEGORIES: TechCategory[] = [
   {
     id: "cloud",
     title: "Cloud & Infrastructure",
+    splitAt: 10,
     tools: [
       { name: "AWS", icon: FaAws, color: AWS, url: "https://aws.amazon.com" },
-      { name: "Azure", img: azureLogo.url, label: "Microsoft Azure" },
       { name: "EC2", img: awsEc2.url, label: "Amazon EC2" },
       { name: "EKS", img: awsEks.url, label: "Amazon EKS" },
       { name: "S3", img: awsS3.url, label: "Amazon S3" },
       { name: "IAM", img: awsIam.url, label: "AWS IAM" },
       { name: "VPC", img: awsVpc.url, label: "Amazon VPC" },
       { name: "Lambda", img: awsLambda.url, label: "AWS Lambda" },
-      { name: "ECR", img: awsEcr.url, label: "Amazon ECR" },
       { name: "RDS", img: awsRds.url, label: "Amazon RDS" },
-      { name: "Azure RBAC", img: azureRbac.url, label: "Azure Role-Based Access Control" },
+      { name: "Route 53", img: "/tech/aws-route53.svg", label: "Amazon Route 53" },
+      { name: "DynamoDB", img: "/tech/aws-dynamodb.svg", label: "Amazon DynamoDB" },
+      { name: "Azure", img: azureLogo.url, label: "Microsoft Azure" },
+      { name: "Azure VMs", img: "/tech/azure-vm.svg", label: "Azure Virtual Machines" },
       { name: "AKS", img: azureAks.url, label: "Azure AKS" },
+      { name: "Entra ID", img: "/tech/azure-entra.svg", label: "Microsoft Entra ID" },
+      { name: "VNets", img: "/tech/azure-vnet.svg", label: "Azure Virtual Networks" },
+      { name: "Azure RBAC", img: azureRbac.url, label: "Azure Role-Based Access Control" },
     ],
   },
   {
