@@ -75,7 +75,6 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "GitLab CI/CD", icon: SiGitlab, color: "#FC6D26" },
       { name: "Argo CD", icon: SiArgo, color: "#EF7B4D" },
       { name: "JFrog Artifactory", icon: SiJfrog, color: "#40BE46" },
-      { name: "Nexus Repository", icon: SiSonatype, color: "#1B8A5A" },
       { name: "Git", icon: SiGit, color: "#F05033" },
       { name: "GitHub", icon: SiGithub },
       { name: "GitOps", icon: SiArgo, color: "#EF7B4D" },
