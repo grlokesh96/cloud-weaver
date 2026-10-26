@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { HiArrowLeft, HiDownload, HiExternalLink } from "react-icons/hi";
 import { ResumeViewer } from "@/components/portfolio/ResumeViewer";
 import { RESUME_FILENAME, RESUME_FILE_URL, RESUME_VIEWER_URL } from "@/lib/resume";
+import { recordResumeDownload } from "@/lib/resume-downloads";
 
 export const Route = createFileRoute("/resume")({
   head: () => ({
@@ -36,6 +37,7 @@ function downloadResume() {
   document.body.appendChild(anchor);
   anchor.click();
   anchor.remove();
+  void recordResumeDownload();
 }
 
 function ResumePage() {

@@ -4,6 +4,7 @@ import { HiMenu, HiX, HiDownload, HiExternalLink } from "react-icons/hi";
 import { NAV_LINKS, PROFILE } from "@/lib/portfolio-data";
 import { ResumeViewer } from "@/components/portfolio/ResumeViewer";
 import { RESUME_FILENAME, RESUME_FILE_URL, RESUME_ORIGINAL_FILENAME, RESUME_VIEWER_URL } from "@/lib/resume";
+import { recordResumeDownload } from "@/lib/resume-downloads";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -48,6 +49,7 @@ export function Nav() {
       a.remove();
     };
     // Fire it immediately so the click actually downloads something.
+    void recordResumeDownload();
     try { anchorDownload(); } catch { window.open(RESUME_FILE_URL, "_blank", "noopener,noreferrer"); return; }
 
     // Best-effort blob upgrade: if the browser previewed instead of downloading,
