@@ -12,8 +12,21 @@ export const RESUME_FILENAME = "G_R_Lokesh_DevOps_Resume.pdf";
 
 /** Human-readable resume metadata shown on the public Resume card. */
 export const RESUME_VERSION = "2.3";
-export const RESUME_UPDATED_LABEL = "July 2026";
-export const RESUME_UPDATED_ISO = "2026-07-25";
+
+/**
+ * Formats an upload timestamp as "Month YYYY". Uses a fixed locale and UTC so
+ * the server render and the browser render always produce the same text.
+ */
+export function formatResumeUpdated(iso: string): string {
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "";
+  return new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric", timeZone: "UTC" }).format(date);
+}
+
+// Date and size come from the uploaded resume's asset record, so they update
+// automatically every time a new resume is uploaded.
+export const RESUME_UPDATED_ISO = resumeAsset.created_at;
+export const RESUME_UPDATED_LABEL = formatResumeUpdated(resumeAsset.created_at);
 export const RESUME_FILE_SIZE_BYTES = resumeAsset.size;
 export const RESUME_TITLE = "AWS DevOps · DevSecOps · Platform Engineer";
 
