@@ -20,8 +20,6 @@ import { SkillsGrid } from "@/components/portfolio/SkillsGrid";
 
 import { Counter, Reveal, MagneticButton } from "@/components/portfolio/ui";
 import {
-  RESUME_DOWNLOAD_BASELINE,
-  RESUME_DOWNLOAD_COUNT_KEY,
   RESUME_FILE_SIZE_BYTES,
   RESUME_FILE_URL,
   RESUME_FILENAME,
@@ -32,6 +30,7 @@ import {
   RESUME_VIEWER_URL,
   formatFileSize,
 } from "@/lib/resume";
+import { recordResumeDownload, useResumeDownloadTotal } from "@/lib/resume-downloads";
 
 
 
