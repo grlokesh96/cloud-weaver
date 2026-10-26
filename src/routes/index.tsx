@@ -521,8 +521,30 @@ function useResumeDownloadCount() {
   return { count, increment };
 }
 
+/** Reads the real size of the served PDF so the card always matches the live file. */
+function useLiveResumeSize() {
+  const [size, setSize] = useState<number>(RESUME_FILE_SIZE_BYTES);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch(RESUME_FILE_URL, { method: "HEAD", cache: "no-store", signal: controller.signal })
+      .then((res) => {
+        if (!res.ok) return;
+        const bytes = Number.parseInt(res.headers.get("content-length") ?? "", 10);
+        if (Number.isFinite(bytes) && bytes > 0) setSize(bytes);
+      })
+      .catch(() => {
+        /* keep the size recorded at upload time */
+      });
+    return () => controller.abort();
+  }, []);
+
+  return size;
+}
+
 function ResumeSection() {
   const { count, increment } = useResumeDownloadCount();
+  const liveSize = useLiveResumeSize();
   const [downloading, setDownloading] = useState(false);
   const [downloaded, setDownloaded] = useState(false);
 
@@ -546,8 +568,8 @@ function ResumeSection() {
     }
   };
 
-  const formattedCount = count.toLocaleString();
-  const sizeLabel = formatFileSize(RESUME_FILE_SIZE_BYTES);
+  const formattedCount = count.toLocaleString("en-US");
+  const sizeLabel = formatFileSize(liveSize);
 
   return (
     <section id="resume" className="section-shell" aria-labelledby="resume-heading">
