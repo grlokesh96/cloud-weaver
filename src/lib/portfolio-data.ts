@@ -93,6 +93,7 @@ export const EXPERIENCE: Experience[] = [
       "Optimized EKS workloads with HPA, KEDA, Cluster Autoscaler, and Karpenter, reducing AWS compute costs by 30%.",
       "Hardened Kubernetes with RBAC, IRSA, Vault, Kyverno, and Istio, enforcing least-privilege access and secure service-to-service communication.",
       "Engineered observability and centralized logging with ELK, Datadog, and Alertmanager, reducing MTTR by 50%.",
+      "Built AI-powered DevOps automation using LLMs, RAG, and Python for incident analysis and human-approved remediation.",
     ],
   },
   {
