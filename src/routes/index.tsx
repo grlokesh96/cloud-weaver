@@ -490,35 +490,6 @@ function Certifications() {
 }
 
 /* ---------------- Resume section ---------------- */
-function useResumeDownloadCount() {
-  const [count, setCount] = useState<number>(RESUME_DOWNLOAD_BASELINE);
-
-  useEffect(() => {
-    try {
-      const raw = window.localStorage.getItem(RESUME_DOWNLOAD_COUNT_KEY);
-      const parsed = raw ? Number.parseInt(raw, 10) : NaN;
-      if (Number.isFinite(parsed) && parsed >= RESUME_DOWNLOAD_BASELINE) {
-        setCount(parsed);
-      }
-    } catch {
-      /* localStorage unavailable — keep baseline */
-    }
-  }, []);
-
-  const increment = () => {
-    setCount((prev) => {
-      const next = prev + 1;
-      try {
-        window.localStorage.setItem(RESUME_DOWNLOAD_COUNT_KEY, String(next));
-      } catch {
-        /* ignore */
-      }
-      return next;
-    });
-  };
-
-  return { count, increment };
-}
 
 /** Reads the real size of the served PDF so the card always matches the live file. */
 function useLiveResumeSize() {
@@ -542,7 +513,7 @@ function useLiveResumeSize() {
 }
 
 function ResumeSection() {
-  const { count, increment } = useResumeDownloadCount();
+  const count = useResumeDownloadTotal();
   const liveSize = useLiveResumeSize();
   const [downloading, setDownloading] = useState(false);
   const [downloaded, setDownloaded] = useState(false);
@@ -559,7 +530,7 @@ function ResumeSection() {
       document.body.appendChild(a);
       a.click();
       a.remove();
-      increment();
+      void recordResumeDownload();
       setDownloaded(true);
     } finally {
       window.setTimeout(() => setDownloading(false), 900);
