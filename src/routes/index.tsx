@@ -301,7 +301,7 @@ function Experience() {
     <section id="experience" className="section-shell">
       <div className="section-container">
         <Reveal>
-          <SectionHeading eyebrow="Experience" title="5+ years engineering cloud-native platforms, DevSecOps automation, and scalable Kubernetes infrastructure." />
+          <SectionHeading eyebrow="Experience" title="5+ years building secure cloud-native infrastructure, automating DevSecOps, and scaling Kubernetes workloads." />
         </Reveal>
         <div className="mt-12 relative">
           <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-[var(--color-aurora-1)]/50 via-white/10 to-transparent md:left-1/2" />
