@@ -29,7 +29,8 @@ export const ROLES = [
   "Infrastructure Automation Engineer",
   "Cloud Native Engineer",
   "GitOps Engineer",
-  "Platform Engineer",
+  "Azure DevOps Engineer",
+  "AIOps Engineer",
   "Site Reliability Engineer",
   "Cloud Security Engineer",
 ];
