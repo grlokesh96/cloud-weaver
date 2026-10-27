@@ -270,7 +270,7 @@ function About() {
           </Reveal>
           <Reveal delay={0.4}>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              My goal is to build systems that are automated by default, secure by design, observable, and engineered for scale. I enjoy solving complex infrastructure challenges, improving operational workflows, and turning recurring problems into reliable, repeatable engineering solutions.
+              My goal is to build systems that are <span className="text-highlight">automated by default</span>, <span className="text-highlight">secure by design</span>, <span className="text-highlight">observable</span>, and <span className="text-highlight">engineered for scale</span>. I enjoy solving complex infrastructure challenges, improving operational workflows, and turning recurring problems into reliable, repeatable engineering solutions.
             </p>
           </Reveal>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
