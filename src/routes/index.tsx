@@ -244,7 +244,7 @@ function About() {
     <section id="about" className="section-shell">
       <div className="section-container">
         <Reveal>
-          <SectionHeading eyebrow="About" title="Platform engineer, obsessed with reliability." />
+          <SectionHeading eyebrow="About" title="DevOps Engineer, obsessed with reliability and AI-driven automation." />
         </Reveal>
 
         <div className="mt-10 space-y-6">
