@@ -408,14 +408,7 @@ function Projects() {
               >
                 <div className="absolute inset-x-0 -top-24 h-40 bg-gradient-to-b from-[var(--color-aurora-1)]/20 via-[var(--color-aurora-2)]/10 to-transparent opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="relative">
-                  <div className="flex flex-wrap gap-1.5">
-                    {p.categories.slice(0, 3).map(c => (
-                      <span key={c} className="rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] uppercase tracking-wider text-primary">
-                        {c}
-                      </span>
-                    ))}
-                  </div>
-                  <h3 className="mt-3 text-xl font-semibold leading-tight">{p.title}</h3>
+                  <h3 className="text-xl font-semibold leading-tight">{p.title}</h3>
                   <p className="mt-2 text-sm text-muted-foreground">{p.summary}</p>
 
                   <div className="mt-4 space-y-2 text-xs">
