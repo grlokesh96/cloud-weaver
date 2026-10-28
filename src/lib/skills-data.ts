@@ -57,6 +57,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Lambda", img: awsLambda.url, label: "AWS Lambda" },
       { name: "RDS", img: awsRds.url, label: "Amazon RDS" },
       { name: "Route 53", img: "/tech/aws-route53.svg", label: "Amazon Route 53" },
+      { name: "WAF", img: "/tech/aws-waf.svg", label: "AWS WAF" },
       { name: "DynamoDB", img: "/tech/aws-dynamodb.svg", label: "Amazon DynamoDB" },
       { name: "Azure", img: azureLogo.url, label: "Microsoft Azure" },
       { name: "Azure VMs", img: "/tech/azure-vm.svg", label: "Azure Virtual Machines" },
@@ -64,6 +65,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Entra ID", img: "/tech/azure-entra.svg", label: "Microsoft Entra ID" },
       { name: "VNets", img: "/tech/azure-vnet.svg", label: "Azure Virtual Networks" },
       { name: "Azure RBAC", img: azureRbac.url, label: "Azure Role-Based Access Control" },
+      { name: "Azure Cost Management", img: "/tech/azure-cost-management.svg", label: "Azure Cost Management" },
     ],
   },
   {
