@@ -164,8 +164,8 @@ export const PROJECTS: Project[] = [
 ];
 
 export const PROJECT_FILTERS = [
-  "All", "AWS", "Kubernetes", "Terraform", "DevSecOps", "Platform Engineering",
-  "CI/CD", "GitOps", "Infrastructure as Code", "Monitoring", "Security",
+  "All", "AWS", "Kubernetes", "Terraform", "DevSecOps",
+  "CI/CD", "GitOps", "Infrastructure as Code", "Monitoring",
 ];
 
 export const CERTIFICATIONS = [
