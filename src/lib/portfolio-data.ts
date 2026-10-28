@@ -135,16 +135,16 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     title: "Cloud-Native Trading & Portfolio Platform",
-    summary: "Production-grade DevSecOps and GitOps platform for a scalable microservices-based trading application.",
-    problem: "Trading platform required high availability, zero-downtime releases, secure delivery, and scalable Kubernetes operations across 20+ microservices and multiple enviroments.",
-    solution: "Built and operated AWS EKS infrastructure using Terraform,\nGitHub Actions, GitLab CI/CD and Argo CD for CI/CD and GitOps delivery. Implemented Docker, Helm, Istio service mesh, and Datadog/Prometheus observability, and integrated Gitleaks, Semgrep, SonarQube, Snyk, Trivy, Checkov, SBOM generation, and Cosign signing into the DevSecOps lifecycle.",
+    summary: "Production-grade DevSecOps and GitOps platform supporting 20+ microservices, with automated deployments, integrated security controls, and production observability.",
+    problem: "The trading platform required high availability, zero-downtime deployments, secure software delivery, and reliable Kubernetes operations across multiple environments.",
+    solution: "Built and operated AWS EKS infrastructure using Terraform and automated CI/CD workflows with GitHub Actions, Argo CD, and Helm. Integrated security scanning using Checkmarx One, SonarQube, Snyk, Gitleaks, Trivy, and Checkov. Implemented SBOM generation with Syft, container image signing with Cosign, Istio service mesh, and observability using Datadog and Prometheus.",
     impact: [
       "45% faster releases",
-      "60% fewer critical vulns",
       "99.9% production availability",
-      "50% MTTR reduction",
+      "50% reduction in MTTR",
+      "40% reduction in incident investigation time through AI-assisted analysis",
     ],
-    tech: ["AWS", "Kubernetes", "GitHub Actions", "Argo CD", "Terraform", "Istio", "Datadog", "Vault", "SonarQube", "Snyk"],
+    tech: ["AWS", "EKS", "Kubernetes", "Terraform", "GitHub Actions", "Argo CD", "Helm", "Istio", "Checkmarx One", "SonarQube", "Trivy", "Syft", "Cosign", "Datadog", "Prometheus", "Python", "LLMs", "RAG"],
     categories: ["AWS", "Kubernetes", "Terraform", "GitOps", "DevSecOps", "Platform Engineering", "CI/CD"],
   },
   {
