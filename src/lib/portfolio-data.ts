@@ -161,33 +161,6 @@ export const PROJECTS: Project[] = [
     tech: ["AWS", "Azure", "Kubernetes", "EKS/AKS", "Docker", "Helm", "Terraform", "Ansible", "GitHub Actions", "Argo CD", "Trivy", "Prometheus", "Grafana"],
     categories: ["Kubernetes", "CI/CD", "GitOps", "Infrastructure as Code", "Monitoring"],
   },
-  {
-    title: "Continuous Personal Health — Philips Healthcare",
-    summary: "CI/CD automation platform to accelerate release velocity for a healthcare application.",
-    problem: "Manual, drift-prone releases across Test/QA/UAT/Prod slowed engineering and increased risk.",
-    solution: "Designed Jenkins pipelines with Maven/Docker/Ansible across 100+ EC2 instances, eliminating drift. Docker Hub registry, Tomcat deploys, and comprehensive runbooks.",
-    impact: [
-      "99% build success rate",
-      "75% fewer env issues",
-      "Weekly → daily releases",
-      "20% less senior-engineer dependency",
-    ],
-    tech: ["Jenkins", "Maven", "Docker", "Ansible", "AWS EC2", "Tomcat"],
-    categories: ["CI/CD", "AWS", "Platform Engineering"],
-  },
-  {
-    title: "Digital Products & Subscriptions Platform",
-    summary: "L1/L2 Cloud Operations & Reliability for a multi-cloud AWS + Azure environment.",
-    problem: "Multi-cloud (AWS + Azure) subscriptions platform required uptime, DR and cost governance.",
-    solution: "Automated backup/DR with Lambda + EBS Snapshots. Enforced IAM least-privilege + MFA. Cost governance via Cost Explorer, right-sizing and auto-shutdown scripts.",
-    impact: [
-      "~70% less data-loss risk",
-      "25–30% monthly cost savings",
-      "30% MTTR reduction",
-    ],
-    tech: ["AWS", "Azure", "Lambda", "IAM", "Jira", "ITIL"],
-    categories: ["AWS", "Security", "Monitoring"],
-  },
 ];
 
 export const PROJECT_FILTERS = [
