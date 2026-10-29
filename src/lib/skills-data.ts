@@ -1,7 +1,7 @@
 import {
   SiKubernetes, SiDocker, SiTerraform, SiGithub, SiGit, SiArgo, SiHelm,
   SiPrometheus, SiGrafana, SiJenkins, SiPython, SiAnsible, SiNginx, SiIstio,
-  SiGitlab, SiGithubactions, SiSonarqubeserver, SiJfrog, SiSonatype, SiTrivy,
+  SiGitlab, SiGithubactions, SiSonarqubeserver, SiSonatype, SiTrivy,
   SiSnyk, SiOwasp, SiVault, SiDatadog, SiElasticstack, SiOpentelemetry,
   SiGnubash, SiPaloaltonetworks, SiPodman,
   SiAnthropic, SiClaude, SiLangchain, SiFastapi, SiGoogle, SiModelcontextprotocol,
@@ -79,7 +79,6 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Azure DevOps", icon: VscAzureDevops, color: "#0078D4" },
       { name: "GitLab CI/CD", icon: SiGitlab, color: "#FC6D26" },
       { name: "Argo CD", icon: SiArgo, color: "#EF7B4D" },
-      { name: "JFrog Artifactory", icon: SiJfrog, color: "#40BE46" },
       { name: "Git", icon: SiGit, color: "#F05033" },
       { name: "GitHub", icon: SiGithub },
       { name: "GitOps", icon: SiArgo, color: "#EF7B4D" },
