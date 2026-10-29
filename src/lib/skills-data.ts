@@ -91,6 +91,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Helm", icon: SiHelm, color: "#277A9F" },
       { name: "Karpenter", mono: "KP", color: AWS },
       { name: "Istio", icon: SiIstio, color: "#466BB0" },
+      { name: "AWS Load Balancer", img: "/tech/aws-elb.svg", label: "AWS Elastic Load Balancing" },
       { name: "NGINX", icon: SiNginx, color: "#009639" },
       { name: "Kubernetes HPA", icon: SiKubernetes, color: K8S },
       { name: "Cluster Autoscaler", icon: SiKubernetes, color: K8S },
