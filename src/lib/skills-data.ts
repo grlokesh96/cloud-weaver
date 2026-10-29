@@ -4,6 +4,7 @@ import {
   SiGitlab, SiGithubactions, SiSonarqubeserver, SiJfrog, SiSonatype, SiTrivy,
   SiSnyk, SiOwasp, SiVault, SiDatadog, SiElasticstack, SiOpentelemetry,
   SiGnubash, SiPaloaltonetworks, SiPodman,
+  SiAnthropic, SiLangchain, SiFastapi, SiGoogle, SiModelcontextprotocol,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { VscAzureDevops } from "react-icons/vsc";
@@ -136,6 +137,18 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Bash", icon: SiGnubash, color: "#4EAA25" },
       { name: "Terraform", icon: SiTerraform, color: "#844FBA" },
       { name: "Ansible", icon: SiAnsible, color: "#EE3333" },
+    ],
+  },
+  {
+    id: "ai",
+    title: "AI & AIOps",
+    tools: [
+      { name: "LLMs", icon: SiAnthropic, color: "#D97757", label: "Large Language Models" },
+      { name: "RAG", icon: SiLangchain, color: "#1C9A8C", label: "Retrieval-Augmented Generation" },
+      { name: "FastAPI", icon: SiFastapi, color: "#009688" },
+      { name: "Google ADK", icon: SiGoogle, color: "#4285F4", label: "Google Agent Development Kit" },
+      { name: "MCP", icon: SiModelcontextprotocol, label: "Model Context Protocol" },
+      { name: "Amazon Bedrock", img: "/tech/aws-bedrock.svg" },
     ],
   },
 ];
