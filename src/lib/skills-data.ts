@@ -4,7 +4,7 @@ import {
   SiGitlab, SiGithubactions, SiSonarqubeserver, SiJfrog, SiSonatype, SiTrivy,
   SiSnyk, SiOwasp, SiVault, SiDatadog, SiElasticstack, SiOpentelemetry,
   SiGnubash, SiPaloaltonetworks, SiPodman,
-  SiAnthropic, SiLangchain, SiFastapi, SiGoogle, SiModelcontextprotocol,
+  SiAnthropic, SiClaude, SiLangchain, SiFastapi, SiGoogle, SiModelcontextprotocol,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { VscAzureDevops } from "react-icons/vsc";
@@ -150,7 +150,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "MCP", icon: SiModelcontextprotocol, label: "Model Context Protocol" },
       { name: "Amazon Bedrock", img: "/tech/aws-bedrock.svg" },
       { name: "Kiro CLI", img: "/tech/kiro.svg" },
-      { name: "AWS OpenSearch Service", img: "/tech/aws-opensearch.svg" },
+      { name: "Claude", icon: SiClaude, color: "#D97757" },
     ],
   },
 ];
