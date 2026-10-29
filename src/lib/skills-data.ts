@@ -6,6 +6,7 @@ import {
   SiGnubash, SiPaloaltonetworks, SiPodman,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
+import { VscAzureDevops } from "react-icons/vsc";
 import type { IconType } from "react-icons";
 const awsEc2 = { url: "/tech/aws-ec2.svg" };
 const awsEks = { url: "/tech/aws-eks.svg" };
@@ -74,6 +75,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
     tools: [
       { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
       { name: "Jenkins", icon: SiJenkins, color: "#D33833" },
+      { name: "Azure DevOps", icon: VscAzureDevops, color: "#0078D4" },
       { name: "GitLab CI/CD", icon: SiGitlab, color: "#FC6D26" },
       { name: "Argo CD", icon: SiArgo, color: "#EF7B4D" },
       { name: "JFrog Artifactory", icon: SiJfrog, color: "#40BE46" },
