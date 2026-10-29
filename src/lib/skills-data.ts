@@ -150,7 +150,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "MCP", icon: SiModelcontextprotocol, label: "Model Context Protocol" },
       { name: "Amazon Bedrock", img: "/tech/aws-bedrock.svg" },
       { name: "Kiro CLI", img: "/tech/kiro.svg" },
-      { name: "Amazon OpenSearch Service", img: "/tech/aws-opensearch.svg" },
+      { name: "AWS OpenSearch Service", img: "/tech/aws-opensearch.svg" },
     ],
   },
 ];
