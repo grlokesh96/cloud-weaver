@@ -72,6 +72,8 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "VNets", img: "/tech/azure-vnet.svg", label: "Azure Virtual Networks" },
       { name: "Azure RBAC", img: azureRbac.url, label: "Azure Role-Based Access Control" },
       { name: "Azure Cost Management", img: "/tech/azure-cost-management.svg", label: "Azure Cost Management" },
+      { name: "Azure Activity Log", img: "/tech/azure-activity-log.svg" },
+      { name: "Azure CLI", img: "/tech/azure-cli.svg", label: "Azure Command-Line Interface" },
     ],
   },
   {
