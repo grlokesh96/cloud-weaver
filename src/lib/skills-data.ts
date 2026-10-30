@@ -107,6 +107,10 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Amazon ECR", img: awsEcr.url },
       { name: "Azure ACR", img: "/tech/azure-acr.svg", label: "Azure Container Registry" },
       { name: "Podman", icon: SiPodman, color: "#A78BFA" },
+      { name: "AWS Fargate", img: "/tech/aws-fargate.svg" },
+      { name: "Azure Container Apps", img: "/tech/azure-container-apps.svg" },
+      { name: "Application Gateway", img: "/tech/azure-app-gateway.svg", label: "Azure Application Gateway" },
+      { name: "KEDA", img: "/tech/keda.svg", label: "Kubernetes Event-driven Autoscaling" },
     ],
   },
   {
