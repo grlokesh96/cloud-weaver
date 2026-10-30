@@ -87,7 +87,6 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Argo CD", icon: SiArgo, color: "#EF7B4D" },
       { name: "Git", icon: SiGit, color: "#F05033" },
       { name: "GitHub", icon: SiGithub },
-      { name: "GitOps", icon: SiArgo, color: "#EF7B4D" },
       { name: "JFrog Artifactory", icon: SiJfrog, color: "#40BE46" },
     ],
   },
