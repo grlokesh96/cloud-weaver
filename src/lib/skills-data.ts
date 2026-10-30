@@ -3,7 +3,7 @@ import {
   SiPrometheus, SiGrafana, SiJenkins, SiPython, SiAnsible, SiNginx, SiIstio,
   SiGitlab, SiGithubactions, SiSonarqubeserver, SiSonatype, SiTrivy,
   SiSnyk, SiOwasp, SiVault, SiDatadog, SiElasticstack, SiOpentelemetry,
-  SiGnubash, SiPaloaltonetworks, SiPodman,
+  SiGnubash, SiPaloaltonetworks, SiPodman, SiJfrog,
   SiAnthropic, SiClaude, SiLangchain, SiFastapi, SiGoogle, SiModelcontextprotocol,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
@@ -88,6 +88,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Git", icon: SiGit, color: "#F05033" },
       { name: "GitHub", icon: SiGithub },
       { name: "GitOps", icon: SiArgo, color: "#EF7B4D" },
+      { name: "JFrog Artifactory", icon: SiJfrog, color: "#40BE46" },
     ],
   },
   {
