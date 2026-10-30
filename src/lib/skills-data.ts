@@ -127,8 +127,8 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Syft", mono: "SY", color: "#4AA8FF" },
       { name: "Cosign", mono: "CS", color: "#F59E0B" },
       { name: "HashiCorp Vault", icon: SiVault, color: "#FFD814" },
-      { name: "AWS Secrets Manager", img: awsSecretsManager.url },
-      { name: "IAM & RBAC", icon: SiKubernetes, color: K8S },
+      { name: "Kyverno", img: "/tech/kyverno.svg" },
+      { name: "OPA Gatekeeper", img: "/tech/opa.svg", label: "Open Policy Agent Gatekeeper" },
     ],
   },
   {
