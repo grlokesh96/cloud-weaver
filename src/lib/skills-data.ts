@@ -7,7 +7,8 @@ import {
   SiAnthropic, SiClaude, SiLangchain, SiFastapi, SiGoogle, SiModelcontextprotocol,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
-import { VscAzureDevops } from "react-icons/vsc";
+import { VscAzureDevops, VscTerminalPowershell } from "react-icons/vsc";
+import { SiLinux } from "react-icons/si";
 import type { IconType } from "react-icons";
 const awsEc2 = { url: "/tech/aws-ec2.svg" };
 const awsEks = { url: "/tech/aws-eks.svg" };
@@ -138,13 +139,18 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Grafana", icon: SiGrafana, color: "#F46800" },
       { name: "Datadog", icon: SiDatadog, color: "#A07BE8" },
       { name: "ELK Stack", icon: SiElasticstack, color: "#00BFB3" },
+      { name: "Alertmanager", icon: SiPrometheus, color: "#E6522C", label: "Prometheus Alertmanager" },
+      { name: "Loki", img: "/tech/loki.png", label: "Grafana Loki" },
       { name: "OpenTelemetry", icon: SiOpentelemetry, color: "#F5A800" },
       { name: "AWS CloudWatch", img: awsCloudwatch.url },
       { name: "Azure Monitor", img: "/tech/azure-monitor.svg" },
       { name: "Python", icon: SiPython, color: "#4B8BBE" },
+      { name: "PowerShell", icon: VscTerminalPowershell, color: "#5391FE" },
+      { name: "Linux", icon: SiLinux, color: "#FCC624" },
       { name: "Boto3", mono: "B3", color: AWS },
       { name: "Bash", icon: SiGnubash, color: "#4EAA25" },
       { name: "Terraform", icon: SiTerraform, color: "#844FBA" },
+      { name: "Terragrunt", img: "/tech/terragrunt.svg" },
       { name: "Ansible", icon: SiAnsible, color: "#EE3333" },
     ],
   },
