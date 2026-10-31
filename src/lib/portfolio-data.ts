@@ -151,7 +151,7 @@ export const PROJECTS: Project[] = [
     title: "IoT Smart Devices — Real-Time Monitoring",
     summary: "Secure and scalable DevOps platform supporting an IoT-connected smart device ecosystem.",
     problem: "Supported 40+ microservices across Development, QA, and Production, requiring standardized CI/CD workflows, consistent deployments, secure delivery, and scalable cloud infrastructure.",
-    solution: "Automated CI/CD workflows using GitHub Actions and Argo CD for GitOps-based deployments. Developed reusable Terraform modules with S3 remote state and DynamoDB state locking, automated infrastructure provisioning using Ansible, optimized Docker images through multi-stage builds, and implemented Kubernetes monitoring with Prometheus and Grafana.",
+    solution: "Designed and implemented standardized CI/CD and GitOps workflows using GitHub Actions and Argo CD for automated deployments across 40+ microservices. Developed reusable Terraform modules to provision AWS infrastructure, reducing provisioning time by 80%, and automated Linux configuration management using Ansible. Optimized Docker images through multi-stage builds, reducing image footprint by 60%, and implemented Kubernetes monitoring using Prometheus, Grafana, and AWS CloudWatch for proactive alerting and improved operational visibility.",
     impact: [
       "40+ microservices supported",
       "60% reduction in Docker image size",
