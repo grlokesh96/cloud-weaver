@@ -3,7 +3,7 @@ import {
   SiPrometheus, SiGrafana, SiJenkins, SiPython, SiAnsible, SiNginx, SiIstio,
   SiGitlab, SiGithubactions, SiSonarqubeserver, SiSonatype, SiTrivy,
   SiSnyk, SiOwasp, SiVault, SiDatadog, SiElasticstack, SiOpentelemetry,
-  SiGnubash, SiPaloaltonetworks, SiPodman, SiJfrog,
+  SiGnubash, SiPaloaltonetworks, SiPodman, SiJfrog, SiFalco, SiCilium,
   SiAnthropic, SiClaude, SiLangchain, SiFastapi, SiGoogle, SiModelcontextprotocol,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
@@ -129,6 +129,10 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "HashiCorp Vault", icon: SiVault, color: "#FFD814" },
       { name: "Kyverno", img: "/tech/kyverno.svg" },
       { name: "OPA Gatekeeper", img: "/tech/opa.svg", label: "Open Policy Agent Gatekeeper" },
+      { name: "Falco", icon: SiFalco, color: "#00AEC7" },
+      { name: "Cilium", icon: SiCilium, color: "#F8C517" },
+      { name: "Kube-bench", img: "/tech/kube-bench.png" },
+      { name: "Kubescape", img: "/tech/kubescape.svg" },
     ],
   },
   {
