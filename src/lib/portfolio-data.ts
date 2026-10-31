@@ -137,7 +137,7 @@ export const PROJECTS: Project[] = [
     title: "Cloud-Native Trading & Portfolio Platform",
     summary: "Production-grade DevSecOps and GitOps platform supporting 20+ microservices, with automated deployments, integrated security controls, and production observability.",
     problem: "The trading platform required high availability, zero-downtime deployments, secure software delivery, and reliable Kubernetes operations across multiple environments.",
-    solution: "Built and operated AWS EKS infrastructure using Terraform and automated CI/CD workflows with GitHub Actions, Argo CD, and Helm. Integrated security scanning using Checkmarx One, SonarQube, Snyk, Gitleaks, Trivy, and Checkov. Implemented SBOM generation with Syft, container image signing with Cosign, Istio service mesh, and observability using Datadog and Prometheus.",
+    solution: "Built and operated AWS EKS infrastructure using Terraform and automated CI/CD workflows with GitHub Actions, Argo CD, and Helm. Integrated security scanning using Checkmarx One, SonarQube, Snyk, Gitleaks, Trivy, and Checkov. Implemented SBOM generation with Syft, container image signing with Cosign, Istio service mesh, and observability using Datadog and Prometheus. Leveraged AI-assisted incident analysis to accelerate troubleshooting and root cause identification, achieving a 40% reduction in incident investigation time.",
     impact: [
       "45% faster releases",
       "99.9% production availability",
