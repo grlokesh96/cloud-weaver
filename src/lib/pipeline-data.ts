@@ -205,7 +205,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "lint", name: "Code Quality", short: "Lint & style checks",
-    icon: Sparkles, tools: [T.eslint, T.pylint, T.checkstyle, T.pmd, T.spotbugs],
+    icon: Sparkles, tools: [T.eslint, T.sonar, T.pylint, T.checkstyle, T.pmd, T.spotbugs],
     categories: ["CI"],
     description: "Static style, complexity, and correctness checks with fail-fast gates.",
     input: "Source", output: "Lint report",
