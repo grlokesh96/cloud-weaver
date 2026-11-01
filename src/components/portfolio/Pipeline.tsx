@@ -36,7 +36,9 @@ function LogoTile({ tool, size = 30 }: { tool: Tool; size?: number }) {
         className="pointer-events-none absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 group-hover/logo:opacity-100"
         style={{ boxShadow: `0 0 16px 2px ${tool.color}55, inset 0 0 0 1px ${tool.color}66` }}
       />
-      {Icon ? (
+      {tool.img ? (
+        <img src={tool.img} alt="" aria-hidden loading="lazy" className="rounded-[3px] object-contain" style={{ width: size * 0.6, height: size * 0.6 }} />
+      ) : Icon ? (
         <Icon aria-hidden style={{ color: tool.color, width: size * 0.55, height: size * 0.55 }} />
       ) : (
         <span className="font-mono text-[10px] font-bold tracking-tight text-foreground">
