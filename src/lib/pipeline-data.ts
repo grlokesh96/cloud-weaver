@@ -2,7 +2,7 @@ import type { IconType } from "react-icons";
 import {
   SiGithub, SiGitlab, SiBitbucket, SiGithubactions, SiJenkins, SiCircleci,
   SiNodedotjs, SiNpm, SiYarn, SiPnpm, SiApachemaven, SiGradle, SiPython, SiGo,
-  SiEslint, SiSonarqubeserver, SiSonar, SiSnyk, SiOwasp, SiDependabot, SiRenovate,
+  SiEslint, SiPodman, SiSonarqubeserver, SiSonar, SiSnyk, SiOwasp, SiDependabot, SiRenovate,
   SiJunit5, SiJest, SiPytest, SiDocker, SiTerraform, SiHelm, SiArgo,
   SiKubernetes, SiJfrog, SiTrivy, SiSpdx,
   SiPrometheus, SiGrafana, SiOpentelemetry, SiDatadog, SiElasticstack, SiFluentbit,
@@ -80,6 +80,7 @@ const T = {
   spotbugs:    { name: "SpotBugs",       mono: "SB",             color: "#E44D26" },
 
   checkmarx:   { name: "Checkmarx One",  mono: "CX", img: "/tech/checkmarx.png", color: "#00A1E0" },
+  podman:      { name: "Podman",         icon: SiPodman,         color: "#892CA0" },
   sonar:       { name: "SonarQube",      icon: SiSonarqubeserver, color: "#4E9BCD" },
   semgrep:     { name: "Semgrep",        mono: "SG",             color: "#6366F1" },
   codeql:      { name: "CodeQL",         icon: SiGithub,         color: "#2088FF" },
@@ -242,7 +243,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "build", name: "Build", short: "Compile & package",
-    icon: Hammer, tools: [T.docker, T.maven, T.gradle, T.node],
+    icon: Hammer, tools: [T.docker, T.podman, T.maven, T.gradle, T.node],
     categories: ["CI"],
     description: "Produce immutable, reproducible build artifacts with SLSA provenance.",
     input: "Source + deps", output: "JAR / bundle / OCI image",
