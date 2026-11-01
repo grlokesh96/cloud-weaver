@@ -81,6 +81,7 @@ const T = {
 
   checkmarx:   { name: "Checkmarx One",  mono: "CX", img: "/tech/checkmarx.png", color: "#00A1E0" },
   podman:      { name: "Podman",         icon: SiPodman,         color: "#892CA0" },
+  acr:         { name: "Azure ACR",      mono: "ACR", img: "/tech/azure-acr.svg", color: "#0078D4" },
   sonar:       { name: "SonarQube",      icon: SiSonarqubeserver, color: "#4E9BCD" },
   semgrep:     { name: "Semgrep",        mono: "SG",             color: "#6366F1" },
   codeql:      { name: "CodeQL",         icon: SiGithub,         color: "#2088FF" },
@@ -288,7 +289,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "registry", name: "Artifact Registry", short: "Publish signed image",
-    icon: Archive, tools: [T.ecr, T.dockerHub, T.ghcr, T.jfrog],
+    icon: Archive, tools: [T.ecr, T.acr, T.dockerHub, T.ghcr, T.jfrog],
     categories: ["Cloud", "Containers"],
     description: "Push signed, scanned image with immutable tags to a trusted registry.",
     input: "Signed image", output: "Registry reference",
