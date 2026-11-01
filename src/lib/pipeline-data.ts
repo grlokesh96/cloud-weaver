@@ -27,6 +27,7 @@ export interface Tool {
   color: string;         // official brand color (or accent for monograms)
   icon?: IconType;       // react-icons brand SVG (Simple Icons / FA6)
   mono?: string;         // 1-3 letter monogram fallback when no official icon exists
+  img?: string;          // official logo image path (public/) when no react-icon exists
 }
 
 export interface PipelineStage {
@@ -69,7 +70,7 @@ const T = {
   go:          { name: "Go",             icon: SiGo,             color: "#00ADD8" },
 
   gitleaks:    { name: "Gitleaks",       mono: "GL",             color: "#EE1C25" },
-  trufflehog:  { name: "TruffleHog",     mono: "TH",             color: "#7B4397" },
+  trufflehog:  { name: "TruffleHog",     mono: "TH", img: "/tech/trufflehog.png", color: "#7B4397" },
   ghSecret:    { name: "GH Secret Scan", icon: SiGithub,         color: "#3FB950" },
 
   eslint:      { name: "ESLint",         icon: SiEslint,         color: "#4B32C3" },
