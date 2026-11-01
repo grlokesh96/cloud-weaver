@@ -79,6 +79,7 @@ const T = {
   pmd:         { name: "PMD",            mono: "PMD",            color: "#7B68EE" },
   spotbugs:    { name: "SpotBugs",       mono: "SB",             color: "#E44D26" },
 
+  checkmarx:   { name: "Checkmarx One",  mono: "CX", img: "/tech/checkmarx.png", color: "#00A1E0" },
   sonar:       { name: "SonarQube",      icon: SiSonarqubeserver, color: "#4E9BCD" },
   semgrep:     { name: "Semgrep",        mono: "SG",             color: "#6366F1" },
   codeql:      { name: "CodeQL",         icon: SiGithub,         color: "#2088FF" },
@@ -214,7 +215,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "sast", name: "SAST", short: "Static app security testing",
-    icon: ShieldCheck, tools: [T.sonar, T.semgrep, T.codeql, T.snykCode],
+    icon: ShieldCheck, tools: [T.sonar, T.checkmarx, T.semgrep, T.codeql, T.snykCode],
     categories: ["Security"],
     description: "Deep static analysis for injection, auth, crypto, and CWE-tagged weaknesses.",
     input: "Source", output: "SARIF + PR annotations",
