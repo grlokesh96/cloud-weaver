@@ -125,7 +125,7 @@ const T = {
   ghcr:        { name: "GHCR",           icon: SiGithub,         color: "#f0f6fc" },
   jfrog:       { name: "JFrog",          icon: SiJfrog,          color: "#41BF47" },
 
-  helm:        { name: "Helm",           icon: SiHelm,           color: "#0F1689" },
+  helm:        { name: "Helm",           icon: SiHelm,           color: "#5B8DEF" },
   argocd:      { name: "Argo CD",        icon: SiArgo,           color: "#EF7B4D" },
   gitRepo:     { name: "Git Repo",       icon: SiGithub,         color: "#f0f6fc" },
 
