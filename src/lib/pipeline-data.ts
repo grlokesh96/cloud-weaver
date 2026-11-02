@@ -129,8 +129,8 @@ const T = {
   argocd:      { name: "Argo CD",        icon: SiArgo,           color: "#EF7B4D" },
   gitRepo:     { name: "Git Repo",       icon: SiGithub,         color: "#f0f6fc" },
 
-  kyverno:     { name: "Kyverno",        mono: "KY",             color: "#00B39F" },
-  opa:         { name: "OPA Gatekeeper", mono: "OPA",            color: "#7D4CDB" },
+  kyverno:     { name: "Kyverno",        mono: "KY", img: "/tech/kyverno.svg",             color: "#00B39F" },
+  opa:         { name: "OPA Gatekeeper", mono: "OPA", img: "/tech/opa.svg",            color: "#7D4CDB" },
   k8s:         { name: "Kubernetes",     icon: SiKubernetes,     color: "#326CE5" },
 
   eks:         { name: "Amazon EKS",     icon: FaAws,            color: "#FF9900" },
