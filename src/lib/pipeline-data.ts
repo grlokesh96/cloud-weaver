@@ -116,9 +116,9 @@ const T = {
   cyclonedx:   { name: "CycloneDX",      mono: "CDX",            color: "#FF6C37" },
   spdx:        { name: "SPDX",           icon: SiSpdx,           color: "#4398CC" },
 
-  cosign:      { name: "Cosign",         mono: "CO",             color: "#3B82F6" },
-  sigstore:    { name: "Sigstore",       mono: "SS",             color: "#2E86AB" },
-  notary:      { name: "Notary v2",      mono: "NT",             color: "#F59E0B" },
+  cosign:      { name: "Cosign",         mono: "CO", img: "/tech/cosign.svg", color: "#3B82F6" },
+  sigstore:    { name: "Sigstore",       mono: "SS", img: "/tech/sigstore.svg", color: "#2E86AB" },
+  notary:      { name: "Notary v2",      mono: "NT", img: "/tech/notary.svg", color: "#F59E0B" },
 
   ecr:         { name: "Amazon ECR",     icon: FaAws,            color: "#FF9900" },
   dockerHub:   { name: "Docker Hub",     icon: SiDocker,         color: "#2496ED" },
