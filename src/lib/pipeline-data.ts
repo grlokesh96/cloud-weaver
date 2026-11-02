@@ -9,6 +9,7 @@ import {
   SiPagerduty, SiJira, SiPortswigger, SiZap,
 } from "react-icons/si";
 import { FaAws, FaSlack, FaMicrosoft } from "react-icons/fa6";
+import { VscAzureDevops } from "react-icons/vsc";
 import {
   GitCommit, GitBranch, PlayCircle, Package, KeyRound, Sparkles,
   ShieldCheck, Boxes, FlaskConical, Hammer, FileCode2, Container,
@@ -57,7 +58,7 @@ const T = {
   ghActions:   { name: "GitHub Actions", icon: SiGithubactions,  color: "#2088FF" },
   gitlabCI:    { name: "GitLab CI",      icon: SiGitlab,         color: "#FC6D26" },
   jenkins:     { name: "Jenkins",        icon: SiJenkins,        color: "#D24939" },
-  azdo:        { name: "Azure DevOps",   mono: "AZ",             color: "#0078D7" },
+  azdo:        { name: "Azure DevOps",   icon: VscAzureDevops,   color: "#0078D4" },
   circleci:    { name: "CircleCI",       icon: SiCircleci,       color: "#00CCBD" },
 
   node:        { name: "Node.js",        icon: SiNodedotjs,      color: "#3C873A" },
