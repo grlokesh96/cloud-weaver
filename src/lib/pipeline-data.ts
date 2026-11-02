@@ -6,7 +6,7 @@ import {
   SiJunit5, SiJest, SiPytest, SiDocker, SiTerraform, SiHelm, SiArgo,
   SiKubernetes, SiJfrog, SiTrivy, SiSpdx,
   SiPrometheus, SiGrafana, SiOpentelemetry, SiDatadog, SiElasticstack, SiFluentbit,
-  SiPagerduty, SiJira, SiPortswigger, SiZap,
+  SiPagerduty, SiJira, SiPortswigger, SiZap, SiFalco, SiAqua,
 } from "react-icons/si";
 import { FaAws, FaSlack, FaMicrosoft } from "react-icons/fa6";
 import { VscAzureDevops } from "react-icons/vsc";
@@ -141,9 +141,9 @@ const T = {
   burp:        { name: "Burp Suite",     icon: SiPortswigger,    color: "#FF6633" },
   nikto:       { name: "Nikto",          mono: "NK",             color: "#8B0000" },
 
-  falco:       { name: "Falco",          mono: "FA",             color: "#00B4DC" },
+  falco:       { name: "Falco",          icon: SiFalco,          color: "#00AEC7" },
   prismaCloud: { name: "Prisma Cloud",   mono: "PC",             color: "#F04E23" },
-  aqua:        { name: "Aqua Security",  mono: "AQ",             color: "#FF6533" },
+  aqua:        { name: "Aqua Security",  icon: SiAqua,           color: "#1904DA" },
   sysdig:      { name: "Sysdig",         mono: "SD",             color: "#00AEEF" },
 
   prometheus:  { name: "Prometheus",     icon: SiPrometheus,     color: "#E6522C" },
