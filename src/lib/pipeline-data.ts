@@ -142,9 +142,9 @@ const T = {
   nikto:       { name: "Nikto",          mono: "NK",             color: "#8B0000" },
 
   falco:       { name: "Falco",          icon: SiFalco,          color: "#00AEC7" },
-  prismaCloud: { name: "Prisma Cloud",   mono: "PC",             color: "#F04E23" },
+  prismaCloud: { name: "Prisma Cloud",   mono: "PC", img: "/tech/prisma-cloud.svg",             color: "#F04E23" },
   aqua:        { name: "Aqua Security",  icon: SiAqua,           color: "#1904DA" },
-  sysdig:      { name: "Sysdig",         mono: "SD",             color: "#00AEEF" },
+  sysdig:      { name: "Sysdig",         mono: "SD", img: "/tech/sysdig.png",             color: "#00AEEF" },
 
   prometheus:  { name: "Prometheus",     icon: SiPrometheus,     color: "#E6522C" },
   grafana:     { name: "Grafana",        icon: SiGrafana,        color: "#F46800" },
