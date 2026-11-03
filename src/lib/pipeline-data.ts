@@ -112,8 +112,8 @@ const T = {
   dockerScout: { name: "Docker Scout",   icon: SiDocker,         color: "#00D4FF" },
   snykCont:    { name: "Snyk Container", icon: SiSnyk,           color: "#4C4A73" },
 
-  syft:        { name: "Syft",           mono: "SY",             color: "#7C3AED" },
-  cyclonedx:   { name: "CycloneDX",      mono: "CDX",            color: "#FF6C37" },
+  syft:        { name: "Syft",           mono: "SY", img: "/tech/syft.svg",             color: "#7C3AED" },
+  cyclonedx:   { name: "CycloneDX",      mono: "CDX", img: "/tech/cyclonedx.svg",            color: "#FF6C37" },
   spdx:        { name: "SPDX",           icon: SiSpdx,           color: "#4398CC" },
 
   cosign:      { name: "Cosign",         mono: "CO", img: "/tech/cosign.svg", color: "#3B82F6" },
