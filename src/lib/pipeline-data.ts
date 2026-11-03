@@ -75,10 +75,10 @@ const T = {
   ghSecret:    { name: "GH Secret Scan", icon: SiGithub,         color: "#3FB950" },
 
   eslint:      { name: "ESLint",         icon: SiEslint,         color: "#4B32C3" },
-  pylint:      { name: "Pylint",         mono: "PY",             color: "#FFD43B" },
-  checkstyle:  { name: "Checkstyle",     mono: "CS",             color: "#F5A623" },
-  pmd:         { name: "PMD",            mono: "PMD",            color: "#7B68EE" },
-  spotbugs:    { name: "SpotBugs",       mono: "SB",             color: "#E44D26" },
+  pylint:      { name: "Pylint",         mono: "PY", img: "/tech/pylint.svg",             color: "#FFD43B" },
+  checkstyle:  { name: "Checkstyle",     mono: "CS", img: "/tech/checkstyle.png",             color: "#F5A623" },
+  pmd:         { name: "PMD",            mono: "PMD", img: "/tech/pmd.svg",            color: "#7B68EE" },
+  spotbugs:    { name: "SpotBugs",       mono: "SB", img: "/tech/spotbugs.png",             color: "#E44D26" },
 
   checkmarx:   { name: "Checkmarx One",  mono: "CX", img: "/tech/checkmarx.png", color: "#00A1E0" },
   podman:      { name: "Podman",         icon: SiPodman,         color: "#892CA0" },
