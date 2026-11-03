@@ -73,7 +73,7 @@ const T = {
   python:      { name: "Python",         icon: SiPython,         color: "#3776AB" },
   go:          { name: "Go",             icon: SiGo,             color: "#00ADD8" },
 
-  gitleaks:    { name: "Gitleaks",       mono: "GL",             color: "#EE1C25" },
+  gitleaks:    { name: "Gitleaks",       mono: "GL", img: "/tech/gitleaks.png",             color: "#EE1C25" },
   trufflehog:  { name: "TruffleHog",     mono: "TH", img: "/tech/trufflehog.png", color: "#7B4397" },
   ghSecret:    { name: "GH Secret Scan", icon: SiGithub,         color: "#3FB950" },
 
