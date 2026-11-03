@@ -10,6 +10,8 @@ import {
 } from "react-icons/si";
 import { FaAws, FaSlack, FaMicrosoft } from "react-icons/fa6";
 import { VscAzureDevops } from "react-icons/vsc";
+import { TbArrowsExchange } from "react-icons/tb";
+import { GiBirdTwitter } from "react-icons/gi";
 import {
   GitCommit, GitBranch, PlayCircle, Package, KeyRound, Sparkles,
   ShieldCheck, Boxes, FlaskConical, Hammer, FileCode2, Container,
@@ -134,8 +136,8 @@ const T = {
   k8s:         { name: "Kubernetes",     icon: SiKubernetes,     color: "#326CE5" },
 
   eks:         { name: "Amazon EKS",     icon: FaAws,            color: "#FF9900" },
-  blueGreen:   { name: "Blue/Green",     mono: "B/G",            color: "#3B82F6" },
-  canary:      { name: "Canary",         mono: "CN",             color: "#F59E0B" },
+  blueGreen:   { name: "Blue/Green",     mono: "B/G", icon: TbArrowsExchange,            color: "#3B82F6" },
+  canary:      { name: "Canary",         mono: "CN", icon: GiBirdTwitter,             color: "#F59E0B" },
 
   zap:         { name: "OWASP ZAP",      icon: SiZap,            color: "#00549E" },
   burp:        { name: "Burp Suite",     icon: SiPortswigger,    color: "#FF6633" },
