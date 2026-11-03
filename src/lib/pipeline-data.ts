@@ -10,6 +10,7 @@ import {
 } from "react-icons/si";
 import { FaAws, FaSlack, FaMicrosoft } from "react-icons/fa6";
 import { VscAzureDevops } from "react-icons/vsc";
+import { GoShieldLock, GoPeople, GoGitPullRequest } from "react-icons/go";
 import { TbArrowsExchange } from "react-icons/tb";
 import { GiBirdTwitter } from "react-icons/gi";
 import {
@@ -52,10 +53,10 @@ const T = {
   github:      { name: "GitHub",         icon: SiGithub,         color: "#f0f6fc" },
   gitlab:      { name: "GitLab",         icon: SiGitlab,         color: "#FC6D26" },
   bitbucket:   { name: "Bitbucket",      icon: SiBitbucket,      color: "#2684FF" },
-  codeowners:  { name: "CODEOWNERS",     mono: "CO",             color: "#8B949E" },
-  pr:          { name: "Pull Request",   mono: "PR",             color: "#2088FF" },
+  codeowners:  { name: "CODEOWNERS",     mono: "CO", icon: GoPeople, color: "#8B949E" },
+  pr:          { name: "Pull Request",   mono: "PR", icon: GoGitPullRequest,             color: "#2088FF" },
   mr:          { name: "Merge Request",  mono: "MR",             color: "#FC6D26" },
-  branchProt:  { name: "Branch Protection", mono: "BP",          color: "#3FB950" },
+  branchProt:  { name: "Branch Protection", mono: "BP", icon: GoShieldLock,          color: "#3FB950" },
 
   ghActions:   { name: "GitHub Actions", icon: SiGithubactions,  color: "#2088FF" },
   gitlabCI:    { name: "GitLab CI",      icon: SiGitlab,         color: "#FC6D26" },
