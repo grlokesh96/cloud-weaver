@@ -95,7 +95,7 @@ const T = {
   owaspDC:     { name: "OWASP DC",       icon: SiOwasp,          color: "#F26522" },
   snyk:        { name: "Snyk",           icon: SiSnyk,           color: "#4C4A73" },
   dependabot:  { name: "Dependabot",     icon: SiDependabot,     color: "#025E8C" },
-  renovate:    { name: "Renovate",       icon: SiRenovate,       color: "#FF6600" },
+  renovate:    { name: "Black Duck",     mono: "BD", img: "/tech/blackduck.png", color: "#FFC20E" },
 
   junit:       { name: "JUnit",          icon: SiJunit5,         color: "#25A162" },
   jest:        { name: "Jest",           icon: SiJest,           color: "#C21325" },
