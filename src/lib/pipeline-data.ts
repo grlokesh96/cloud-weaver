@@ -9,6 +9,7 @@ import {
   SiPagerduty, SiJira, SiPortswigger, SiZap, SiFalco, SiAqua,
 } from "react-icons/si";
 import { FaAws, FaSlack, FaMicrosoft } from "react-icons/fa6";
+import { SiPaloaltonetworks } from "react-icons/si";
 import { VscAzureDevops } from "react-icons/vsc";
 import { GoShieldLock, GoPeople, GoGitPullRequest } from "react-icons/go";
 import { TbArrowsExchange } from "react-icons/tb";
@@ -105,10 +106,10 @@ const T = {
   docker:      { name: "Docker",         icon: SiDocker,         color: "#2496ED" },
 
   terraform:   { name: "Terraform",      icon: SiTerraform,      color: "#7B42BC" },
-  checkov:     { name: "Checkov",        mono: "CK",             color: "#6D28D9" },
-  tfsec:       { name: "tfsec",          mono: "TS",             color: "#00A98F" },
-  terrascan:   { name: "Terrascan",      mono: "TC",             color: "#00B0FF" },
-  kics:        { name: "KICS",           mono: "KI",             color: "#EF4444" },
+  checkov:     { name: "Checkov",        mono: "CK", icon: SiPaloaltonetworks, color: "#FA582D" },
+  tfsec:       { name: "tfsec",          mono: "TS", img: "/tech/tfsec.png", color: "#00A98F" },
+  terrascan:   { name: "Terrascan",      mono: "TC", img: "/tech/terrascan.png", color: "#00B0FF" },
+  kics:        { name: "KICS",           mono: "KI", img: "/tech/kics.png", color: "#EF4444" },
 
   trivy:       { name: "Trivy",          icon: SiTrivy,          color: "#1904DA" },
   grype:       { name: "Grype",          mono: "GR",             color: "#FF6A00" },
