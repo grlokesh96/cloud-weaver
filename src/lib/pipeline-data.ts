@@ -143,7 +143,7 @@ const T = {
 
   zap:         { name: "OWASP ZAP",      icon: SiZap,            color: "#00549E" },
   burp:        { name: "Burp Suite",     icon: SiPortswigger,    color: "#FF6633" },
-  nikto:       { name: "Nikto",          mono: "NK",             color: "#8B0000" },
+  nikto:       { name: "Invicti",        mono: "IN", img: "/tech/invicti.png", color: "#1E90FF" },
 
   falco:       { name: "Falco",          icon: SiFalco,          color: "#00AEC7" },
   prismaCloud: { name: "Prisma Cloud",   mono: "PC", img: "/tech/prisma-cloud.svg",             color: "#F04E23" },
