@@ -144,6 +144,7 @@ const T = {
   zap:         { name: "OWASP ZAP",      icon: SiZap,            color: "#00549E" },
   burp:        { name: "Burp Suite",     icon: SiPortswigger,    color: "#FF6633" },
   nikto:       { name: "Invicti",        mono: "IN", img: "/tech/invicti.png", color: "#1E90FF" },
+  stackhawk:   { name: "StackHawk",      mono: "SH", img: "/tech/stackhawk.png", color: "#00CBC6" },
 
   falco:       { name: "Falco",          icon: SiFalco,          color: "#00AEC7" },
   prismaCloud: { name: "Prisma Cloud",   mono: "PC", img: "/tech/prisma-cloud.svg",             color: "#F04E23" },
@@ -330,7 +331,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "dast", name: "DAST", short: "Dynamic security testing",
-    icon: Bug, tools: [T.zap, T.burp, T.nikto],
+    icon: Bug, tools: [T.zap, T.burp, T.nikto, T.stackhawk],
     categories: ["Security", "Testing"],
     description: "Post-deploy black-box scan against staging / preview environment.",
     input: "Live URL", output: "DAST report",
