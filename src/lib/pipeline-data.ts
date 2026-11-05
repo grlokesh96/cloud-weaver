@@ -112,7 +112,7 @@ const T = {
   kics:        { name: "KICS",           mono: "KI", img: "/tech/kics.png", color: "#EF4444" },
 
   trivy:       { name: "Trivy",          icon: SiTrivy,          color: "#1904DA" },
-  grype:       { name: "Grype",          mono: "GR",             color: "#FF6A00" },
+  grype:       { name: "Grype",          mono: "GR", img: "/tech/grype.png", color: "#FF6A00" },
   dockerScout: { name: "Docker Scout",   icon: SiDocker,         color: "#00D4FF" },
   snykCont:    { name: "Snyk Container", icon: SiSnyk,           color: "#4C4A73" },
 
