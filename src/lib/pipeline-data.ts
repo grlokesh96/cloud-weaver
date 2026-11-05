@@ -11,7 +11,7 @@ import {
 import { FaAws, FaSlack, FaMicrosoft } from "react-icons/fa6";
 import { SiPaloaltonetworks } from "react-icons/si";
 import { VscAzureDevops } from "react-icons/vsc";
-import { GoShieldLock, GoPeople, GoGitPullRequest } from "react-icons/go";
+import { GoShieldLock, GoPeople, GoGitPullRequest, GoGitMerge } from "react-icons/go";
 import { TbArrowsExchange } from "react-icons/tb";
 import { GiBirdTwitter } from "react-icons/gi";
 import {
@@ -56,7 +56,7 @@ const T = {
   bitbucket:   { name: "Bitbucket",      icon: SiBitbucket,      color: "#2684FF" },
   codeowners:  { name: "CODEOWNERS",     mono: "CO", icon: GoPeople, color: "#8B949E" },
   pr:          { name: "Pull Request",   mono: "PR", icon: GoGitPullRequest,             color: "#2088FF" },
-  mr:          { name: "Merge Request",  mono: "MR",             color: "#FC6D26" },
+  mr:          { name: "Merge Request",  mono: "MR", icon: GoGitMerge,    color: "#FC6D26" },
   branchProt:  { name: "Branch Protection", mono: "BP", icon: GoShieldLock,          color: "#3FB950" },
 
   ghActions:   { name: "GitHub Actions", icon: SiGithubactions,  color: "#2088FF" },
