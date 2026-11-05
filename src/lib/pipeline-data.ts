@@ -8,7 +8,7 @@ import {
   SiPrometheus, SiGrafana, SiOpentelemetry, SiDatadog, SiElasticstack, SiFluentbit,
   SiPagerduty, SiJira, SiPortswigger, SiZap, SiFalco, SiAqua,
 } from "react-icons/si";
-import { FaAws, FaSlack, FaMicrosoft } from "react-icons/fa6";
+import { FaAws, FaSlack, FaMicrosoft, FaGitAlt } from "react-icons/fa6";
 import { SiPaloaltonetworks } from "react-icons/si";
 import { VscAzureDevops } from "react-icons/vsc";
 import { GoShieldLock, GoPeople, GoGitPullRequest, GoGitMerge } from "react-icons/go";
@@ -131,7 +131,7 @@ const T = {
 
   helm:        { name: "Helm",           icon: SiHelm,           color: "#5B8DEF" },
   argocd:      { name: "Argo CD",        icon: SiArgo,           color: "#EF7B4D" },
-  gitRepo:     { name: "Git Repo",       icon: SiGithub,         color: "#f0f6fc" },
+  gitRepo:     { name: "Git Repo",       icon: FaGitAlt,         color: "#F05133" },
 
   kyverno:     { name: "Kyverno",        mono: "KY", img: "/tech/kyverno.svg",             color: "#00B39F" },
   opa:         { name: "OPA Gatekeeper", mono: "OPA", img: "/tech/opa.svg",            color: "#7D4CDB" },
