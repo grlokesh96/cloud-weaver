@@ -6,6 +6,7 @@ import {
   SiJunit5, SiJest, SiPytest, SiDocker, SiTerraform, SiHelm, SiArgo,
   SiKubernetes, SiJfrog, SiTrivy, SiSpdx,
   SiPrometheus, SiGrafana, SiOpentelemetry, SiDatadog, SiElasticstack, SiFluentbit,
+  SiDash0,
   SiPagerduty, SiJira, SiPortswigger, SiZap, SiFalco, SiAqua,
 } from "react-icons/si";
 import { FaAws, FaSlack, FaMicrosoft, FaGitAlt } from "react-icons/fa6";
@@ -156,6 +157,7 @@ const T = {
   loki:        { name: "Loki",           icon: SiGrafana,        color: "#FFA500" },
   otel:        { name: "OpenTelemetry",  icon: SiOpentelemetry,  color: "#F5A800" },
   datadog:     { name: "Datadog",        icon: SiDatadog,        color: "#632CA6" },
+  dash0:       { name: "Dash0",          icon: SiDash0,          color: "#EA3D3B" },
   elk:         { name: "ELK Stack",      icon: SiElasticstack,   color: "#005571" },
   fluentbit:   { name: "Fluent Bit",     icon: SiFluentbit,      color: "#49BDA5" },
 
@@ -349,7 +351,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "monitor", name: "Observability", short: "Metrics, logs, traces",
-    icon: Activity, tools: [T.prometheus, T.grafana, T.loki, T.otel, T.datadog, T.elk, T.fluentbit],
+    icon: Activity, tools: [T.prometheus, T.grafana, T.loki, T.otel, T.datadog, T.dash0, T.elk, T.fluentbit],
     categories: ["Observability"],
     description: "Golden signals, SLOs, distributed traces, and correlated logs.",
     input: "OTel signals", output: "Dashboards + SLOs",
