@@ -9,7 +9,7 @@ import {
   SiDash0,
   SiPagerduty, SiJira, SiPortswigger, SiZap, SiFalco, SiAqua,
 } from "react-icons/si";
-import { FaAws, FaSlack, FaMicrosoft, FaGitAlt } from "react-icons/fa6";
+import { FaAws, FaSlack, FaGitAlt } from "react-icons/fa6";
 import { BsMicrosoftTeams } from "react-icons/bs";
 import { SiPaloaltonetworks } from "react-icons/si";
 import { VscAzureDevops } from "react-icons/vsc";
