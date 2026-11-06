@@ -9,7 +9,8 @@ import {
   SiDash0,
   SiPagerduty, SiJira, SiPortswigger, SiZap, SiFalco, SiAqua,
 } from "react-icons/si";
-import { FaAws, FaSlack, FaMicrosoft, FaGitAlt } from "react-icons/fa6";
+import { FaAws, FaSlack, FaGitAlt } from "react-icons/fa6";
+import { BsMicrosoftTeams } from "react-icons/bs";
 import { SiPaloaltonetworks } from "react-icons/si";
 import { VscAzureDevops } from "react-icons/vsc";
 import { GoShieldLock, GoPeople, GoGitPullRequest, GoGitMerge } from "react-icons/go";
@@ -162,7 +163,7 @@ const T = {
   fluentbit:   { name: "Fluent Bit",     icon: SiFluentbit,      color: "#49BDA5" },
 
   slack:       { name: "Slack",          icon: FaSlack,          color: "#B45BB8" },
-  teams:       { name: "MS Teams",       icon: FaMicrosoft,      color: "#6264A7" },
+  teams:       { name: "MS Teams",       icon: BsMicrosoftTeams, color: "#A5A8F2" },
   pagerduty:   { name: "PagerDuty",      icon: SiPagerduty,      color: "#06AC38" },
   sns:         { name: "Amazon SNS",     icon: FaAws,            color: "#E7157B" },
   jira:        { name: "Jira",           icon: SiJira,           color: "#0052CC" },
