@@ -71,7 +71,7 @@ const T = {
   yarn:        { name: "Yarn",           icon: SiYarn,           color: "#2C8EBB" },
   pnpm:        { name: "pnpm",           icon: SiPnpm,           color: "#F69220" },
   maven:       { name: "Maven",          icon: SiApachemaven,    color: "#C71A36" },
-  gradle:      { name: "Gradle",         icon: SiGradle,         color: "#02303A" },
+  gradle:      { name: "Gradle",         icon: SiGradle,         color: "#5FD3C9" },
   python:      { name: "Python",         icon: SiPython,         color: "#3776AB" },
   go:          { name: "Go",             icon: SiGo,             color: "#00ADD8" },
 
@@ -86,7 +86,7 @@ const T = {
   spotbugs:    { name: "SpotBugs",       mono: "SB", img: "/tech/spotbugs.png",             color: "#E44D26" },
 
   checkmarx:   { name: "Checkmarx One",  mono: "CX", img: "/tech/checkmarx.png", color: "#00A1E0" },
-  podman:      { name: "Podman",         icon: SiPodman,         color: "#892CA0" },
+  podman:      { name: "Podman",         icon: SiPodman,         color: "#C77DDB" },
   acr:         { name: "Azure ACR",      mono: "ACR", img: "/tech/azure-acr.svg", color: "#0078D4" },
   sonar:       { name: "SonarQube",      icon: SiSonarqubeserver, color: "#4E9BCD" },
   semgrep:     { name: "Semgrep",        mono: "SG",             color: "#6366F1" },
