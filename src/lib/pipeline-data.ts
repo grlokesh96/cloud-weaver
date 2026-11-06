@@ -91,10 +91,10 @@ const T = {
   sonar:       { name: "SonarQube",      icon: SiSonarqubeserver, color: "#4E9BCD" },
   semgrep:     { name: "Semgrep",        mono: "SG",             color: "#6366F1" },
   codeql:      { name: "CodeQL",         icon: SiGithub,         color: "#2088FF" },
-  snykCode:    { name: "Snyk Code",      icon: SiSnyk,           color: "#4C4A73" },
+  snykCode:    { name: "Snyk Code",      icon: SiSnyk,           color: "#8F8CE8" },
 
   owaspDC:     { name: "OWASP DC",       icon: SiOwasp,          color: "#F26522" },
-  snyk:        { name: "Snyk",           icon: SiSnyk,           color: "#4C4A73" },
+  snyk:        { name: "Snyk",           icon: SiSnyk,           color: "#8F8CE8" },
   dependabot:  { name: "Dependabot",     icon: SiDependabot,     color: "#025E8C" },
   renovate:    { name: "Black Duck",     mono: "BD", img: "/tech/blackduck.png", color: "#FFC20E" },
 
@@ -115,7 +115,7 @@ const T = {
   trivy:       { name: "Trivy",          icon: SiTrivy,          color: "#1904DA" },
   grype:       { name: "Grype",          mono: "GR", img: "/tech/grype.png", color: "#FF6A00" },
   dockerScout: { name: "Docker Scout",   icon: SiDocker,         color: "#00D4FF" },
-  snykCont:    { name: "Snyk Container", icon: SiSnyk,           color: "#4C4A73" },
+  snykCont:    { name: "Snyk Container", icon: SiSnyk,           color: "#8F8CE8" },
 
   syft:        { name: "Syft",           mono: "SY", img: "/tech/syft.svg",             color: "#7C3AED" },
   cyclonedx:   { name: "CycloneDX",      mono: "CDX", img: "/tech/cyclonedx.svg",            color: "#FF6C37" },
@@ -161,7 +161,7 @@ const T = {
   elk:         { name: "ELK Stack",      icon: SiElasticstack,   color: "#005571" },
   fluentbit:   { name: "Fluent Bit",     icon: SiFluentbit,      color: "#49BDA5" },
 
-  slack:       { name: "Slack",          icon: FaSlack,          color: "#4A154B" },
+  slack:       { name: "Slack",          icon: FaSlack,          color: "#B45BB8" },
   teams:       { name: "MS Teams",       icon: FaMicrosoft,      color: "#6264A7" },
   pagerduty:   { name: "PagerDuty",      icon: SiPagerduty,      color: "#06AC38" },
   sns:         { name: "Amazon SNS",     icon: FaAws,            color: "#E7157B" },
