@@ -70,8 +70,8 @@
   --pipeline-logo-surface: var(--secondary);
   --pipeline-logo-border: color-mix(in oklab, var(--foreground) 18%, transparent);
   --pipeline-logo-hover-border: color-mix(in oklab, var(--foreground) 35%, transparent);
-  --pipeline-logo-readable: oklch(from var(--pipeline-tool-brand, var(--foreground)) max(l, 0.72) min(c, 0.18) h);
-  --pipeline-logo-shadow: 0 0 16px 2px color-mix(in oklab, var(--pipeline-tool-brand, var(--primary)) 30%, transparent);
+  --pipeline-logo-min-lightness: 0.72;
+  --pipeline-logo-max-chroma: 0.18;
 }
 
 .dark {
@@ -80,6 +80,8 @@
 
 /* Fixed tiles wrap without shrinking; mobile marks get more inspection space. */
 .pipeline-logo-tile {
+  --pipeline-logo-readable: oklch(from var(--pipeline-tool-brand, var(--foreground)) max(l, var(--pipeline-logo-min-lightness)) min(c, var(--pipeline-logo-max-chroma)) h);
+  --pipeline-logo-shadow: 0 0 16px 2px color-mix(in oklab, var(--pipeline-tool-brand, var(--primary)) 30%, transparent);
   width: max(var(--pipeline-logo-size), 38px);
   height: max(var(--pipeline-logo-size), 38px);
   background: var(--pipeline-logo-surface);
