@@ -66,10 +66,52 @@
   --aurora-3: oklch(0.72 0.2 160); /* mint */
   --brand: oklch(0.78 0.17 195);
   --brand-2: oklch(0.68 0.22 300);
+  /* Pipeline logos retain brand hue with a readable dark-surface lightness. */
+  --pipeline-logo-surface: var(--secondary);
+  --pipeline-logo-border: color-mix(in oklab, var(--foreground) 18%, transparent);
+  --pipeline-logo-hover-border: color-mix(in oklab, var(--foreground) 35%, transparent);
+  --pipeline-logo-min-lightness: 0.72;
+  --pipeline-logo-max-chroma: 0.18;
 }
 
 .dark {
   color-scheme: dark;
+}
+
+/* Fixed tiles wrap without shrinking; mobile marks get more inspection space. */
+.pipeline-logo-tile {
+  --pipeline-logo-readable: oklch(from var(--pipeline-tool-brand, var(--foreground)) max(l, var(--pipeline-logo-min-lightness)) min(c, var(--pipeline-logo-max-chroma)) h);
+  --pipeline-logo-shadow: 0 0 16px 2px color-mix(in oklab, var(--pipeline-tool-brand, var(--primary)) 30%, transparent);
+  width: max(var(--pipeline-logo-size), 38px);
+  height: max(var(--pipeline-logo-size), 38px);
+  background: var(--pipeline-logo-surface);
+  border-color: var(--pipeline-logo-border);
+}
+.pipeline-logo-tile:hover {
+  border-color: var(--pipeline-logo-hover-border);
+}
+.pipeline-logo-icon,
+.pipeline-logo-image {
+  width: 76%;
+  height: 76%;
+}
+.pipeline-logo-icon {
+  color: var(--pipeline-logo-readable);
+}
+.pipeline-logo-image {
+  filter: brightness(1.2);
+}
+.pipeline-logo-image[src="/tech/sigstore.svg"] {
+  filter: brightness(2.4);
+}
+.pipeline-logo-glow {
+  box-shadow: var(--pipeline-logo-shadow);
+}
+@media (min-width: 640px) {
+  .pipeline-logo-tile {
+    width: var(--pipeline-logo-size);
+    height: var(--pipeline-logo-size);
+  }
 }
 
 html {
