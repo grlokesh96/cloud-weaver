@@ -104,6 +104,10 @@
 .pipeline-logo-image[src="/tech/sigstore.svg"] {
   filter: brightness(2.4);
 }
+.pipeline-logo-image[src="/tech/blackduck.png"] {
+  /* Lift the black duck silhouette without changing its tile or other logos. */
+  filter: invert(1) grayscale(1) brightness(1.5);
+}
 .pipeline-logo-glow {
   box-shadow: var(--pipeline-logo-shadow);
 }
