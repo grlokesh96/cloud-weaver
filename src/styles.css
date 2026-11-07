@@ -101,6 +101,9 @@
 .pipeline-logo-image {
   filter: brightness(1.2);
 }
+.pipeline-logo-image[src="/tech/sigstore.svg"] {
+  filter: brightness(2.4);
+}
 .pipeline-logo-glow {
   box-shadow: var(--pipeline-logo-shadow);
 }
