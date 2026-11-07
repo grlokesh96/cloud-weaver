@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import { HiOutlineX, HiOutlinePlay, HiOutlinePause, HiOutlineRefresh, HiCheck, HiX } from "react-icons/hi";
 
 import {
@@ -21,6 +22,10 @@ const statusStyle: Record<Status, { ring: string; dot: string; label: string; gl
 /** Official brand logo tile — SVG when available, monogram fallback with brand color. */
 function LogoTile({ tool, size = 30 }: { tool: Tool; size?: number }) {
   const Icon = tool.icon;
+  const tileStyle = {
+    "--pipeline-logo-size": `${size}px`,
+    "--pipeline-tool-brand": tool.color,
+  } as CSSProperties;
   return (
     <motion.div
       whileHover={{ y: -2, scale: 1.08 }}
@@ -28,20 +33,19 @@ function LogoTile({ tool, size = 30 }: { tool: Tool; size?: number }) {
       title={tool.name}
       role="img"
       aria-label={tool.name}
-      className="group/logo relative grid place-items-center rounded-lg border border-foreground/10 bg-foreground/[0.04] backdrop-blur-sm transition-colors hover:border-foreground/25"
-      style={{ width: size, height: size }}
+      className="pipeline-logo-tile group/logo relative grid shrink-0 place-items-center rounded-lg border transition-colors"
+      style={tileStyle}
     >
       {/* brand-color glow on hover */}
       <span
-        className="pointer-events-none absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 group-hover/logo:opacity-100"
-        style={{ boxShadow: `0 0 16px 2px ${tool.color}55, inset 0 0 0 1px ${tool.color}66` }}
+        className="pipeline-logo-glow pointer-events-none absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 group-hover/logo:opacity-100"
       />
       {tool.img ? (
-        <img src={tool.img} alt="" aria-hidden loading="lazy" className="rounded-[3px] object-contain" style={{ width: size * 0.6, height: size * 0.6 }} />
+        <img src={tool.img} alt="" aria-hidden loading="lazy" decoding="async" className="pipeline-logo-image rounded-[3px] object-contain" />
       ) : Icon ? (
-        <Icon aria-hidden style={{ color: tool.color, width: size * 0.55, height: size * 0.55 }} />
+        <Icon aria-hidden className="pipeline-logo-icon" />
       ) : (
-        <span className="font-mono text-[10px] font-bold tracking-tight text-foreground">
+        <span className="font-mono text-xs font-bold text-foreground">
           {tool.mono ?? tool.name.slice(0, 2).toUpperCase()}
         </span>
       )}
@@ -412,7 +416,7 @@ export function Pipeline() {
                 <p className={`${d.desc} mt-2.5 leading-snug text-muted-foreground`}>{stage.short}</p>
 
                 {/* official logos */}
-                <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
+                <div className="mt-2.5 flex flex-wrap items-center gap-2 sm:gap-1.5">
                   {stage.tools.map(t => (
                     <LogoTile key={`${stage.id}-${t.name}`} tool={t} size={d.logoSize} />
                   ))}
