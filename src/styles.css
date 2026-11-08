@@ -101,6 +101,12 @@
 .pipeline-logo-image {
   filter: brightness(1.2);
 }
+.pipeline-logo-image[src$="/semgrep-mark.svg"] {
+  /* Semgrep's wide mark needs the full tile width rather than a square icon inset. */
+  width: 100%;
+  height: 90%;
+  filter: brightness(1.4);
+}
 .pipeline-logo-image[src="/tech/sigstore.svg"] {
   filter: brightness(2.4);
 }
