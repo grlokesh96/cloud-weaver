@@ -13,7 +13,7 @@ function TechTile({ tech }: { tech: Tech }) {
     >
       <span className="grid h-9 w-9 place-items-center" aria-hidden>
         {tech.img ? (
-          <img src={tech.img} alt="" width={32} height={32} loading="lazy" decoding="async" className="h-8 w-8 object-contain" />
+          <img src={tech.img} alt="" width={32} height={32} loading="lazy" decoding="async" className={tech.imgClass ?? "h-8 w-8 object-contain"} />
         ) : Icon ? (
           <Icon className={tech.color ? "h-8 w-8" : "h-8 w-8 text-foreground"} style={tech.color ? { color: tech.color } : undefined} />
         ) : (

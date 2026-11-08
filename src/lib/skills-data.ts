@@ -35,6 +35,7 @@ export interface Tech {
   name: string;
   icon?: IconType;
   img?: string;
+  imgClass?: string;
   color?: string;
   mono?: string;
   url?: string;
@@ -120,7 +121,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
     tools: [
       { name: "Trivy", icon: SiTrivy, color: "#5B6CFF" },
       { name: "Checkov", icon: SiPaloaltonetworks, color: "#FA582D" },
-      { name: "Semgrep", img: semgrepLogo.url },
+      { name: "Semgrep", img: semgrepLogo.url, imgClass: "h-7 w-12 object-contain" },
       { name: "Gitleaks", mono: "GL", color: "#E5484D" },
       { name: "Snyk", icon: SiSnyk, color: "#9B7BFF" },
       { name: "OWASP ZAP", icon: SiOwasp },
