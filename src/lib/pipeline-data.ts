@@ -154,6 +154,7 @@ const T = {
   prismaCloud: { name: "Prisma Cloud",   mono: "PC", img: "/tech/prisma-cloud.svg",             color: "#F04E23" },
   aqua:        { name: "Aqua Security",  icon: SiAqua,           color: "#1904DA" },
   sysdig:      { name: "Sysdig",         mono: "SD", img: "/tech/sysdig.png",             color: "#00AEEF" },
+  wiz:         { name: "Wiz",            mono: "WZ", img: "/tech/wiz.svg",                color: "#4D6CFA" },
 
   prometheus:  { name: "Prometheus",     icon: SiPrometheus,     color: "#E6522C" },
   grafana:     { name: "Grafana",        icon: SiGrafana,        color: "#F46800" },
@@ -345,7 +346,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "runtime", name: "Runtime Security", short: "eBPF threat detection",
-    icon: Radar, tools: [T.falco, T.prismaCloud, T.aqua, T.sysdig],
+    icon: Radar, tools: [T.falco, T.prismaCloud, T.aqua, T.sysdig, T.wiz],
     categories: ["Security", "Observability"],
     description: "Kernel-level detection of anomalous syscalls, exec spawn, and privilege escalation.",
     input: "Kernel events", output: "Alerts to SIEM",
