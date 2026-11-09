@@ -23,7 +23,6 @@ import {
   Radar, Activity, Bell,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import semgrepLogo from "@/assets/semgrep-logo.svg.asset.json";
 
 export type StageCategory =
   | "Source" | "CI" | "Security" | "Testing" | "Containers"
@@ -91,7 +90,7 @@ const T = {
   podman:      { name: "Podman",         icon: SiPodman,         color: "#C77DDB" },
   acr:         { name: "Azure ACR",      mono: "ACR", img: "/tech/azure-acr.svg", color: "#0078D4" },
   sonar:       { name: "SonarQube",      icon: SiSonarqubeserver, color: "#4E9BCD" },
-  semgrep:     { name: "Semgrep",        img: semgrepLogo.url,   color: "#6366F1" },
+  semgrep:     { name: "Semgrep",        img: "/tech/semgrep.svg",   color: "#6366F1" },
   codeql:      { name: "CodeQL",         icon: SiGithub,         color: "#2088FF" },
   snykCode:    { name: "Snyk Code",      icon: SiSnyk,           color: "#8F8CE8" },
 
