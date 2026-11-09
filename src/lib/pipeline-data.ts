@@ -141,6 +141,7 @@ const T = {
   k8s:         { name: "Kubernetes",     icon: SiKubernetes,     color: "#326CE5" },
 
   eks:         { name: "Amazon EKS",     icon: FaAws,            color: "#FF9900" },
+  aks:         { name: "Azure AKS",      mono: "AKS", img: "/tech/azure-aks.svg", color: "#0078D4" },
   blueGreen:   { name: "Blue/Green",     mono: "B/G", icon: TbArrowsExchange,            color: "#3B82F6" },
   canary:      { name: "Canary",         mono: "CN", icon: GiBirdTwitter,             color: "#F59E0B" },
 
@@ -326,7 +327,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "deploy", name: "Kubernetes Deployment", short: "Progressive delivery",
-    icon: Rocket, tools: [T.eks, T.k8s, T.helm, T.argocd, T.blueGreen, T.canary],
+    icon: Rocket, tools: [T.eks, T.aks, T.k8s, T.helm, T.argocd, T.blueGreen, T.canary],
     categories: ["CD", "GitOps", "Cloud"],
     description: "Progressive rollout with health checks, analysis, and automated rollback.",
     input: "Approved manifest", output: "Running Pods",
