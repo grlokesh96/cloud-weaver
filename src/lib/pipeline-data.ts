@@ -66,6 +66,7 @@ const T = {
   jenkins:     { name: "Jenkins",        icon: SiJenkins,        color: "#D24939" },
   azdo:        { name: "Azure DevOps",   icon: VscAzureDevops,   color: "#0078D4" },
   circleci:    { name: "CircleCI",       icon: SiCircleci,       color: "#00CCBD" },
+  harness:     { name: "Harness",        mono: "HN", img: "/tech/harness.svg",             color: "#4FB3FF" },
 
   node:        { name: "Node.js",        icon: SiNodedotjs,      color: "#3C873A" },
   npm:         { name: "npm",            icon: SiNpm,            color: "#CB3837" },
@@ -190,7 +191,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "ci", name: "CI Platform", short: "Trigger build workflow",
-    icon: PlayCircle, tools: [T.ghActions, T.gitlabCI, T.jenkins, T.azdo, T.circleci],
+    icon: PlayCircle, tools: [T.ghActions, T.gitlabCI, T.jenkins, T.azdo, T.harness],
     categories: ["CI"],
     description: "CI runner picks up the event and starts a hermetic build matrix with OIDC to cloud.",
     input: "Merge / PR event", output: "Workflow run",
