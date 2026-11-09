@@ -140,7 +140,7 @@ const T = {
   opa:         { name: "OPA Gatekeeper", mono: "OPA", img: "/tech/opa.svg",            color: "#7D4CDB" },
   k8s:         { name: "Kubernetes",     icon: SiKubernetes,     color: "#326CE5" },
 
-  eks:         { name: "Amazon EKS",     icon: FaAws,            color: "#FF9900" },
+  eks:         { name: "Amazon EKS",     mono: "EKS", img: "/tech/aws-eks.svg", color: "#FF9900" },
   aks:         { name: "Azure AKS",      mono: "AKS", img: "/tech/azure-aks.svg", color: "#0078D4" },
   blueGreen:   { name: "Blue/Green",     mono: "B/G", icon: TbArrowsExchange,            color: "#3B82F6" },
   canary:      { name: "Canary",         mono: "CN", icon: GiBirdTwitter,             color: "#F59E0B" },
