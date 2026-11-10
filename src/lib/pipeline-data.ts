@@ -2,6 +2,7 @@ import type { IconType } from "react-icons";
 import {
   SiGithub, SiGitlab, SiBitbucket, SiGithubactions, SiJenkins, SiCircleci,
   SiNodedotjs, SiNpm, SiYarn, SiPnpm, SiApachemaven, SiGradle, SiPython, SiGo,
+  SiComposer, SiNuget,
   SiEslint, SiPodman, SiSonarqubeserver, SiSonar, SiSnyk, SiOwasp, SiDependabot, SiRenovate,
   SiJunit5, SiJest, SiPytest, SiDocker, SiTerraform, SiHelm, SiArgo,
   SiKubernetes, SiJfrog, SiTrivy, SiSpdx,
@@ -76,6 +77,8 @@ const T = {
   gradle:      { name: "Gradle",         icon: SiGradle,         color: "#5FD3C9" },
   python:      { name: "Python",         icon: SiPython,         color: "#3776AB" },
   go:          { name: "Go",             icon: SiGo,             color: "#00ADD8" },
+  composer:    { name: "Composer",       icon: SiComposer,       color: "#D9A679" },
+  nuget:       { name: "NuGet",          icon: SiNuget,          color: "#5AA9E6" },
 
   gitleaks:    { name: "Gitleaks",       mono: "GL", img: "/tech/gitleaks.png",             color: "#EE1C25" },
   trufflehog:  { name: "TruffleHog",     mono: "TH", img: "/tech/trufflehog.png", color: "#7B4397" },
@@ -202,7 +205,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "deps", name: "Dependency Management", short: "Resolve & cache modules",
-    icon: Package, tools: [T.node, T.npm, T.yarn, T.pnpm, T.maven, T.gradle, T.python, T.go],
+    icon: Package, tools: [T.node, T.npm, T.yarn, T.pnpm, T.maven, T.gradle, T.python, T.go, T.composer, T.nuget],
     categories: ["CI"],
     description: "Restore deterministic dependencies from lockfiles with layer caching and private registry proxy.",
     input: "Lockfile", output: "node_modules / .m2 / venv",
