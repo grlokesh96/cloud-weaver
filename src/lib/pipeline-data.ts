@@ -3,7 +3,7 @@ import {
   SiGithub, SiGitlab, SiBitbucket, SiGithubactions, SiJenkins, SiCircleci,
   SiNodedotjs, SiNpm, SiYarn, SiPnpm, SiApachemaven, SiGradle, SiPython, SiGo,
   SiComposer, SiNuget, SiBazel, SiGnu, SiRust,
-  SiEslint, SiPodman, SiSonarqubeserver, SiSonar, SiSnyk, SiOwasp, SiDependabot, SiRenovate,
+  SiEslint, SiPodman, SiSonarqubeserver, SiSonar, SiSnyk, SiOwasp, SiDependabot, SiRenovate, SiPrettier,
   SiJunit5, SiJest, SiPytest, SiDocker, SiTerraform, SiHelm, SiArgo,
   SiKubernetes, SiJfrog, SiTrivy, SiSpdx,
   SiPrometheus, SiGrafana, SiOpentelemetry, SiDatadog, SiElasticstack, SiFluentbit,
@@ -90,6 +90,7 @@ const T = {
   eslint:      { name: "ESLint",         icon: SiEslint,         color: "#4B32C3" },
   pylint:      { name: "Pylint",         mono: "PY", img: "/tech/pylint.svg",             color: "#FFD43B" },
   checkstyle:  { name: "Checkstyle",     mono: "CS", img: "/tech/checkstyle.png",             color: "#F5A623" },
+  prettier:    { name: "Prettier",       icon: SiPrettier,       color: "#F7B93E" },
   pmd:         { name: "PMD",            mono: "PMD", img: "/tech/pmd.svg",            color: "#7B68EE" },
   spotbugs:    { name: "SpotBugs",       mono: "SB", img: "/tech/spotbugs.png",             color: "#E44D26" },
 
@@ -230,7 +231,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "lint", name: "Code Quality", short: "Lint & style checks",
-    icon: Sparkles, tools: [T.eslint, T.sonar, T.codeql, T.pylint, T.checkstyle, T.pmd, T.spotbugs],
+    icon: Sparkles, tools: [T.eslint, T.sonar, T.codeql, T.pylint, T.prettier, T.pmd, T.spotbugs],
     categories: ["CI"],
     description: "Static style, complexity, and correctness checks with fail-fast gates.",
     input: "Source", output: "Lint report",
