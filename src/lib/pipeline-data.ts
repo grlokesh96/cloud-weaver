@@ -83,6 +83,9 @@ const T = {
   gitleaks:    { name: "Gitleaks",       mono: "GL", img: "/tech/gitleaks.png",             color: "#EE1C25" },
   trufflehog:  { name: "TruffleHog",     mono: "TH", img: "/tech/trufflehog.png", color: "#7B4397" },
   ghSecret:    { name: "GH Secret Scan", icon: SiGithub,         color: "#3FB950" },
+  talisman:    { name: "Talisman",       mono: "TA", img: "/tech/talisman.png",        color: "#F0B45A" },
+  gitguardian: { name: "GitGuardian",    mono: "GG", img: "/tech/gitguardian.svg",     color: "#E8EAF0" },
+  kingfisher:  { name: "Kingfisher",     mono: "KF", img: "/tech/kingfisher.png",      color: "#47A76A" },
 
   eslint:      { name: "ESLint",         icon: SiEslint,         color: "#4B32C3" },
   pylint:      { name: "Pylint",         mono: "PY", img: "/tech/pylint.svg",             color: "#FFD43B" },
@@ -218,7 +221,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "secrets", name: "Secret Scanning", short: "Detect leaked credentials",
-    icon: KeyRound, tools: [T.gitleaks, T.trufflehog, T.ghSecret],
+    icon: KeyRound, tools: [T.gitleaks, T.trufflehog, T.ghSecret, T.talisman, T.gitguardian, T.kingfisher],
     categories: ["Security"],
     description: "Scan diff and history for API keys, tokens, and private material before build.",
     input: "Source tree", output: "SARIF findings",
