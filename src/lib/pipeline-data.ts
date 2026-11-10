@@ -2,7 +2,7 @@ import type { IconType } from "react-icons";
 import {
   SiGithub, SiGitlab, SiBitbucket, SiGithubactions, SiJenkins, SiCircleci,
   SiNodedotjs, SiNpm, SiYarn, SiPnpm, SiApachemaven, SiGradle, SiPython, SiGo,
-  SiComposer, SiNuget,
+  SiComposer, SiNuget, SiBazel, SiGnu, SiRust,
   SiEslint, SiPodman, SiSonarqubeserver, SiSonar, SiSnyk, SiOwasp, SiDependabot, SiRenovate,
   SiJunit5, SiJest, SiPytest, SiDocker, SiTerraform, SiHelm, SiArgo,
   SiKubernetes, SiJfrog, SiTrivy, SiSpdx,
@@ -110,6 +110,10 @@ const T = {
   coverage:    { name: "Coverage",       mono: "%",              color: "#3FB950" },
 
   docker:      { name: "Docker",         icon: SiDocker,         color: "#2496ED" },
+  make:        { name: "Make",           icon: SiGnu,            color: "#E05B57" },
+  bazel:       { name: "Bazel",          icon: SiBazel,          color: "#43A047" },
+  goBuild:     { name: "Go Build",       icon: SiGo,             color: "#00ADD8" },
+  cargo:       { name: "Cargo",          icon: SiRust,           color: "#F74C00" },
 
   terraform:   { name: "Terraform",      icon: SiTerraform,      color: "#7B42BC" },
   checkov:     { name: "Checkov",        mono: "CK", icon: SiPaloaltonetworks, color: "#FA582D" },
@@ -259,7 +263,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "build", name: "Build", short: "Compile & package",
-    icon: Hammer, tools: [T.docker, T.podman, T.maven, T.gradle, T.node],
+    icon: Hammer, tools: [T.docker, T.podman, T.maven, T.gradle, T.make, T.bazel, T.goBuild, T.cargo],
     categories: ["CI"],
     description: "Produce immutable, reproducible build artifacts with SLSA provenance.",
     input: "Source + deps", output: "JAR / bundle / OCI image",
