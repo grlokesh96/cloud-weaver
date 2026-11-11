@@ -213,7 +213,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "deps", name: "Dependency Management", short: "Resolve & cache modules",
-    icon: Package, tools: [T.node, T.npm, T.yarn, T.pnpm, T.maven, T.gradle, T.python, T.go, T.composer, T.nuget],
+    icon: Package, tools: [T.npm, T.yarn, T.pnpm, T.maven, T.gradle, T.python, T.go, T.composer, T.nuget],
     categories: ["CI"],
     description: "Restore deterministic dependencies from lockfiles with layer caching and private registry proxy.",
     input: "Lockfile", output: "node_modules / .m2 / venv",
