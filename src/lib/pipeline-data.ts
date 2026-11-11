@@ -126,6 +126,7 @@ const T = {
   tfsec:       { name: "tfsec",          mono: "TS", img: "/tech/tfsec.png", color: "#00A98F" },
   terrascan:   { name: "Terrascan",      mono: "TC", img: "/tech/terrascan.png", color: "#00B0FF" },
   kics:        { name: "KICS",           mono: "KI", img: "/tech/kics.png", color: "#EF4444" },
+  cloudsploit: { name: "CloudSploit",    mono: "CS", img: "/tech/cloudsploit.png", color: "#08B1D5" },
 
   trivy:       { name: "Trivy",          icon: SiTrivy,          color: "#1904DA" },
   grype:       { name: "Grype",          mono: "GR", img: "/tech/grype.png", color: "#FF6A00" },
@@ -278,7 +279,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "iac", name: "IaC Security", short: "Terraform policy scan",
-    icon: FileCode2, tools: [T.terraform, T.checkov, T.tfsec, T.terrascan, T.kics],
+    icon: FileCode2, tools: [T.checkov, T.tfsec, T.terrascan, T.kics, T.cloudsploit],
     categories: ["Security", "Infrastructure"],
     description: "Scan Terraform / Kubernetes manifests for misconfig, CIS, and compliance drift.",
     input: "*.tf / manifests", output: "Policy report",
