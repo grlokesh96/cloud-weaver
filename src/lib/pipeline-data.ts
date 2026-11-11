@@ -138,7 +138,7 @@ const T = {
   sigstore:    { name: "Sigstore",       mono: "SS", img: "/tech/sigstore.svg", color: "#2E86AB" },
   notary:      { name: "Notary v2",      mono: "NT", img: "/tech/notary.svg", color: "#F59E0B" },
 
-  ecr:         { name: "Amazon ECR",     icon: FaAws,            color: "#FF9900" },
+  ecr:         { name: "Amazon ECR",     mono: "ECR", img: "/tech/aws-ecr.svg", color: "#FF9900" },
   dockerHub:   { name: "Docker Hub",     icon: SiDocker,         color: "#2496ED" },
   ghcr:        { name: "GHCR",           icon: SiGithub,         color: "#f0f6fc" },
   jfrog:       { name: "JFrog",          icon: SiJfrog,          color: "#41BF47" },
