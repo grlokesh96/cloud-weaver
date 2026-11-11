@@ -4,7 +4,7 @@ import {
   SiNodedotjs, SiNpm, SiYarn, SiPnpm, SiApachemaven, SiGradle, SiPython, SiGo,
   SiComposer, SiNuget, SiBazel, SiGnu, SiRust,
   SiEslint, SiPodman, SiSonarqubeserver, SiSonar, SiSnyk, SiOwasp, SiDependabot, SiRenovate, SiPrettier,
-  SiJunit5, SiJest, SiPytest, SiDocker, SiTerraform, SiHelm, SiArgo,
+  SiJunit5, SiJest, SiPytest, SiPostman, SiDocker, SiTerraform, SiHelm, SiArgo,
   SiKubernetes, SiJfrog, SiTrivy, SiSpdx,
   SiPrometheus, SiGrafana, SiOpentelemetry, SiDatadog, SiElasticstack, SiFluentbit,
   SiDash0,
@@ -111,6 +111,8 @@ const T = {
   jest:        { name: "Jest",           icon: SiJest,           color: "#C21325" },
   pytest:      { name: "PyTest",         icon: SiPytest,         color: "#009FE3" },
   goTest:      { name: "Go Test",        icon: SiGo,             color: "#00ADD8" },
+  postman:     { name: "Postman",        icon: SiPostman,        color: "#FF6C37" },
+  playwright:  { name: "Playwright",     mono: "PW", img: "/tech/playwright.svg", color: "#2EAD33" },
   coverage:    { name: "Coverage",       mono: "%",              color: "#3FB950" },
 
   docker:      { name: "Docker",         icon: SiDocker,         color: "#2496ED" },
@@ -258,7 +260,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "test", name: "Testing", short: "Run tests & coverage",
-    icon: FlaskConical, tools: [T.junit, T.jest, T.pytest, T.goTest, T.coverage],
+    icon: FlaskConical, tools: [T.junit, T.jest, T.pytest, T.goTest, T.postman, T.playwright, T.coverage],
     categories: ["Testing"],
     description: "Fast unit + integration suites with coverage thresholds enforced in CI.",
     input: "Compiled code", output: "JUnit XML + coverage",
