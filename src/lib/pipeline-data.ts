@@ -5,7 +5,7 @@ import {
   SiComposer, SiNuget, SiBazel, SiGnu, SiRust,
   SiEslint, SiPodman, SiSonarqubeserver, SiSonar, SiSnyk, SiOwasp, SiDependabot, SiRenovate, SiPrettier,
   SiApachejmeter, SiJest, SiPytest, SiPostman, SiDocker, SiTerraform, SiHelm, SiArgo,
-  SiKubernetes, SiJfrog, SiTrivy, SiSpdx,
+  SiKubernetes, SiJfrog, SiTrivy, SiSpdx, SiHashicorp,
   SiPrometheus, SiGrafana, SiOpentelemetry, SiDatadog, SiElasticstack, SiFluentbit,
   SiDash0,
   SiPagerduty, SiJira, SiPortswigger, SiZap, SiFalco, SiAqua,
@@ -153,6 +153,8 @@ const T = {
   kyverno:     { name: "Kyverno",        mono: "KY", img: "/tech/kyverno.svg",             color: "#00B39F" },
   opa:         { name: "OPA Gatekeeper", mono: "OPA", img: "/tech/opa.svg",            color: "#7D4CDB" },
   k8s:         { name: "Kubernetes",     icon: SiKubernetes,     color: "#326CE5" },
+  sentinel:    { name: "Sentinel",       icon: SiHashicorp,      color: "#A98BF0" },
+  conftest:    { name: "Conftest",       mono: "CF", img: "/tech/conftest.png", color: "#9FB6C4" },
 
   eks:         { name: "Amazon EKS",     mono: "EKS", img: "/tech/aws-eks.svg", color: "#FF9900" },
   aks:         { name: "Azure AKS",      mono: "AKS", img: "/tech/azure-aks.svg", color: "#0078D4" },
@@ -336,7 +338,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "policy", name: "Policy Validation", short: "Admission validation",
-    icon: Scale, tools: [T.kyverno, T.opa, T.k8s],
+    icon: Scale, tools: [T.kyverno, T.opa, T.sentinel, T.conftest],
     categories: ["Security", "GitOps"],
     description: "Cluster admission webhooks block non-compliant workloads (root, hostPath, unsigned).",
     input: "Manifest", output: "Admit / deny",
