@@ -183,6 +183,9 @@ const T = {
   teams:       { name: "MS Teams",       icon: BsMicrosoftTeams, color: "#A5A8F2" },
   pagerduty:   { name: "PagerDuty",      icon: SiPagerduty,      color: "#06AC38" },
   eventbridge: { name: "AWS EventBridge", mono: "EB", img: "/tech/aws-eventbridge.svg", color: "#E7157B" },
+  sns:         { name: "Amazon SNS",     mono: "SNS", img: "/tech/aws-sns.svg",        color: "#E7157B" },
+  azMonitor:   { name: "Azure Monitor Alerts", mono: "AMA", img: "/tech/azure-monitor-alerts.svg", color: "#5EA0EF" },
+  servicenow:  { name: "ServiceNow",     mono: "SN", img: "/tech/servicenow.svg",       color: "#A6D8C0" },
   jira:        { name: "Jira",           icon: SiJira,           color: "#0052CC" },
 } satisfies Record<string, Tool>;
 
@@ -378,7 +381,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "notify", name: "Notifications", short: "Alert the right team",
-    icon: Bell, tools: [T.slack, T.teams, T.pagerduty, T.eventbridge, T.jira],
+    icon: Bell, tools: [T.slack, T.teams, T.pagerduty, T.eventbridge, T.sns, T.azMonitor, T.servicenow, T.jira],
     categories: ["Observability"],
     description: "Route alerts, deploy events, and incidents to on-call and ChatOps.",
     input: "Alert / event", output: "Ticket / page",
