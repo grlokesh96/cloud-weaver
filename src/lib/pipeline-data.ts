@@ -182,7 +182,7 @@ const T = {
   slack:       { name: "Slack",          icon: FaSlack,          color: "#B45BB8" },
   teams:       { name: "MS Teams",       icon: BsMicrosoftTeams, color: "#A5A8F2" },
   pagerduty:   { name: "PagerDuty",      icon: SiPagerduty,      color: "#06AC38" },
-  sns:         { name: "Amazon SNS",     icon: FaAws,            color: "#E7157B" },
+  eventbridge: { name: "AWS EventBridge", mono: "EB", img: "/tech/aws-eventbridge.svg", color: "#E7157B" },
   jira:        { name: "Jira",           icon: SiJira,           color: "#0052CC" },
 } satisfies Record<string, Tool>;
 
@@ -378,7 +378,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "notify", name: "Notifications", short: "Alert the right team",
-    icon: Bell, tools: [T.slack, T.teams, T.pagerduty, T.sns, T.jira],
+    icon: Bell, tools: [T.slack, T.teams, T.pagerduty, T.eventbridge, T.jira],
     categories: ["Observability"],
     description: "Route alerts, deploy events, and incidents to on-call and ChatOps.",
     input: "Alert / event", output: "Ticket / page",
