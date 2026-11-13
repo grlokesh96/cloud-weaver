@@ -178,7 +178,7 @@ const T = {
   otel:        { name: "OpenTelemetry",  icon: SiOpentelemetry,  color: "#F5A800" },
   datadog:     { name: "Datadog",        icon: SiDatadog,        color: "#632CA6" },
   dash0:       { name: "Dash0",          icon: SiDash0,          color: "#EA3D3B" },
-  elk:         { name: "ELK Stack",      icon: SiElasticstack,   color: "#005571" },
+  elk:         { name: "ELK Stack",      mono: "ELK", img: "/tech/elk-stack.svg",         color: "#00A9E5" },
   fluentbit:   { name: "Fluent Bit",     icon: SiFluentbit,      color: "#49BDA5" },
 
   slack:       { name: "Slack",          icon: FaSlack,          color: "#B45BB8" },
