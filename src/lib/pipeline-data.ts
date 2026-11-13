@@ -6,7 +6,7 @@ import {
   SiEslint, SiPodman, SiSonarqubeserver, SiSonar, SiSnyk, SiOwasp, SiDependabot, SiRenovate, SiPrettier,
   SiApachejmeter, SiJest, SiPytest, SiPostman, SiDocker, SiTerraform, SiHelm, SiArgo,
   SiKubernetes, SiJfrog, SiTrivy, SiSpdx, SiHashicorp,
-  SiPrometheus, SiGrafana, SiOpentelemetry, SiDatadog, SiElasticstack, SiFluentbit,
+  SiPrometheus, SiGrafana, SiOpentelemetry, SiDatadog, SiFluentbit,
   SiDash0,
   SiPagerduty, SiJira, SiPortswigger, SiZap, SiFalco, SiAqua,
 } from "react-icons/si";
