@@ -176,6 +176,7 @@ const T = {
   grafana:     { name: "Grafana",        icon: SiGrafana,        color: "#F46800" },
   loki:        { name: "Grafana Loki",   mono: "GL", img: "/tech/grafana-loki.svg",       color: "#F15B2B" },
   otel:        { name: "OpenTelemetry",  icon: SiOpentelemetry,  color: "#F5A800" },
+  jaeger:      { name: "Jaeger",         mono: "JG", img: "/tech/jaeger.svg",             color: "#67CFE3" },
   datadog:     { name: "Datadog",        icon: SiDatadog,        color: "#632CA6" },
   dash0:       { name: "Dash0",          icon: SiDash0,          color: "#EA3D3B" },
   elk:         { name: "ELK Stack",      mono: "ELK", img: "/tech/elk-stack.svg",         color: "#00A9E5" },
@@ -374,7 +375,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "monitor", name: "Observability", short: "Metrics, logs, traces",
-    icon: Activity, tools: [T.prometheus, T.grafana, T.loki, T.otel, T.datadog, T.dash0, T.elk, T.fluentbit],
+    icon: Activity, tools: [T.prometheus, T.grafana, T.loki, T.otel, T.jaeger, T.datadog, T.dash0, T.elk, T.fluentbit],
     categories: ["Observability"],
     description: "Golden signals, SLOs, distributed traces, and correlated logs.",
     input: "OTel signals", output: "Dashboards + SLOs",
