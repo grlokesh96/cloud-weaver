@@ -174,7 +174,7 @@ const T = {
 
   prometheus:  { name: "Prometheus",     icon: SiPrometheus,     color: "#E6522C" },
   grafana:     { name: "Grafana",        icon: SiGrafana,        color: "#F46800" },
-  loki:        { name: "Loki",           icon: SiGrafana,        color: "#FFA500" },
+  loki:        { name: "Grafana Loki",   mono: "GL", img: "/tech/grafana-loki.svg",       color: "#F15B2B" },
   otel:        { name: "OpenTelemetry",  icon: SiOpentelemetry,  color: "#F5A800" },
   datadog:     { name: "Datadog",        icon: SiDatadog,        color: "#632CA6" },
   dash0:       { name: "Dash0",          icon: SiDash0,          color: "#EA3D3B" },
