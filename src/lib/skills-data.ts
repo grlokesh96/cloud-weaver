@@ -164,7 +164,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "LLMs", icon: SiAnthropic, color: "#D97757", label: "Large Language Models" },
       { name: "RAG", icon: SiLangchain, color: "#1C9A8C", label: "Retrieval-Augmented Generation" },
       { name: "FastAPI", icon: SiFastapi, color: "#009688" },
-      { name: "Google ADK", icon: SiGoogle, color: "#4285F4", label: "Google Agent Development Kit" },
+      { name: "Google ADK", img: "/tech/google-adk.png", color: "#4285F4", label: "Google Agent Development Kit" },
       { name: "MCP", icon: SiModelcontextprotocol, label: "Model Context Protocol" },
       { name: "Amazon Bedrock", img: "/tech/aws-bedrock.svg" },
       { name: "Kiro CLI", img: "/tech/kiro.svg" },
