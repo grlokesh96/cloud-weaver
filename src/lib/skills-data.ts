@@ -2,7 +2,7 @@ import {
   SiKubernetes, SiDocker, SiTerraform, SiGithub, SiGit, SiArgo, SiHelm,
   SiPrometheus, SiGrafana, SiJenkins, SiPython, SiAnsible, SiNginx, SiIstio,
   SiGitlab, SiGithubactions, SiSonarqubeserver, SiSonatype, SiTrivy,
-  SiSnyk, SiOwasp, SiVault, SiDatadog, SiElasticstack, SiOpentelemetry,
+  SiSnyk, SiOwasp, SiVault, SiDatadog, SiOpentelemetry,
   SiGnubash, SiPaloaltonetworks, SiPodman, SiJfrog, SiFalco, SiCilium,
   SiAnthropic, SiClaude, SiLangchain, SiFastapi, SiGoogle, SiModelcontextprotocol,
 } from "react-icons/si";
@@ -142,7 +142,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Prometheus", icon: SiPrometheus, color: "#E6522C" },
       { name: "Grafana", icon: SiGrafana, color: "#F46800" },
       { name: "Datadog", icon: SiDatadog, color: "#A07BE8" },
-      { name: "ELK Stack", icon: SiElasticstack, color: "#00BFB3" },
+      { name: "ELK Stack", img: "/tech/elk-stack.svg", mono: "ELK", color: "#00A9E5" },
       { name: "Loki", img: "/tech/loki.png", label: "Grafana Loki" },
       { name: "OpenTelemetry", icon: SiOpentelemetry, color: "#F5A800" },
       { name: "AWS CloudWatch", img: awsCloudwatch.url },
