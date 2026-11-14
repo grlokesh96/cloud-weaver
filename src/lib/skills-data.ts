@@ -2,7 +2,7 @@ import {
   SiKubernetes, SiDocker, SiTerraform, SiGithub, SiGit, SiArgo, SiHelm,
   SiPrometheus, SiGrafana, SiJenkins, SiPython, SiAnsible, SiNginx, SiIstio,
   SiGitlab, SiGithubactions, SiSonarqubeserver, SiSonatype, SiTrivy,
-  SiSnyk, SiOwasp, SiVault, SiDatadog, SiElasticstack, SiOpentelemetry,
+  SiSnyk, SiOwasp, SiVault, SiDatadog, SiOpentelemetry,
   SiGnubash, SiPaloaltonetworks, SiPodman, SiJfrog, SiFalco, SiCilium,
   SiAnthropic, SiClaude, SiLangchain, SiFastapi, SiGoogle, SiModelcontextprotocol,
 } from "react-icons/si";
