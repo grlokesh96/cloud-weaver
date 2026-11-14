@@ -142,7 +142,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Prometheus", icon: SiPrometheus, color: "#E6522C" },
       { name: "Grafana", icon: SiGrafana, color: "#F46800" },
       { name: "Datadog", icon: SiDatadog, color: "#A07BE8" },
-      { name: "ELK Stack", icon: SiElasticstack, color: "#00BFB3" },
+      { name: "ELK Stack", img: "/tech/elk-stack.svg", mono: "ELK", color: "#00A9E5" },
       { name: "Loki", img: "/tech/loki.png", label: "Grafana Loki" },
       { name: "OpenTelemetry", icon: SiOpentelemetry, color: "#F5A800" },
       { name: "AWS CloudWatch", img: awsCloudwatch.url },
