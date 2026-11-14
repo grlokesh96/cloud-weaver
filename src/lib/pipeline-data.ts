@@ -130,7 +130,7 @@ const T = {
 
   trivy:       { name: "Trivy",          icon: SiTrivy,          color: "#1904DA" },
   grype:       { name: "Grype",          mono: "GR", img: "/tech/grype.png", color: "#FF6A00" },
-  dockerScout: { name: "Docker Scout",   icon: SiDocker,         color: "#00D4FF" },
+  dockerScout: { name: "Docker Scout",   mono: "DS", img: "/tech/docker-scout.png", color: "#7FE0C3" },
   snykCont:    { name: "Snyk Container", icon: SiSnyk,           color: "#8F8CE8" },
 
   syft:        { name: "Syft",           mono: "SY", img: "/tech/syft.svg",             color: "#7C3AED" },
