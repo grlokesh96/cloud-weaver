@@ -102,7 +102,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Istio", icon: SiIstio, color: "#466BB0" },
       { name: "AWS Load Balancer", img: "/tech/aws-elb.svg", label: "AWS Elastic Load Balancing" },
       { name: "NGINX", icon: SiNginx, color: "#009639" },
-      { name: "Kubernetes HPA", icon: SiKubernetes, color: K8S },
+      { name: "K8s Autoscaling", img: "/tech/k8s-autoscaling.png", color: K8S, label: "Kubernetes Autoscaling (HPA/VPA)" },
       { name: "Cluster Autoscaler", icon: SiKubernetes, color: K8S },
       { name: "Amazon ECR", img: awsEcr.url },
       { name: "Azure ACR", img: "/tech/azure-acr.svg", label: "Azure Container Registry" },
