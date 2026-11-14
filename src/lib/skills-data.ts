@@ -4,7 +4,7 @@ import {
   SiGitlab, SiGithubactions, SiSonarqubeserver, SiSonatype, SiTrivy,
   SiSnyk, SiOwasp, SiVault, SiDatadog, SiOpentelemetry,
   SiGnubash, SiPaloaltonetworks, SiPodman, SiJfrog, SiFalco, SiCilium,
-  SiAnthropic, SiClaude, SiLangchain, SiFastapi, SiGoogle, SiModelcontextprotocol,
+  SiAnthropic, SiClaude, SiLangchain, SiFastapi, SiModelcontextprotocol,
 } from "react-icons/si";
 import { FaAws } from "react-icons/fa";
 import { VscAzureDevops, VscTerminalPowershell } from "react-icons/vsc";
