@@ -1,5 +1,5 @@
 import {
-  SiKubernetes, SiDocker, SiTerraform, SiGithub, SiGit, SiArgo, SiHelm,
+  SiKubernetes, SiDocker, SiTerraform, SiGithub, SiGit, SiArgo, SiHelm, SiTraefikproxy,
   SiPrometheus, SiGrafana, SiJenkins, SiPython, SiAnsible, SiNginx, SiIstio,
   SiGitlab, SiGithubactions, SiSonarqubeserver, SiSonatype, SiTrivy,
   SiSnyk, SiOwasp, SiVault, SiDatadog, SiOpentelemetry,
@@ -103,7 +103,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "AWS Load Balancer", img: "/tech/aws-elb.svg", label: "AWS Elastic Load Balancing" },
       { name: "NGINX", icon: SiNginx, color: "#009639" },
       { name: "K8s Autoscaling", img: "/tech/k8s-autoscaling.svg", color: K8S, label: "Kubernetes Autoscaling (HPA/VPA)" },
-      { name: "Cluster Autoscaler", icon: SiKubernetes, color: K8S },
+      { name: "Traefik", icon: SiTraefikproxy, color: "#3DB9D4", label: "Traefik Proxy" },
       { name: "Amazon ECR", img: awsEcr.url },
       { name: "Azure ACR", img: "/tech/azure-acr.svg", label: "Azure Container Registry" },
       { name: "Podman", icon: SiPodman, color: "#A78BFA" },
