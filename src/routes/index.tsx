@@ -4,8 +4,9 @@ import { useEffect, useMemo, useState } from "react";
 import {
   HiOutlineDownload, HiOutlineMail, HiOutlineArrowRight,
   HiOutlineExternalLink, HiOutlineDocumentText, HiOutlineLocationMarker,
-  HiOutlinePhone, HiOutlineCheckCircle,
+  HiOutlinePhone, HiOutlineCheckCircle, HiOutlineDuplicate, HiOutlineCheck,
 } from "react-icons/hi";
+import { toast } from "sonner";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import {
   PROFILE, ROLES, HERO_TECH, STATS, EXPERIENCE, PROJECTS,
@@ -637,8 +638,24 @@ function ResumeSection() {
 /* ---------------- Contact ---------------- */
 function Contact() {
   const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
+  const [copied, setCopied] = useState(false);
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(PROFILE.email);
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = PROFILE.email;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      ta.remove();
+    }
+    setCopied(true);
+    toast.success("Email address copied to clipboard");
+    setTimeout(() => setCopied(false), 2000);
+  };
   const cards = [
-    { icon: HiOutlineMail, label: "Email", value: PROFILE.email, href: `mailto:${PROFILE.email}` },
+    { icon: HiOutlineMail, label: "Email", value: PROFILE.email, href: `mailto:${PROFILE.email}`, copyable: true },
     { icon: FaLinkedin, label: "LinkedIn", value: "grlokesh96", href: PROFILE.linkedin },
     { icon: FaGithub, label: "GitHub", value: "grlokesh96", href: PROFILE.github },
     { icon: HiOutlinePhone, label: "Phone", value: PROFILE.phone, href: `tel:${PROFILE.phone.replace(/\s/g, "")}` },
@@ -662,11 +679,26 @@ function Contact() {
                 target={c.href.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
                 title={c.value}
-                className="glass group flex min-w-0 flex-col gap-2 rounded-xl p-4 transition-transform hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                className="glass group relative flex min-w-0 flex-col gap-2 rounded-xl p-4 transition-transform hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
               >
                 <c.icon size={20} className="text-primary shrink-0" aria-hidden />
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">{c.label}</div>
                 <div className="truncate text-sm font-medium">{c.value}</div>
+                {c.copyable && (
+                  <button
+                    type="button"
+                    aria-label="Copy email address"
+                    title="Copy email address"
+                    onClick={e => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      void copyEmail();
+                    }}
+                    className="absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-foreground/10 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                  >
+                    {copied ? <HiOutlineCheck size={16} className="text-primary" aria-hidden /> : <HiOutlineDuplicate size={16} aria-hidden />}
+                  </button>
+                )}
               </a>
             ))}
           </div>
