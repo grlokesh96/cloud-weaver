@@ -1,5 +1,5 @@
 import {
-  SiKubernetes, SiDocker, SiTerraform, SiGithub, SiGit, SiArgo, SiHelm, SiTraefikproxy,
+  SiKubernetes, SiDocker, SiTerraform, SiGithub, SiGit, SiArgo, SiHelm,
   SiPrometheus, SiGrafana, SiJenkins, SiPython, SiAnsible, SiNginx, SiIstio,
   SiGitlab, SiGithubactions, SiSonarqubeserver, SiSonatype, SiTrivy,
   SiSnyk, SiOwasp, SiVault, SiDatadog, SiOpentelemetry,
