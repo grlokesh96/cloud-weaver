@@ -47,7 +47,7 @@ export function Reveal({ children, delay = 0, y = 24 }: { children: ReactNode; d
 
 export function MagneticButton({
   children, className = "", href, onClick, ariaLabel,
-}: { children: ReactNode; className?: string; href?: string; onClick?: () => void; ariaLabel?: string }) {
+}: { children: ReactNode; className?: string; href?: string; onClick?: (e: React.MouseEvent) => void; ariaLabel?: string }) {
   const ref = useRef<HTMLElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
