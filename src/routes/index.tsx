@@ -158,7 +158,12 @@ function Hero() {
               <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
                 <MagneticButton
                   href={RESUME_FILE_URL}
-                  onClick={() => void recordResumeDownload()}
+                  onClick={e => {
+                    e.preventDefault();
+                    void recordResumeDownload().finally(() => {
+                      window.location.href = RESUME_FILE_URL;
+                    });
+                  }}
                   className="bg-foreground text-background hover:bg-foreground/90"
                 >
                   <HiOutlineDownload /> Download Resume
