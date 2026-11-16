@@ -654,7 +654,7 @@ function Contact() {
     toast.success("Email address copied to clipboard");
     setTimeout(() => setCopied(false), 2000);
   };
-  const cards = [
+  const cards: { icon: typeof HiOutlineMail; label: string; value: string; href: string; copyable?: boolean }[] = [
     { icon: HiOutlineMail, label: "Email", value: PROFILE.email, href: `mailto:${PROFILE.email}`, copyable: true },
     { icon: FaLinkedin, label: "LinkedIn", value: "grlokesh96", href: PROFILE.linkedin },
     { icon: FaGithub, label: "GitHub", value: "grlokesh96", href: PROFILE.github },
