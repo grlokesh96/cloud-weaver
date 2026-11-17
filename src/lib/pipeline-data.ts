@@ -143,7 +143,7 @@ const T = {
 
   ecr:         { name: "Amazon ECR",     mono: "ECR", img: "/tech/aws-ecr.svg", color: "#FF9900" },
   dockerHub:   { name: "Docker Hub",     icon: SiDocker,         color: "#2496ED" },
-  ghcr:        { name: "GHCR",           icon: SiGithub,         color: "#f0f6fc" },
+  ghPackages:  { name: "GitHub Packages", mono: "GP", img: "/tech/github-packages.svg", color: "#f0f6fc" },
   jfrog:       { name: "JFrog",          icon: SiJfrog,          color: "#41BF47" },
   harbor:      { name: "Harbor",         mono: "HB", img: "/tech/harbor.svg", color: "#60B932" },
 
@@ -322,7 +322,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "registry", name: "Artifact Registry", short: "Publish signed image",
-    icon: Archive, tools: [T.ecr, T.acr, T.dockerHub, T.ghcr, T.jfrog, T.harbor],
+    icon: Archive, tools: [T.ecr, T.acr, T.dockerHub, T.ghPackages, T.jfrog, T.harbor],
     categories: ["Cloud", "Containers"],
     description: "Push signed, scanned image with immutable tags to a trusted registry.",
     input: "Signed image", output: "Registry reference",
