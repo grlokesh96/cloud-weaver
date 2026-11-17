@@ -161,6 +161,7 @@ const T = {
   aks:         { name: "Azure AKS",      mono: "AKS", img: "/tech/azure-aks.svg", color: "#0078D4" },
   blueGreen:   { name: "Blue/Green",     mono: "B/G", icon: TbArrowsExchange,            color: "#3B82F6" },
   canary:      { name: "Canary",         mono: "CN", icon: GiBirdTwitter,             color: "#F59E0B" },
+  argoRollouts:{ name: "Argo Rollouts",  mono: "AR", img: "/tech/argo-rollouts.png", color: "#F97316" },
 
   zap:         { name: "OWASP ZAP",      icon: SiZap,            color: "#00549E" },
   burp:        { name: "Burp Suite",     icon: SiPortswigger,    color: "#FF6633" },
@@ -349,7 +350,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "deploy", name: "Kubernetes Deployment", short: "Progressive delivery",
-    icon: Rocket, tools: [T.eks, T.aks, T.k8s, T.helm, T.argocd, T.blueGreen, T.canary],
+    icon: Rocket, tools: [T.eks, T.aks, T.k8s, T.helm, T.argocd, T.blueGreen, T.canary, T.argoRollouts],
     categories: ["CD", "GitOps", "Cloud"],
     description: "Progressive rollout with health checks, analysis, and automated rollback.",
     input: "Approved manifest", output: "Running Pods",
