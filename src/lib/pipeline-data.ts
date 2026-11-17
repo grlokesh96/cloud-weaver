@@ -145,6 +145,7 @@ const T = {
   dockerHub:   { name: "Docker Hub",     icon: SiDocker,         color: "#2496ED" },
   ghcr:        { name: "GHCR",           icon: SiGithub,         color: "#f0f6fc" },
   jfrog:       { name: "JFrog",          icon: SiJfrog,          color: "#41BF47" },
+  harbor:      { name: "Harbor",         mono: "HB", img: "/tech/harbor.svg", color: "#60B932" },
 
   helm:        { name: "Helm",           icon: SiHelm,           color: "#5B8DEF" },
   argocd:      { name: "Argo CD",        icon: SiArgo,           color: "#EF7B4D" },
@@ -321,7 +322,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "registry", name: "Artifact Registry", short: "Publish signed image",
-    icon: Archive, tools: [T.ecr, T.acr, T.dockerHub, T.ghcr, T.jfrog],
+    icon: Archive, tools: [T.ecr, T.acr, T.dockerHub, T.ghcr, T.jfrog, T.harbor],
     categories: ["Cloud", "Containers"],
     description: "Push signed, scanned image with immutable tags to a trusted registry.",
     input: "Signed image", output: "Registry reference",
