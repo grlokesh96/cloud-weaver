@@ -57,6 +57,7 @@ const T = {
   github:      { name: "GitHub",         icon: SiGithub,         color: "#f0f6fc" },
   gitlab:      { name: "GitLab",         icon: SiGitlab,         color: "#FC6D26" },
   bitbucket:   { name: "Bitbucket",      icon: SiBitbucket,      color: "#2684FF" },
+  azRepos:     { name: "Azure Repos",    mono: "AR", img: "/tech/azure-repos.svg", color: "#0078D4" },
   codeowners:  { name: "CODEOWNERS",     mono: "CO", icon: GoPeople, color: "#8B949E" },
   pr:          { name: "Pull Request",   mono: "PR", icon: GoGitPullRequest,             color: "#2088FF" },
   mr:          { name: "Merge Request",  mono: "MR", icon: GoGitMerge,    color: "#FC6D26" },
@@ -197,7 +198,7 @@ const T = {
 export const PIPELINE_STAGES: PipelineStage[] = [
   {
     id: "scm", name: "Source Control", short: "Commit & push code",
-    icon: GitCommit, tools: [T.github, T.gitlab, T.bitbucket],
+    icon: GitCommit, tools: [T.github, T.gitlab, T.bitbucket, T.azRepos],
     categories: ["Source"],
     description: "Engineer authors code locally, signs commits, and pushes to a feature branch on the SCM.",
     input: "Local changes", output: "Signed commit on remote branch",
