@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="pytest">
+  <!-- tube caps above the rack -->
+  <rect x="8"  y="8"  width="9" height="8" rx="2" fill="#00A3E0"/>
+  <rect x="21" y="8"  width="9" height="8" rx="2" fill="#B8D400"/>
+  <rect x="34" y="8"  width="9" height="8" rx="2" fill="#F57E20"/>
+  <rect x="47" y="8"  width="9" height="8" rx="2" fill="#E52E25"/>
+  <!-- rack bar -->
+  <rect x="5" y="17" width="54" height="10" rx="5" fill="#C9D1DC"/>
+  <!-- tubes below the rack, descending -->
+  <rect x="8"  y="27" width="9" height="29" rx="2" fill="#00A3E0"/>
+  <rect x="21" y="27" width="9" height="21" rx="2" fill="#B8D400"/>
+  <rect x="34" y="27" width="9" height="14" rx="2" fill="#F57E20"/>
+  <rect x="47" y="27" width="9" height="7"  rx="2" fill="#E52E25"/>
+</svg>

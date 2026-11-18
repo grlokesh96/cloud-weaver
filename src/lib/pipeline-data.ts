@@ -4,7 +4,7 @@ import {
   SiNodedotjs, SiNpm, SiYarn, SiPnpm, SiApachemaven, SiGradle, SiPython, SiGo,
   SiComposer, SiNuget, SiBazel, SiGnu, SiRust,
   SiEslint, SiPodman, SiSonarqubeserver, SiSonar, SiSnyk, SiOwasp, SiDependabot, SiRenovate, SiPrettier,
-  SiApachejmeter, SiJest, SiPytest, SiPostman, SiDocker, SiTerraform, SiHelm, SiArgo,
+  SiApachejmeter, SiJest, SiPostman, SiDocker, SiTerraform, SiHelm, SiArgo,
   SiKubernetes, SiJfrog, SiTrivy, SiSpdx, SiHashicorp,
   SiPrometheus, SiGrafana, SiOpentelemetry, SiDatadog, SiFluentbit,
   SiDash0,
@@ -110,7 +110,7 @@ const T = {
 
   jmeter:      { name: "JMeter",         icon: SiApachejmeter,   color: "#D22128" },
   jest:        { name: "Jest",           icon: SiJest,           color: "#C21325" },
-  pytest:      { name: "PyTest",         icon: SiPytest,         color: "#009FE3" },
+  pytest:      { name: "PyTest",         mono: "PT", img: "/tech/pytest.svg", color: "#009FE3" },
   goTest:      { name: "Go Test",        icon: SiGo,             color: "#00ADD8" },
   postman:     { name: "Postman",        icon: SiPostman,        color: "#FF6C37" },
   playwright:  { name: "Playwright",     mono: "PW", img: "/tech/playwright.svg", color: "#2EAD33" },
