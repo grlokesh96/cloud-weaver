@@ -114,7 +114,7 @@ const T = {
   goTest:      { name: "Go Test",        icon: SiGo,             color: "#00ADD8" },
   postman:     { name: "Postman",        icon: SiPostman,        color: "#FF6C37" },
   playwright:  { name: "Playwright",     mono: "PW", img: "/tech/playwright.svg", color: "#2EAD33" },
-  coverage:    { name: "Coverage",       mono: "%",              color: "#3FB950" },
+  codecov:     { name: "Codecov",        mono: "CC", img: "/tech/codecov.svg", color: "#FF3D8F" },
 
   docker:      { name: "Docker",         icon: SiDocker,         color: "#2496ED" },
   make:        { name: "Make",           icon: SiGnu,            color: "#E05B57" },
@@ -270,7 +270,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "test", name: "Testing", short: "Run tests & coverage",
-    icon: FlaskConical, tools: [T.jmeter, T.jest, T.pytest, T.goTest, T.postman, T.playwright, T.coverage],
+    icon: FlaskConical, tools: [T.jmeter, T.jest, T.pytest, T.goTest, T.postman, T.playwright, T.codecov],
     categories: ["Testing"],
     description: "Fast unit + integration suites with coverage thresholds enforced in CI.",
     input: "Compiled code", output: "JUnit XML + coverage",
