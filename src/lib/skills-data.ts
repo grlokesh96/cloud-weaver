@@ -1,6 +1,6 @@
 import {
   SiKubernetes, SiDocker, SiTerraform, SiGithub, SiGit, SiArgo, SiHelm,
-  SiPrometheus, SiGrafana, SiJenkins, SiPython, SiAnsible, SiNginx, SiIstio,
+  SiPrometheus, SiGrafana, SiJenkins, SiAnsible, SiNginx, SiIstio,
   SiGitlab, SiGithubactions, SiSonarqubeserver, SiSonatype, SiTrivy,
   SiSnyk, SiOwasp, SiVault, SiDatadog, SiOpentelemetry,
   SiGnubash, SiPaloaltonetworks, SiPodman, SiJfrog, SiFalco, SiCilium,
@@ -148,7 +148,7 @@ export const SKILL_CATEGORIES: TechCategory[] = [
       { name: "Jaeger", img: "/tech/jaeger.svg", mono: "JG", color: "#67CFE3" },
       { name: "AWS CloudWatch", img: awsCloudwatch.url },
       { name: "Azure Monitor", img: "/tech/azure-monitor.svg" },
-      { name: "Python", icon: SiPython, color: "#4B8BBE" },
+      { name: "Python", img: "/tech/python.svg", mono: "PY", color: "#4B8BBE" },
       { name: "PowerShell", icon: VscTerminalPowershell, color: "#5391FE" },
       { name: "Linux", icon: SiLinux, color: "#FCC624" },
       { name: "Bash", icon: SiGnubash, color: "#4EAA25" },
