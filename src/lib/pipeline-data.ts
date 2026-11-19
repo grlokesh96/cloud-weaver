@@ -109,6 +109,7 @@ const T = {
 
   jmeter:      { name: "JMeter",         icon: SiApachejmeter,   color: "#D22128" },
   jest:        { name: "Jest",           icon: SiJest,           color: "#C21325" },
+  mocha:       { name: "Mocha",          mono: "MO", img: "/tech/mocha.svg",           color: "#C89B7B" },
   pytest:      { name: "PyTest",         mono: "PT", img: "/tech/pytest.svg", color: "#009FE3" },
   goTest:      { name: "Go Test",        icon: SiGo,             color: "#00ADD8" },
   postman:     { name: "Postman",        icon: SiPostman,        color: "#FF6C37" },
@@ -269,7 +270,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "test", name: "Testing", short: "Run tests & coverage",
-    icon: FlaskConical, tools: [T.jmeter, T.jest, T.pytest, T.goTest, T.postman, T.playwright, T.codecov],
+    icon: FlaskConical, tools: [T.jmeter, T.jest, T.mocha, T.pytest, T.goTest, T.postman, T.playwright, T.codecov],
     categories: ["Testing"],
     description: "Fast unit + integration suites with coverage thresholds enforced in CI.",
     input: "Compiled code", output: "JUnit XML + coverage",
