@@ -72,7 +72,6 @@
   --pipeline-logo-hover-border: color-mix(in oklab, var(--foreground) 35%, transparent);
   --pipeline-logo-min-lightness: 0.72;
   --pipeline-logo-max-chroma: 0.18;
-  --pipeline-testing-touch-size: 44px;
 }
 
 .dark {
@@ -107,44 +106,6 @@
 }
 .pipeline-logo-glow {
   box-shadow: var(--pipeline-logo-shadow);
-}
-.pipeline-testing-tool {
-  display: contents;
-}
-.pipeline-testing-label {
-  display: none;
-}
-@media (max-width: 639px) {
-  .pipeline-testing-tools {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
-    gap: 12px 8px;
-    align-items: start;
-  }
-  .pipeline-testing-tool {
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-  }
-  .pipeline-testing-label {
-    display: block;
-    width: 100%;
-    min-height: 32px;
-    line-height: 16px;
-    text-align: center;
-    overflow-wrap: anywhere;
-  }
-  .pipeline-testing-tools .pipeline-logo-tile,
-  .pipeline-testing-drawer .pipeline-logo-tile {
-    width: var(--pipeline-testing-touch-size);
-    height: var(--pipeline-testing-touch-size);
-  }
-  .pipeline-testing-drawer {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 @media (min-width: 640px) {
   .pipeline-logo-tile {
