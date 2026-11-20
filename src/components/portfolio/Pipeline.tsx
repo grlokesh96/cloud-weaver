@@ -416,9 +416,16 @@ export function Pipeline() {
                 <p className={`${d.desc} mt-2.5 leading-snug text-muted-foreground`}>{stage.short}</p>
 
                 {/* official logos */}
-                <div className="mt-2.5 flex flex-wrap items-center gap-2 sm:gap-1.5">
+                <div className={`mt-2.5 flex flex-wrap items-center gap-2 sm:gap-1.5 ${stage.id === "test" ? "pipeline-testing-tools w-full" : ""}`}>
                   {stage.tools.map(t => (
-                    <LogoTile key={`${stage.id}-${t.name}`} tool={t} size={d.logoSize} />
+                    stage.id === "test" ? (
+                      <div key={`${stage.id}-${t.name}`} className="pipeline-testing-tool">
+                        <LogoTile tool={t} size={d.logoSize} />
+                        <span aria-hidden className="pipeline-testing-label text-xs font-medium text-foreground">{t.name}</span>
+                      </div>
+                    ) : (
+                      <LogoTile key={`${stage.id}-${t.name}`} tool={t} size={d.logoSize} />
+                    )
                   ))}
                 </div>
 
@@ -560,11 +567,11 @@ export function Pipeline() {
               <DrawerRow label="Output" value={active.output} />
 
               <DrawerSection title="Toolchain">
-                <div className="flex flex-wrap gap-2">
+                <div className={`flex flex-wrap gap-2 ${active.id === "test" ? "pipeline-testing-drawer" : ""}`}>
                   {active.tools.map(t => (
-                    <div key={t.name} className="flex items-center gap-2 rounded-lg border border-foreground/10 bg-foreground/5 px-2 py-1.5">
+                    <div key={t.name} className="flex min-w-0 items-center gap-2 rounded-lg border border-foreground/10 bg-foreground/5 px-2 py-1.5">
                       <LogoTile tool={t} size={26} />
-                      <span className="text-xs">{t.name}</span>
+                      <span className="min-w-0 break-words text-xs">{t.name}</span>
                     </div>
                   ))}
                 </div>
