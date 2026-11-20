@@ -121,6 +121,7 @@ const T = {
   bazel:       { name: "Bazel",          icon: SiBazel,          color: "#43A047" },
   goBuild:     { name: "Go Build",       icon: SiGo,             color: "#00ADD8" },
   cargo:       { name: "Cargo",          icon: SiRust,           color: "#F74C00" },
+  vite:        { name: "Vite",           mono: "VI", img: "/tech/vite.svg",           color: "#BD34FE" },
 
   terraform:   { name: "Terraform",      icon: SiTerraform,      color: "#7B42BC" },
   checkov:     { name: "Checkov",        mono: "CK", icon: SiPaloaltonetworks, color: "#FA582D" },
@@ -279,7 +280,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "build", name: "Build", short: "Compile & package",
-    icon: Hammer, tools: [T.docker, T.podman, T.maven, T.gradle, T.make, T.bazel, T.goBuild, T.cargo],
+    icon: Hammer, tools: [T.docker, T.podman, T.maven, T.gradle, T.make, T.bazel, T.goBuild, T.cargo, T.vite],
     categories: ["CI"],
     description: "Produce immutable, reproducible build artifacts with SLSA provenance.",
     input: "Source + deps", output: "JAR / bundle / OCI image",
