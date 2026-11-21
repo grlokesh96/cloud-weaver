@@ -4,7 +4,7 @@ import type { CSSProperties } from "react";
 import { HiOutlineX, HiOutlinePlay, HiOutlinePause, HiOutlineRefresh, HiCheck, HiX } from "react-icons/hi";
 
 import {
-  PIPELINE_STAGES, PIPELINE_FILTERS, PIPELINE_STATS,
+  PIPELINE_STAGES, PIPELINE_FILTERS, PIPELINE_GROUPS, PIPELINE_STATS,
   type PipelineStage, type StageCategory, type Tool,
 } from "@/lib/pipeline-data";
 
@@ -101,6 +101,15 @@ export function Pipeline() {
 
   const matchesFilter = (s: PipelineStage) =>
     filter === "All" || s.categories.includes(filter as StageCategory);
+
+  const jumpToStage = (stageId: string) => {
+    const idx = PIPELINE_STAGES.findIndex(s => s.id === stageId);
+    if (idx < 0) return;
+    setFocusIdx(idx);
+    const el = cardRefs.current[idx];
+    el?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+    window.setTimeout(() => el?.focus({ preventScroll: true }), 350);
+  };
 
   const clearTimer = () => {
     if (timerRef.current !== null) {
@@ -255,6 +264,21 @@ export function Pipeline() {
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">{s.label}</div>
               <div className="mt-1 text-lg font-semibold" style={{ color: s.accent }}>{s.value}</div>
             </div>
+          ))}
+        </div>
+
+        {/* Quick category jump */}
+        <div className="mt-6 flex flex-wrap items-center gap-2" role="navigation" aria-label="Jump to a pipeline area">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Jump to</span>
+          {PIPELINE_GROUPS.map(g => (
+            <button
+              key={g.stageId}
+              onClick={() => jumpToStage(g.stageId)}
+              aria-label={`Jump to ${g.label} stages`}
+              className="rounded-full border border-primary/25 bg-primary/[0.04] px-3 py-1.5 text-xs font-medium text-primary/90 transition-all hover:border-primary/50 hover:bg-primary/10 hover:text-primary"
+            >
+              {g.label}
+            </button>
           ))}
         </div>
 
