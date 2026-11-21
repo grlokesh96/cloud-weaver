@@ -402,15 +402,6 @@ export const PIPELINE_FILTERS: (StageCategory | "All")[] = [
   "Cloud", "Infrastructure", "GitOps", "Observability",
 ];
 
-/** Quick-jump groups: each chip scrolls to the first stage of that pipeline area. */
-export const PIPELINE_GROUPS: { label: string; stageId: string }[] = [
-  { label: "Source & CI", stageId: "scm" },
-  { label: "Security Gates", stageId: "secrets" },
-  { label: "Build, Test & Supply Chain", stageId: "build" },
-  { label: "Deployment & K8s", stageId: "gitops" },
-  { label: "Observability & Ops", stageId: "dast" },
-];
-
 export const PIPELINE_STATS = [
   { label: "Pipeline Success", value: "98.7%", accent: "var(--color-aurora-3)" },
   { label: "Avg Execution", value: "20m 42s", accent: "var(--color-aurora-1)" },
