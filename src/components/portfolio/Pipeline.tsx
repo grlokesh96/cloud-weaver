@@ -260,26 +260,47 @@ export function Pipeline() {
 
         {/* Controls */}
         <div className="mt-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-          <div
-            className="flex flex-wrap gap-2"
-            role="toolbar"
-            aria-label="Filter stages by category"
-          >
-            {PIPELINE_FILTERS.map(f => (
-              <button
-                key={f}
-                onClick={() => setFilter(f)}
-                aria-pressed={filter === f}
-                aria-label={`Filter: ${f}`}
-                className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-all ${
-                  filter === f
-                    ? "border-primary/60 bg-primary/10 text-foreground"
-                    : "border-foreground/10 text-muted-foreground hover:border-foreground/20 hover:text-foreground"
-                }`}
-              >
-                {f}
-              </button>
-            ))}
+          <div className="flex flex-col gap-2">
+            <div
+              className="flex flex-wrap gap-2"
+              role="toolbar"
+              aria-label="Filter stages by category"
+            >
+              {PIPELINE_FILTERS.map(f => {
+                const count = f === "All"
+                  ? PIPELINE_STAGES.length
+                  : PIPELINE_STAGES.filter(s => s.categories.includes(f as StageCategory)).length;
+                const isActive = filter === f;
+                return (
+                  <button
+                    key={f}
+                    onClick={() => setFilter(f)}
+                    aria-pressed={isActive}
+                    aria-label={`Filter: ${f}, ${count} stages`}
+                    className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-all ${
+                      isActive
+                        ? "border-primary/70 bg-primary/15 text-foreground shadow-[0_0_16px_-4px_var(--color-aurora-1)]"
+                        : "border-foreground/10 text-muted-foreground hover:border-foreground/25 hover:text-foreground"
+                    }`}
+                  >
+                    {f}
+                    <span
+                      aria-hidden
+                      className={`rounded-full px-1.5 py-px font-mono text-[10px] tabular-nums ${
+                        isActive ? "bg-primary/25 text-foreground" : "bg-foreground/[0.07] text-muted-foreground"
+                      }`}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+            <p className="text-[11px] text-muted-foreground" role="status" aria-live="polite">
+              {filter === "All"
+                ? `Showing all ${PIPELINE_STAGES.length} stages`
+                : `Showing ${PIPELINE_STAGES.filter(s => s.categories.includes(filter as StageCategory)).length} of ${PIPELINE_STAGES.length} stages — others dimmed`}
+            </p>
           </div>
           <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-2 sm:flex" role="toolbar" aria-label="Pipeline simulator controls">
             {/* Density toggle */}
