@@ -199,6 +199,7 @@ const T = {
   servicenow:  { name: "ServiceNow",     mono: "SN", img: "/tech/servicenow.svg",       color: "#A6D8C0" },
   jira:        { name: "Jira",           icon: SiJira,           color: "#0052CC" },
   robusta:     { name: "Robusta", img: "/tech/robusta.svg", color: "#2BBFB2" },
+  incidentio:  { name: "incident.io", img: "/tech/incident-io.svg", color: "#F25533" },
   pdRunbook:   { name: "PagerDuty Runbook Automation", icon: SiPagerduty, color: "#06AC38" },
   ssmAutomation: { name: "AWS Systems Manager Automation", img: "/tech/aws-systems-manager-automation.png", color: "#E7157B" },
 } satisfies Record<string, Tool>;
@@ -413,7 +414,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "aiops", name: "AIOps & Self-Healing", short: "Automated alert triage, runbook execution & self-healing",
-    icon: Bot, tools: [T.robusta, T.pdRunbook, T.ssmAutomation],
+    icon: Bot, tools: [T.robusta, T.incidentio, T.pdRunbook, T.ssmAutomation],
     categories: ["Observability", "Cloud"],
     description: "Correlate alerts and diagnostic evidence with Robusta, execute approved remediation through PagerDuty Runbook Automation and AWS Systems Manager Automation, and verify recovery against service health signals. AI-assisted triage is optional; remediation remains policy-controlled.",
     input: "Alerts + diagnostic context + approved runbooks", output: "Audited remediation + verified recovery or escalation",

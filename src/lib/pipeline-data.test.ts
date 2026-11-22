@@ -24,7 +24,7 @@ describe("requested pipeline additions", () => {
     const stage = PIPELINE_STAGES.find(item => item.id === "aiops");
     assert.deepEqual(stage?.categories, ["Observability", "Cloud"]);
     assert.deepEqual(stage?.tools.map(tool => tool.name), [
-      "Robusta", "PagerDuty Runbook Automation", "AWS Systems Manager Automation",
+      "Robusta", "incident.io", "PagerDuty Runbook Automation", "AWS Systems Manager Automation",
     ]);
   });
 });
