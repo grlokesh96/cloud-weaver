@@ -21,7 +21,7 @@ import {
   GitCommit, GitBranch, PlayCircle, Package, KeyRound, Sparkles,
   ShieldCheck, Boxes, FlaskConical, Hammer, FileCode2, Container,
   FileText, PenLine, Archive, GitMerge, Scale, Rocket, Bug,
-  Radar, Activity, Bell,
+  Radar, Activity, Bell, CircleDollarSign, Bot,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
@@ -130,6 +130,10 @@ const T = {
   kics:        { name: "KICS",           mono: "KI", img: "/tech/kics.png", color: "#EF4444" },
   cloudsploit: { name: "CloudSploit",    mono: "CS", img: "/tech/cloudsploit.png", color: "#08B1D5" },
 
+  infracost:   { name: "Infracost", img: "/tech/infracost.svg", color: "#DB44B8" },
+  kubecost:    { name: "Kubecost", img: "/tech/kubecost.svg", color: "#2CA66F" },
+  opencost:    { name: "OpenCost", img: "/tech/opencost.svg", color: "#00AEEF" },
+
   trivy:       { name: "Trivy",          icon: SiTrivy,          color: "#1904DA" },
   grype:       { name: "Grype",          mono: "GR", img: "/tech/grype.png", color: "#FF6A00" },
   dockerScout: { name: "Docker Scout",   mono: "DS", img: "/tech/docker-scout.png", color: "#7FE0C3" },
@@ -194,6 +198,9 @@ const T = {
   azMonitor:   { name: "Azure Monitor Alerts", mono: "AMA", img: "/tech/azure-monitor-alerts.svg", color: "#5EA0EF" },
   servicenow:  { name: "ServiceNow",     mono: "SN", img: "/tech/servicenow.svg",       color: "#A6D8C0" },
   jira:        { name: "Jira",           icon: SiJira,           color: "#0052CC" },
+  robusta:     { name: "Robusta", img: "/tech/robusta.svg", color: "#2BBFB2" },
+  pdRunbook:   { name: "PagerDuty Runbook Automation", icon: SiPagerduty, color: "#06AC38" },
+  ssmAutomation: { name: "AWS Systems Manager Automation", img: "/tech/aws-systems-manager-automation.png", color: "#E7157B" },
 } satisfies Record<string, Tool>;
 
 export const PIPELINE_STAGES: PipelineStage[] = [
@@ -297,6 +304,15 @@ export const PIPELINE_STAGES: PipelineStage[] = [
     commands: ["checkov -d . --framework terraform"],
   },
   {
+    id: "finops", name: "FinOps & Cost Estimation", short: "Shift-left cloud cost guardrails & PR cost impact",
+    icon: CircleDollarSign, tools: [T.infracost, T.kubecost, T.opencost],
+    categories: ["Infrastructure", "Cloud"],
+    description: "Estimate cloud cost changes in infrastructure PRs with Infracost, then use Kubecost and OpenCost workload allocation to inform right-sizing and cost guardrails. Estimates depend on usage assumptions and are not billing guarantees.",
+    input: "Infrastructure plan + usage assumptions + workload cost data", output: "PR cost estimate + cost allocation insights",
+    bestPractices: ["Review cost deltas before merge", "Keep usage assumptions current", "Allocate Kubernetes costs by team and namespace"],
+    commands: ["infracost breakdown --path . --format json --out-file infracost.json", "infracost diff --path . --compare-to infracost.json"],
+  },
+  {
     id: "container", name: "Container Security", short: "Scan images for CVEs",
     icon: Container, tools: [T.trivy, T.grype, T.dockerScout, T.snykCont],
     categories: ["Security", "Containers"],
@@ -394,6 +410,15 @@ export const PIPELINE_STAGES: PipelineStage[] = [
     input: "Alert / event", output: "Ticket / page",
     bestPractices: ["Symptom-based alerts", "Runbooks in alerts", "Post-incident review"],
     commands: ["curl -XPOST $SLACK_WEBHOOK ..."],
+  },
+  {
+    id: "aiops", name: "AIOps & Self-Healing", short: "Automated alert triage, runbook execution & self-healing",
+    icon: Bot, tools: [T.robusta, T.pdRunbook, T.ssmAutomation],
+    categories: ["Observability", "Cloud"],
+    description: "Correlate alerts and diagnostic evidence with Robusta, execute approved remediation through PagerDuty Runbook Automation and AWS Systems Manager Automation, and verify recovery against service health signals. AI-assisted triage is optional; remediation remains policy-controlled.",
+    input: "Alerts + diagnostic context + approved runbooks", output: "Audited remediation + verified recovery or escalation",
+    bestPractices: ["Require approval for high-impact actions", "Use least-privilege execution roles", "Limit retries and blast radius; escalate failed recovery", "Audit actions and verify service health"],
+    commands: ["aws ssm describe-automation-documents", "aws ssm describe-automation-executions"],
   },
 ];
 

@@ -243,7 +243,7 @@ export function Pipeline() {
             From commit to production - secured, automated, and observable.
           </h2>
           <p id="pipeline-desc" className="mt-2 max-w-2xl text-sm text-muted-foreground">
-            22 stages · 90+ integrated tools ·&nbsp;Signed artifacts ·&nbsp;policy-gated deployments ·&nbsp;real-time observability&nbsp;
+            {PIPELINE_STAGES.length} stages · 90+ integrated tools ·&nbsp;Signed artifacts ·&nbsp;policy-gated deployments ·&nbsp;real-time observability&nbsp;
           </p>
         </div>
 
