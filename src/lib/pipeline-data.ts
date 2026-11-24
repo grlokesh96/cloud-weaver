@@ -133,6 +133,7 @@ const T = {
   infracost:   { name: "Infracost", img: "/tech/infracost.svg", color: "#DB44B8" },
   kubecost:    { name: "Kubecost", img: "/tech/kubecost.svg", color: "#2CA66F" },
   opencost:    { name: "OpenCost", img: "/tech/opencost.svg", color: "#00AEEF" },
+  castai:      { name: "CAST AI", img: "/tech/cast-ai.svg", color: "#FFFFFF" },
 
   trivy:       { name: "Trivy",          icon: SiTrivy,          color: "#1904DA" },
   grype:       { name: "Grype",          mono: "GR", img: "/tech/grype.png", color: "#FF6A00" },
@@ -306,7 +307,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "finops", name: "FinOps & Cost Estimation", short: "Shift-left cloud cost guardrails & PR cost impact",
-    icon: CircleDollarSign, tools: [T.infracost, T.kubecost, T.opencost],
+    icon: CircleDollarSign, tools: [T.infracost, T.kubecost, T.opencost, T.castai],
     categories: ["Infrastructure", "Cloud"],
     description: "Estimate cloud cost changes in infrastructure PRs with Infracost, then use Kubecost and OpenCost workload allocation to inform right-sizing and cost guardrails. Estimates depend on usage assumptions and are not billing guarantees.",
     input: "Infrastructure plan + usage assumptions + workload cost data", output: "PR cost estimate + cost allocation insights",

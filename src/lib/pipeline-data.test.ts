@@ -14,7 +14,14 @@ describe("requested pipeline additions", () => {
     ]);
     const stage = PIPELINE_STAGES.find(item => item.id === "finops");
     assert.deepEqual(stage?.categories, ["Infrastructure", "Cloud"]);
-    assert.deepEqual(stage?.tools.map(tool => tool.name), ["Infracost", "Kubecost", "OpenCost"]);
+    assert.deepEqual(stage?.tools.map(tool => tool.name), ["Infracost", "Kubecost", "OpenCost", "CAST AI"]);
+  });
+
+  test("includes CAST AI exactly once in FinOps with its local logo", () => {
+    const placements = PIPELINE_STAGES.flatMap(stage =>
+      stage.tools.filter(tool => tool.name === "CAST AI").map(tool => ({ stage: stage.id, logo: tool.img }))
+    );
+    assert.deepEqual(placements, [{ stage: "finops", logo: "/tech/cast-ai.svg" }]);
   });
 
   test("ends with Notifications followed by AIOps and its requested tools", () => {
