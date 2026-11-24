@@ -1,4 +1,5 @@
 import type { IconType } from "react-icons";
+import googleGcrLogo from "@/assets/google-gcr.svg.asset.json";
 import {
   SiGithub, SiGitlab, SiBitbucket, SiGithubactions, SiJenkins, SiCircleci,
   SiNodedotjs, SiNpm, SiYarn, SiPnpm, SiApachemaven, SiGradle, SiPython, SiGo,
@@ -97,6 +98,7 @@ const T = {
   checkmarx:   { name: "Checkmarx One",  mono: "CX", img: "/tech/checkmarx.png", color: "#00A1E0" },
   podman:      { name: "Podman",         icon: SiPodman,         color: "#C77DDB" },
   acr:         { name: "Azure ACR",      mono: "ACR", img: "/tech/azure-acr.svg", color: "#0078D4" },
+  gcr:         { name: "Google GCR",     img: googleGcrLogo.url, color: "#4285F4" },
   sonar:       { name: "SonarQube",      icon: SiSonarqubeserver, color: "#4E9BCD" },
   semgrep:     { name: "Semgrep",        img: "/tech/semgrep.svg",   color: "#6366F1" },
   codeql:      { name: "CodeQL",         icon: SiGithub,         color: "#2088FF" },
@@ -343,7 +345,7 @@ export const PIPELINE_STAGES: PipelineStage[] = [
   },
   {
     id: "registry", name: "Artifact Registry", short: "Publish signed image",
-    icon: Archive, tools: [T.ecr, T.acr, T.dockerHub, T.ghPackages, T.jfrog, T.harbor],
+    icon: Archive, tools: [T.ecr, T.acr, T.gcr, T.dockerHub, T.ghPackages, T.jfrog, T.harbor],
     categories: ["Cloud", "Containers"],
     description: "Push signed, scanned image with immutable tags to a trusted registry.",
     input: "Signed image", output: "Registry reference",

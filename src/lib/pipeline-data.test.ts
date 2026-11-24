@@ -3,6 +3,12 @@ import { strict as assert } from "node:assert";
 import { PIPELINE_STAGES } from "./pipeline-data";
 
 describe("requested pipeline additions", () => {
+  test("places Google GCR immediately after Azure ACR in Artifact Registry", () => {
+    const stage = PIPELINE_STAGES.find(item => item.id === "registry");
+    assert.deepEqual(stage?.tools.map(tool => tool.name), [
+      "Amazon ECR", "Azure ACR", "Google GCR", "Docker Hub", "GitHub Packages", "JFrog", "Harbor",
+    ]);
+  });
   test("has 24 stages with unique identifiers", () => {
     assert.equal(PIPELINE_STAGES.length, 24);
     assert.equal(new Set(PIPELINE_STAGES.map(stage => stage.id)).size, 24);
