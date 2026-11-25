@@ -82,9 +82,9 @@ export const SKILL_CATEGORIES: TechCategory[] = [
     title: "CI/CD & GitOps",
     tools: [
       { name: "GitHub Actions", icon: SiGithubactions, color: "#2088FF" },
+      { name: "GitLab CI/CD", icon: SiGitlab, color: "#FC6D26" },
       { name: "Jenkins", icon: SiJenkins, color: "#D33833" },
       { name: "Azure DevOps", icon: VscAzureDevops, color: "#0078D4" },
-      { name: "GitLab CI/CD", icon: SiGitlab, color: "#FC6D26" },
       { name: "Argo CD", icon: SiArgo, color: "#EF7B4D" },
       { name: "Git", icon: SiGit, color: "#F05033" },
       { name: "GitHub", icon: SiGithub },
