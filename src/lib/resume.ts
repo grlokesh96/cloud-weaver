@@ -28,7 +28,7 @@ export function formatResumeUpdated(iso: string): string {
 export const RESUME_UPDATED_ISO = resumeAsset.created_at;
 export const RESUME_UPDATED_LABEL = formatResumeUpdated(resumeAsset.created_at);
 export const RESUME_FILE_SIZE_BYTES = resumeAsset.size;
-export const RESUME_TITLE = "AWS DevOps · DevSecOps · Platform Engineer";
+export const RESUME_TITLE = "DevOps Engineer, DevSecOps Engineer, Cloud Engineer";
 
 /** localStorage key for the client-side download counter. */
 export const RESUME_DOWNLOAD_COUNT_KEY = "resume:download-count:v1";
