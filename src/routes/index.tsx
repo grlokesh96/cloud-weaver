@@ -221,7 +221,7 @@ function OpenToWork() {
                 </div>
                 <h2 className="mt-2 text-2xl font-bold sm:text-3xl">Available immediately · Remote · Hybrid · Full-time · Contract</h2>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Senior DevOps · DevSecOps · Platform Engineering Hyderabad, India&nbsp;&nbsp;· Open to Remote Global Opportunities
+                  Senior DevOps · DevSecOps · SRE Engineering Hyderabad, India&nbsp;&nbsp;· Open to Remote Global Opportunities
                 </p>
               </div>
               <div className="flex flex-wrap gap-2">
