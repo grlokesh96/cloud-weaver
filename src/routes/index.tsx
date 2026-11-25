@@ -14,6 +14,7 @@ import {
 } from "@/lib/portfolio-data";
 
 import { Nav } from "@/components/portfolio/Nav";
+import { useSiteVisits } from "@/lib/site-visits";
 
 import { Pipeline } from "@/components/portfolio/Pipeline";
 import { K8sOpsCenter } from "@/components/portfolio/K8sOpsCenter";
@@ -793,6 +794,7 @@ function Field({ name, label, type = "text", required }: { name: string; label: 
 
 /* ---------------- Footer ---------------- */
 function Footer() {
+  const visits = useSiteVisits();
   return (
     <footer className="section-shell-tight relative overflow-hidden border-t border-foreground/5">
       <svg className="pointer-events-none absolute inset-x-0 -top-8 w-full opacity-40" height="80" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden>
@@ -807,6 +809,10 @@ function Footer() {
       <div className="section-container relative flex flex-col items-center justify-between gap-4 sm:flex-row">
         <div className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} {PROFILE.name}. Crafted with care.
+        </div>
+        <div className="glass inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs text-muted-foreground" aria-live="polite">
+          <span className="relative flex h-2 w-2"><span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" /><span className="relative inline-flex h-2 w-2 rounded-full bg-primary" /></span>
+          <span className="font-mono text-foreground">{visits === null ? "—" : visits.toLocaleString()}</span> profile views
         </div>
         <div className="flex items-center gap-1">
           <a href={PROFILE.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="inline-flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground hover:bg-foreground/5 hover:text-foreground"><FaGithub size={18} /></a>
