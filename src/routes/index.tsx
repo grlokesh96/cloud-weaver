@@ -20,6 +20,8 @@ import { useSiteVisits } from "@/lib/site-visits";
 import { Pipeline } from "@/components/portfolio/Pipeline";
 import { K8sOpsCenter } from "@/components/portfolio/K8sOpsCenter";
 import { SkillsGrid } from "@/components/portfolio/SkillsGrid";
+import { HeroTerminal } from "@/components/portfolio/HeroTerminal";
+import { PIPELINE_STAGES } from "@/lib/pipeline-data";
 
 import { Counter, Reveal, MagneticButton } from "@/components/portfolio/ui";
 import {
@@ -178,10 +180,20 @@ function Hero() {
                 </MagneticButton>
               </div>
             </Reveal>
+            <Reveal delay={0.34}>
+              <a
+                href="#pipeline"
+                className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-medium text-foreground shadow-[0_0_24px_-6px_var(--primary)] transition hover:bg-primary/20 sm:text-sm"
+              >
+                <span aria-hidden>⚡</span> Interactive Demos: {PIPELINE_STAGES.length}-Stage CI/CD Pipeline &amp; EKS Ops Center <span aria-hidden>↓</span>
+              </a>
+            </Reveal>
           </div>
 
           <Reveal delay={0.15}>
-            <div className="hidden lg:block" aria-hidden />
+            <div className="hidden lg:block">
+              <HeroTerminal />
+            </div>
           </Reveal>
         </div>
 
