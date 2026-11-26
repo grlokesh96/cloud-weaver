@@ -409,19 +409,20 @@ html {
 @utility section-shell {
   position: relative;
   padding-inline: 1rem;
-  padding-block: 4.5rem;
+  padding-block: 2.25rem;
   @media (min-width: 640px) {
     padding-inline: 1.5rem;
-    padding-block: 6rem;
+    padding-block: 3.5rem;
   }
 }
 
 @utility section-shell-tight {
   position: relative;
   padding-inline: 1rem;
-  padding-block: 2.5rem;
+  padding-block: 1.5rem;
   @media (min-width: 640px) {
     padding-inline: 1.5rem;
+    padding-block: 2.25rem;
   }
 }
 

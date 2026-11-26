@@ -57,7 +57,7 @@ function CategoryGroup({ cat, index }: { cat: TechCategory; index: number }) {
 
 export function SkillsGrid() {
   return (
-    <div className="mt-10 space-y-8">
+    <div className="mt-6 space-y-8 sm:mt-8">
       {SKILL_CATEGORIES.map((c, i) => <CategoryGroup key={c.id} cat={c} index={i} />)}
     </div>
   );

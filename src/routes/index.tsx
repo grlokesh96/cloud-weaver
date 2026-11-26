@@ -135,7 +135,7 @@ function TechCloud() {
 /* ---------------- Hero ---------------- */
 function Hero() {
   return (
-    <section id="top" className="aurora-bg relative flex min-h-[100svh] flex-col justify-center overflow-hidden pt-28 pb-14 sm:pt-32 sm:pb-16">
+    <section id="top" className="aurora-bg relative flex min-h-[100svh] flex-col justify-center overflow-hidden pt-28 pb-6 sm:pt-32 sm:pb-8">
       <div className="grid-bg absolute inset-0" aria-hidden />
       <TechCloud />
       <div className="section-container relative px-4 sm:px-6">
@@ -277,7 +277,7 @@ function About() {
           <SectionHeading eyebrow="About" title="DevOps Engineer, obsessed with reliability and AI-driven automation." />
         </Reveal>
 
-        <div className="mt-10 space-y-6">
+        <div className="mt-6 space-y-6 sm:mt-8">
           <Reveal>
             <p className="text-lg leading-relaxed text-muted-foreground">
               I'm a <span className="text-highlight">DevOps & DevSecOps Engineer</span> focused on <span className="text-highlight">AIOps</span> with <span className="text-highlight">5+ years</span> of experience designing, automating, and securing cloud-native infrastructure. My expertise spans <span className="text-highlight">AWS</span>, <span className="text-highlight">Kubernetes</span>, <span className="text-highlight">GitOps</span>, <span className="text-highlight">CI/CD automation</span>, <span className="text-highlight">Infrastructure as Code</span>, <span className="text-highlight">cloud security</span>, and <span className="text-highlight">AI-assisted operations</span>, helping improve software delivery, platform reliability, and operational efficiency.
@@ -333,7 +333,7 @@ function Experience() {
         <Reveal>
           <SectionHeading eyebrow="Experience" title="5+ years building secure cloud-native infrastructure, automating DevSecOps, and scaling Kubernetes workloads." />
         </Reveal>
-        <div className="mt-12 relative">
+        <div className="mt-6 sm:mt-8 relative">
           <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-[var(--color-aurora-1)]/50 via-white/10 to-transparent md:left-1/2" />
           <div className="space-y-10">
             {EXPERIENCE.map((e, i) => (
@@ -407,7 +407,7 @@ function Projects() {
           <SectionHeading eyebrow="Featured Projects" title={"Production-grade cloud platforms, engineered to scale.\u00A0\n"} />
         </Reveal>
 
-        <div className="mt-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div className="mt-6 flex flex-col gap-4 sm:mt-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-wrap gap-1.5">
             {PROJECT_FILTERS.map(f => (
               <button
@@ -481,7 +481,7 @@ function Certifications() {
         <Reveal>
           <SectionHeading eyebrow="Certifications" title="Credentials & continuous learning." />
         </Reveal>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-2 lg:grid-cols-3">
           {CERTIFICATIONS.map((c, i) => (
             <Reveal key={c.name} delay={i * 0.05}>
               <motion.div
@@ -699,7 +699,7 @@ function Contact() {
           <SectionHeading eyebrow="Contact" title="Let's build reliable platforms together." />
         </Reveal>
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1.1fr]">
+        <div className="mt-6 grid gap-6 sm:mt-8 lg:grid-cols-[1fr_1.1fr]">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
             {cards.map(c => (
               <a

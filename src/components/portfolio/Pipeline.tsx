@@ -249,7 +249,7 @@ export function Pipeline() {
 
 
         {/* Dashboard stats */}
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
+        <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
           {PIPELINE_STATS.map(s => (
             <div key={s.label} className="glass rounded-xl p-3">
               <div className="text-[10px] uppercase tracking-widest text-muted-foreground">{s.label}</div>
