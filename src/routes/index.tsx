@@ -5,6 +5,7 @@ import {
   HiOutlineDownload, HiOutlineMail, HiOutlineArrowRight,
   HiOutlineExternalLink, HiOutlineDocumentText, HiOutlineLocationMarker,
   HiOutlinePhone, HiOutlineCheckCircle, HiOutlineDuplicate, HiOutlineCheck,
+  HiOutlineLightningBolt, HiOutlineGlobe,
 } from "react-icons/hi";
 import { toast } from "sonner";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -208,26 +209,45 @@ function Hero() {
 
 /* ---------------- Open to work banner ---------------- */
 function OpenToWork() {
+  const pill = "inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary/60 px-3 py-1 text-xs font-medium text-muted-foreground";
   return (
     <section id="work-banner" className="section-shell-tight">
       <div className="section-container">
         <Reveal>
-          <div className="glass animated-border relative overflow-hidden rounded-2xl p-6 sm:p-8">
-            <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
+          <div className="glass animated-border relative overflow-hidden rounded-2xl p-5 sm:p-6">
+            {/* radial emerald/cyan glow behind the pulsing status dot */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -left-10 -top-16 h-48 w-48 rounded-full blur-3xl"
+              style={{ background: "radial-gradient(circle, color-mix(in oklab, var(--color-aurora-3) 65%, transparent), transparent 70%)" }}
+            />
+            <div className="relative flex flex-col items-start justify-between gap-5 lg:flex-row lg:items-center">
               <div>
                 <div className="flex items-center gap-2 text-emerald-400">
                   <span className="pulse-dot h-2.5 w-2.5 rounded-full bg-emerald-400" />
-                  <span className="text-sm font-semibold uppercase tracking-widest">Open to New Opportunities</span>
+                  <span className="text-xs font-semibold uppercase tracking-widest">Open to New Opportunities</span>
                 </div>
-                <h2 className="mt-2 text-2xl font-bold sm:text-3xl">Available immediately · Remote · Hybrid · Full-time · Contract</h2>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Senior DevOps · DevSecOps · Site Reliability Engineering&nbsp;
-                  <br />
-                  Hyderabad, India&nbsp;&nbsp;· Open to Remote Global Opportunities
-                </p>
+                <h2 className="mt-2 text-xl font-bold sm:text-2xl">Available for Senior DevOps, DevSecOps &amp; SRE Roles</h2>
+                <div className="mt-3 flex flex-wrap items-center gap-2">
+                  <span className={pill}>
+                    <HiOutlineLightningBolt className="h-3.5 w-3.5 text-primary" /> Immediate Joiner
+                  </span>
+                  <span className={pill}>
+                    <HiOutlineGlobe className="h-3.5 w-3.5 text-primary" /> Remote &amp; Hybrid
+                  </span>
+                  <span className={pill}>
+                    <HiOutlineLocationMarker className="h-3.5 w-3.5 text-primary" /> Hyderabad / Relocation
+                  </span>
+                </div>
               </div>
-              <div className="flex flex-wrap gap-2">
-                <a href={RESUME_VIEWER_URL} target="_blank" rel="noopener noreferrer" className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm hover:bg-foreground/10">
+              <div className="flex flex-wrap items-center gap-2">
+                <a
+                  href={RESUME_VIEWER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:brightness-110"
+                  style={{ boxShadow: "0 0 28px -6px color-mix(in oklab, var(--color-primary) 70%, transparent)" }}
+                >
                   <HiOutlineDownload /> Resume
                 </a>
                 <a href={`mailto:${PROFILE.email}`} className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm hover:bg-foreground/10">
