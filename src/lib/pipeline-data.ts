@@ -88,7 +88,7 @@ const T = {
   talisman:    { name: "Talisman",       mono: "TA", img: "/tech/talisman.png",        color: "#F0B45A" },
   kingfisher:  { name: "Kingfisher",     mono: "KF", img: "/tech/kingfisher.png",      color: "#47A76A" },
 
-  eslint:      { name: "ESLint",         icon: SiEslint,         color: "#4B32C3" },
+  eslint:      { name: "ESLint",         icon: SiEslint,         color: "#8A72F0" },
   pylint:      { name: "Pylint",         mono: "PY", img: "/tech/pylint.svg",             color: "#FFD43B" },
   checkstyle:  { name: "Checkstyle",     mono: "CS", img: "/tech/checkstyle.png",             color: "#F5A623" },
   prettier:    { name: "Prettier",       icon: SiPrettier,       color: "#F7B93E" },
@@ -106,7 +106,7 @@ const T = {
 
   owaspDC:     { name: "OWASP DC",       icon: SiOwasp,          color: "#F26522" },
   snyk:        { name: "Snyk",           icon: SiSnyk,           color: "#8F8CE8" },
-  dependabot:  { name: "Dependabot",     icon: SiDependabot,     color: "#025E8C" },
+  dependabot:  { name: "Dependabot",     icon: SiDependabot,     color: "#42AEE8" },
   renovate:    { name: "Black Duck",     mono: "BD", img: "/tech/blackduck.png", color: "#FFC20E" },
 
   jmeter:      { name: "JMeter",         icon: SiApachejmeter,   color: "#D22128" },
@@ -137,7 +137,7 @@ const T = {
   opencost:    { name: "OpenCost", img: "/tech/opencost.svg", color: "#00AEEF" },
   castai:      { name: "CAST AI", img: "/tech/cast-ai.svg", color: "#FFFFFF" },
 
-  trivy:       { name: "Trivy",          icon: SiTrivy,          color: "#1904DA" },
+  trivy:       { name: "Trivy",          icon: SiTrivy,          color: "#5B8CFF" },
   grype:       { name: "Grype",          mono: "GR", img: "/tech/grype.png", color: "#FF6A00" },
   dockerScout: { name: "Docker Scout",   mono: "DS", img: "/tech/docker-scout.png", color: "#7FE0C3" },
   snykCont:    { name: "Snyk Container", icon: SiSnyk,           color: "#8F8CE8" },
@@ -172,14 +172,14 @@ const T = {
   canary:      { name: "Canary",         mono: "CN", icon: GiBirdTwitter,             color: "#F59E0B" },
   argoRollouts:{ name: "Argo Rollouts",  mono: "AR", img: "/tech/argo-rollouts.png", color: "#F97316" },
 
-  zap:         { name: "OWASP ZAP",      icon: SiZap,            color: "#00549E" },
+  zap:         { name: "OWASP ZAP",      icon: SiZap,            color: "#3FA6E8" },
   burp:        { name: "Burp Suite",     icon: SiPortswigger,    color: "#FF6633" },
   nikto:       { name: "Invicti",        mono: "IN", img: "/tech/invicti.png", color: "#1E90FF" },
   stackhawk:   { name: "StackHawk",      mono: "SH", img: "/tech/stackhawk.png", color: "#00CBC6" },
 
   falco:       { name: "Falco",          icon: SiFalco,          color: "#00AEC7" },
   prismaCloud: { name: "Prisma Cloud",   mono: "PC", img: "/tech/prisma-cloud.svg",             color: "#F04E23" },
-  aqua:        { name: "Aqua Security",  icon: SiAqua,           color: "#1904DA" },
+  aqua:        { name: "Aqua Security",  icon: SiAqua,           color: "#5B8CFF" },
   sysdig:      { name: "Sysdig",         mono: "SD", img: "/tech/sysdig.png",             color: "#00AEEF" },
   wiz:         { name: "Wiz",            mono: "WZ", img: "/tech/wiz.svg",                color: "#4D6CFA" },
 
@@ -188,7 +188,7 @@ const T = {
   loki:        { name: "Grafana Loki",   mono: "GL", img: "/tech/grafana-loki.svg",       color: "#F15B2B" },
   otel:        { name: "OpenTelemetry",  icon: SiOpentelemetry,  color: "#F5A800" },
   jaeger:      { name: "Jaeger",         mono: "JG", img: "/tech/jaeger.svg",             color: "#67CFE3" },
-  datadog:     { name: "Datadog",        icon: SiDatadog,        color: "#632CA6" },
+  datadog:     { name: "Datadog",        icon: SiDatadog,        color: "#A57BE0" },
   dash0:       { name: "Dash0",          icon: SiDash0,          color: "#EA3D3B" },
   elk:         { name: "ELK Stack",      mono: "ELK", img: "/tech/elk-stack.svg",         color: "#00A9E5" },
   fluentbit:   { name: "Fluent Bit",     icon: SiFluentbit,      color: "#49BDA5" },
@@ -200,7 +200,7 @@ const T = {
   sns:         { name: "Amazon SNS",     mono: "SNS", img: "/tech/aws-sns.svg",        color: "#E7157B" },
   azMonitor:   { name: "Azure Monitor Alerts", mono: "AMA", img: "/tech/azure-monitor-alerts.svg", color: "#5EA0EF" },
   servicenow:  { name: "ServiceNow",     mono: "SN", img: "/tech/servicenow.svg",       color: "#A6D8C0" },
-  jira:        { name: "Jira",           icon: SiJira,           color: "#0052CC" },
+  jira:        { name: "Jira",           icon: SiJira,           color: "#5B94F0" },
   robusta:     { name: "Robusta", img: "/tech/robusta.svg", color: "#2BBFB2" },
   incidentio:  { name: "incident.io", img: "/tech/incident-io.svg", color: "#F25533" },
   pdRunbook:   { name: "PagerDuty Runbook Automation", icon: SiPagerduty, color: "#06AC38" },
