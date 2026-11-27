@@ -20,7 +20,6 @@ import { useSiteVisits } from "@/lib/site-visits";
 import { Pipeline } from "@/components/portfolio/Pipeline";
 import { K8sOpsCenter } from "@/components/portfolio/K8sOpsCenter";
 import { SkillsGrid } from "@/components/portfolio/SkillsGrid";
-import { HeroTerminal } from "@/components/portfolio/HeroTerminal";
 import { PIPELINE_STAGES } from "@/lib/pipeline-data";
 
 import { Counter, Reveal, MagneticButton } from "@/components/portfolio/ui";
@@ -191,9 +190,7 @@ function Hero() {
           </div>
 
           <Reveal delay={0.15}>
-            <div className="hidden lg:block">
-              <HeroTerminal />
-            </div>
+            <div className="hidden lg:block" aria-hidden />
           </Reveal>
         </div>
 
