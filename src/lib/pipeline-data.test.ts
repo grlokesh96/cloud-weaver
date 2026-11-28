@@ -12,9 +12,11 @@ describe("requested pipeline additions", () => {
   test("gives Google GCR the stored Artifact Registry logo", () => {
     const tool = PIPELINE_STAGES.find(stage => stage.id === "registry")?.tools.find(t => t.name === "Google GCR");
     assert.ok(tool, "Google GCR tile is missing from Artifact Registry");
+    const logo = tool.img;
+    assert.ok(typeof logo === "string", `Google GCR should have a logo, got ${String(logo)}`);
     assert.ok(
-      tool.img.startsWith("/__l5e/") && tool.img.endsWith("/google-artifact-registry.svg"),
-      `Google GCR should use the stored Artifact Registry logo, got ${tool.img}`,
+      logo.startsWith("/__l5e/") && logo.endsWith("/google-artifact-registry.svg"),
+      `Google GCR should use the stored Artifact Registry logo, got ${logo}`,
     );
   });
 
