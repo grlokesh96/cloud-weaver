@@ -19,3 +19,9 @@
 
 - [x] Serve the official logo at the requested static path and update its regression test.
 - [x] Verify HTTP delivery and desktop/mobile rendering; preserve the old CDN asset for previous deployments.
+
+## Infrastructure as Code
+
+- [ ] Add the requested stage after Build with five recognizable tool logos.
+- [ ] Update ordering and category tests for 25 stages.
+- [ ] Verify filters, logos, detail drawer, density, and simulation on desktop and mobile.
