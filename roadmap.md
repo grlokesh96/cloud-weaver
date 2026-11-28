@@ -14,3 +14,8 @@
 
 - [x] Replace the Stage 16 image with an official Artifact Registry logo stored with site assets.
 - [x] Verify the logo in the stage card and detail drawer on desktop and mobile.
+
+## Google GCR static delivery
+
+- [x] Serve the official logo at the requested static path and update its regression test.
+- [x] Verify HTTP delivery and desktop/mobile rendering; preserve the old CDN asset for previous deployments.

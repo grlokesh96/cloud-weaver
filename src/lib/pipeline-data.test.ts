@@ -14,10 +14,7 @@ describe("requested pipeline additions", () => {
     assert.ok(tool, "Google GCR tile is missing from Artifact Registry");
     const logo = tool.img;
     assert.ok(typeof logo === "string", `Google GCR should have a logo, got ${String(logo)}`);
-    assert.ok(
-      logo.startsWith("/__l5e/") && logo.endsWith("/google-artifact-registry.svg"),
-      `Google GCR should use the stored Artifact Registry logo, got ${logo}`,
-    );
+    assert.equal(logo, "/tech/google-artifact-registry.svg");
   });
 
   test("has 24 stages with unique identifiers", () => {

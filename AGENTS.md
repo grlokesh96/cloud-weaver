@@ -15,3 +15,4 @@
 - The resume download total is a single shared row in the `resume_stats` table, incremented only through the `increment_resume_downloads()` database function; every download button must call `recordResumeDownload()` so all entry points count.
 - Pipeline tool tiles share sizing and contrast tokens in global CSS for both stage cards and detail drawers, so mobile visibility fixes apply consistently without changing individual brand assets.
 - Keep stage order, numbering, filters, and simulator totals derived from PIPELINE_STAGES so additions stay consistent across the pipeline.
+- Serve the Google GCR logo from its explicit static public SVG path for deployment portability; retain the old CDN pointer outside public for earlier deployments that still reference it.
