@@ -9,6 +9,15 @@ describe("requested pipeline additions", () => {
       "Amazon ECR", "Azure ACR", "Google GCR", "Docker Hub", "GitHub Packages", "JFrog", "Harbor",
     ]);
   });
+  test("gives Google GCR the stored Artifact Registry logo", () => {
+    const tool = PIPELINE_STAGES.find(stage => stage.id === "registry")?.tools.find(t => t.name === "Google GCR");
+    assert.ok(tool, "Google GCR tile is missing from Artifact Registry");
+    assert.ok(
+      tool.img.startsWith("/__l5e/") && tool.img.endsWith("/google-artifact-registry.svg"),
+      `Google GCR should use the stored Artifact Registry logo, got ${tool.img}`,
+    );
+  });
+
   test("has 24 stages with unique identifiers", () => {
     assert.equal(PIPELINE_STAGES.length, 24);
     assert.equal(new Set(PIPELINE_STAGES.map(stage => stage.id)).size, 24);
